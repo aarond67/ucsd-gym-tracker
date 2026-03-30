@@ -31,10 +31,15 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python ucsd_gym_occupancy_scraper.py
 
-      - name: Commit updated CSV
+      - name: Commit updated CSV if present
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ucsd_occupancy_history.csv
-          git diff --cached --quiet || git commit -m "update occupancy data"
-          git push
+
+          if [ -f ucsd_occupancy_history.csv ]; then
+            git add ucsd_occupancy_history.csv
+            git diff --cached --quiet || git commit -m "update occupancy data"
+            git push
+          else
+            echo "No CSV present, skipping commit."
+          fi
