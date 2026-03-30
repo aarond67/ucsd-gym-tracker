@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install playwright pandas matplotlib
+          pip install playwright pandas matplotlib tzdata
           python -m playwright install chromium
 
       - name: Run scraper
