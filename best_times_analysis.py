@@ -81,3 +81,38 @@ for facility in df["facility_name"].unique():
     plt.close()
 
 print("\nSaved graphs and best_times_summary.csv")
+
+# ----------------------------
+# 📅 BEST TIME TODAY
+# ----------------------------
+
+today_name = pd.Timestamp.now().day_name()
+
+lines = []
+lines.append(f"Best gym times for {today_name}\n")
+
+for facility in df["facility_name"].unique():
+    sub = summary[
+        (summary["facility_name"] == facility) &
+        (summary["day"] == today_name)
+    ].sort_values("avg_percent")
+
+    if sub.empty:
+        continue
+
+    best = sub.iloc[0]
+
+    hour = int(best["hour"])
+    percent = round(best["avg_percent"], 1)
+
+    # convert to readable time
+    hour_display = f"{hour % 12 or 12}:00 {'AM' if hour < 12 else 'PM'}"
+
+    lines.append(f"{facility}:")
+    lines.append(f"Best time today: {hour_display} (~{percent}% full)\n")
+
+# save file
+with open("best_time_today.txt", "w") as f:
+    f.write("\n".join(lines))
+
+print("\nSaved best_time_today.txt")
