@@ -86,7 +86,7 @@ print("\nSaved graphs and best_times_summary.csv")
 # 📅 BEST TIME TODAY
 # ----------------------------
 
-today_name = pd.Timestamp.now().day_name()
+today_name = pd.Timestamp.now(tz="America/Los_Angeles").day_name()
 
 lines = []
 lines.append(f"Best gym times for {today_name}\n")
