@@ -44,47 +44,36 @@ def normalize_facility_name(name: str) -> str:
 def parse_card_text(card_text: str) -> Optional[Dict[str, object]]:
     text = clean_text(card_text)
 
-    if "% full" not in text:
-        return None
-
-    percent_match = re.search(r"(\d+)\s*%\s*full", text, re.IGNORECASE)
-    if not percent_match:
-        return None
-    percent_full = int(percent_match.group(1))
-
     status = ""
     for candidate in ["Available", "Busy", "Full", "Closed"]:
         if re.search(rf"\b{candidate}\b", text, re.IGNORECASE):
             status = candidate
             break
 
+    # Try to extract percent (optional now)
+    percent_match = re.search(r"(\d+)\s*%\s*full", text, re.IGNORECASE)
+    percent_full = int(percent_match.group(1)) if percent_match else None
+
+    # Extract facility name
     facility_name = ""
     if status:
-        m = re.match(rf"^(.*?)\s*-\s*{status}\b", text, flags=re.IGNORECASE)
-        if m:
-            facility_name = m.group(1).strip()
+        parts = re.split(rf"\s*-\s*{status}\b", text, flags=re.IGNORECASE)
+        if parts and parts[0].strip():
+            facility_name = parts[0].strip()
 
     if not facility_name:
-        facility_name = text[:percent_match.start()].strip(" -")
+        return None
 
     facility_name = normalize_facility_name(facility_name)
     facility_key = facility_name.lower()
-
-    if not facility_name:
-        return None
-    if re.fullmatch(r"\d+%?", facility_name):
-        return None
-    if len(facility_name) < 4:
-        return None
 
     return {
         "facility_name": facility_name,
         "facility_key": facility_key,
         "status": status or "Unknown",
-        "percent_full": percent_full,
+        "percent_full": percent_full if percent_full is not None else 0,
         "raw_text": text,
     }
-
 
 def extract_candidate_blocks(page) -> List[str]:
     selectors = [
