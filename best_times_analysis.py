@@ -8,25 +8,23 @@ CSV_FILE = "ucsd_occupancy_history.csv"
 
 df = pd.read_csv(CSV_FILE)
 
+# Parse timestamps with timezone preserved
 df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
 df = df.dropna(subset=["timestamp", "percent_full", "facility_name"]).copy()
 
 df["percent_full"] = pd.to_numeric(df["percent_full"], errors="coerce")
 df = df.dropna(subset=["percent_full"]).copy()
 
-df["status"] = df["status"].fillna("").astype(str)
-df["hour"] = df["timestamp"].dt.hour
-df["day"] = df["timestamp"].dt.day_name()
+df["status"] = df["status"].fillna("").astype(str).str.lower()
+df["hour"] = df["timestamp"].dt.tz_convert("America/Los_Angeles").dt.hour
+df["day"] = df["timestamp"].dt.tz_convert("America/Los_Angeles").dt.day_name()
 
 day_order = [
     "Monday", "Tuesday", "Wednesday",
     "Thursday", "Friday", "Saturday", "Sunday"
 ]
 
-# ----------------------------
-# Ignore CLOSED rows for analysis
-# ----------------------------
-analysis_df = df[df["status"].str.lower() != "closed"].copy()
+analysis_df = df[df["status"] != "closed"].copy()
 
 if analysis_df.empty:
     print("No open-gym occupancy rows available for analysis.")
@@ -70,7 +68,7 @@ for facility in summary["facility_name"].unique():
 for facility in analysis_df["facility_name"].unique():
     sub = analysis_df[analysis_df["facility_name"] == facility].copy()
 
-    hourly = sub.groupby("hour")["percent_full"].mean().sort_index()
+    hourly = sub.groupby("hour")["percent_full"].mean().reindex(range(24))
 
     plt.figure(figsize=(10, 5))
     plt.plot(hourly.index, hourly.values, marker="o")
@@ -90,23 +88,20 @@ for facility in analysis_df["facility_name"].unique():
         aggfunc="mean"
     )
 
-    pivot = pivot.reindex(day_order)
+    pivot = pivot.reindex(index=day_order, columns=range(24))
 
     plt.figure(figsize=(12, 5))
-    plt.imshow(pivot, aspect="auto")
+    plt.imshow(pivot.values, aspect="auto")
     plt.colorbar(label="% Full")
     plt.title(f"{facility} - Weekly Heatmap")
     plt.xlabel("Hour")
     plt.ylabel("Day")
-    plt.xticks(range(24))
+    plt.xticks(range(24), range(24))
     plt.yticks(range(len(pivot.index)), pivot.index)
     plt.tight_layout()
     plt.savefig(f"{facility.replace(' ', '_')}_heatmap.png", dpi=160)
     plt.close()
 
-# ----------------------------
-# BEST TIME TODAY
-# ----------------------------
 today_name = pd.Timestamp.now(tz="America/Los_Angeles").day_name()
 
 lines = []
