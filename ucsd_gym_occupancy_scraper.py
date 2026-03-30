@@ -14,7 +14,7 @@ import re
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import Dict, List, Optional
 from zoneinfo import ZoneInfo
 
 from playwright.sync_api import sync_playwright
@@ -29,7 +29,16 @@ KNOWN_FACILITIES = {
     "triton esports center",
 }
 
-VALID_STATUSES = {"available", "busy", "full", "closed", "active"}
+# Put longer status labels first so "Very Active" is not mistaken for just "Active".
+STATUS_CANDIDATES = [
+    "Very Active",
+    "Available",
+    "Active",
+    "Busy",
+    "Full",
+    "Closed",
+]
+VALID_STATUSES = {status.lower() for status in STATUS_CANDIDATES}
 
 
 def clean_text(text: str) -> str:
@@ -43,28 +52,47 @@ def normalize_facility_name(name: str) -> str:
     return name.strip()
 
 
+def extract_status(text: str) -> str:
+    for candidate in STATUS_CANDIDATES:
+        if re.search(rf"\b{re.escape(candidate)}\b", text, re.IGNORECASE):
+            return candidate
+    return ""
+
+
 def parse_card_text(card_text: str) -> Optional[Dict[str, object]]:
     text = clean_text(card_text)
-
-    status = ""
-    for candidate in ["Available", "Busy", "Full", "Closed", "Active"]:
-        if re.search(rf"\b{candidate}\b", text, re.IGNORECASE):
-            status = candidate
-            break
+    status = extract_status(text)
 
     percent_match = re.search(r"(\d+)\s*%\s*full", text, re.IGNORECASE)
     percent_full = int(percent_match.group(1)) if percent_match else None
 
     facility_name = ""
     if status:
-        parts = re.split(rf"\s*-\s*{status}\b", text, flags=re.IGNORECASE)
+        # Split on the status label to isolate the facility name.
+        parts = re.split(rf"\s*-\s*{re.escape(status)}\b", text, maxsplit=1, flags=re.IGNORECASE)
         if parts and parts[0].strip():
             facility_name = parts[0].strip()
 
-    if not facility_name:
-        # fallback: everything before percent
-        if percent_match:
-            facility_name = text[:percent_match.start()].strip(" -")
+    if not facility_name and percent_match:
+        # Fallback: remove the trailing percent portion, then strip any known status suffix.
+        before_percent = text[:percent_match.start()].strip(" -")
+        for candidate in STATUS_CANDIDATES:
+            before_percent = re.sub(
+                rf"\s*-\s*{re.escape(candidate)}$",
+                "",
+                before_percent,
+                flags=re.IGNORECASE,
+            )
+        facility_name = before_percent.strip()
+
+    if not facility_name and status:
+        # Another fallback for cards without a visible percent.
+        facility_name = re.sub(
+            rf"\s*-\s*{re.escape(status)}.*$",
+            "",
+            text,
+            flags=re.IGNORECASE,
+        ).strip()
 
     if not facility_name:
         return None
@@ -113,10 +141,11 @@ def extract_candidate_blocks(page) -> List[str]:
             has_percent = "% full" in lowered
             has_status = any(status in lowered for status in VALID_STATUSES)
 
-            if not has_status:
+            # Keep cards that have a known status, or closed cards without a percent.
+            if not has_status and not ("closed" in lowered and not has_percent):
                 continue
 
-            # Only keep realistic card-sized blocks
+            # Only keep realistic card-sized blocks.
             if 10 <= len(txt) <= 220:
                 raw_blocks.append(txt)
 
@@ -138,7 +167,7 @@ def score_row(row: Dict[str, object]) -> tuple:
     return (
         1 if name in KNOWN_FACILITIES else 0,
         1 if status in VALID_STATUSES else 0,
-        1 if status in {"available", "active", "busy", "full", "closed"} else 0,
+        1 if status in {"available", "active", "very active", "busy", "full", "closed"} else 0,
         0 if "Current Occupancy" in raw else 1,
         -len(raw),
     )
@@ -186,7 +215,7 @@ def scrape_once() -> List[Dict[str, object]]:
             chosen = choose_best_rows(parsed_rows)
             found_known = {str(r["facility_key"]) for r in chosen} & KNOWN_FACILITIES
 
-            # We want all four if possible, but at least RIMAC + Main Gym
+            # We want all four if possible, but at least RIMAC + Main Gym.
             if "rimac fitness gym" in found_known and "main gym fitness gym" in found_known:
                 parsed_rows = chosen
                 break
