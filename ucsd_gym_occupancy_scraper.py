@@ -7,6 +7,8 @@ Designed to be more reliable both locally and in GitHub Actions.
 """
 
 from __future__ import annotations
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import csv
 import re
@@ -156,7 +158,7 @@ def choose_best_rows(rows: List[Dict[str, object]]) -> List[Dict[str, object]]:
 
 
 def scrape_once() -> List[Dict[str, object]]:
-    now = datetime.now()
+    now = datetime.now(ZoneInfo("America/Los_Angeles"))
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
