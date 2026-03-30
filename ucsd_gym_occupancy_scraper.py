@@ -4,19 +4,18 @@ Scrape UCSD Recreation facility occupancy levels from:
 https://recreation.ucsd.edu/facilities/
 
 Designed to be more reliable both locally and in GitHub Actions.
+If no occupancy data is found, this script exits cleanly without changing the CSV.
 """
 
 from __future__ import annotations
-from datetime import datetime
-from zoneinfo import ZoneInfo
 
 import csv
 import re
 import sys
-import time
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Optional
+from zoneinfo import ZoneInfo
 
 from playwright.sync_api import sync_playwright
 
@@ -149,7 +148,6 @@ def choose_best_rows(rows: List[Dict[str, object]]) -> List[Dict[str, object]]:
 
     chosen = list(best_by_facility.values())
 
-    # If known facilities were found, keep only those.
     known = [r for r in chosen if str(r["facility_key"]) in KNOWN_FACILITIES]
     if known:
         chosen = known
@@ -172,10 +170,8 @@ def scrape_once() -> List[Dict[str, object]]:
 
         page.goto(URL, wait_until="domcontentloaded", timeout=60000)
 
-        # Give the page time to hydrate dynamic content
         page.wait_for_timeout(4000)
 
-        # Scroll slowly to encourage lazy-loaded content
         page.evaluate("window.scrollTo(0, document.body.scrollHeight * 0.35)")
         page.wait_for_timeout(1500)
         page.evaluate("window.scrollTo(0, document.body.scrollHeight * 0.7)")
@@ -183,7 +179,6 @@ def scrape_once() -> List[Dict[str, object]]:
         page.evaluate("window.scrollTo(0, 0)")
         page.wait_for_timeout(1500)
 
-        # Retry extraction a few times because cloud rendering can lag
         parsed_rows: List[Dict[str, object]] = []
         for _ in range(4):
             candidate_blocks = extract_candidate_blocks(page)
@@ -197,8 +192,7 @@ def scrape_once() -> List[Dict[str, object]]:
             chosen = choose_best_rows(parsed_rows)
             found_known = {str(r["facility_key"]) for r in chosen} & KNOWN_FACILITIES
 
-            # Good enough if we found at least 3 real facilities
-            if len(found_known) >= 3:
+            if len(found_known) >= 2:
                 parsed_rows = chosen
                 break
 
@@ -209,7 +203,7 @@ def scrape_once() -> List[Dict[str, object]]:
     final_rows = choose_best_rows(parsed_rows)
 
     if not final_rows:
-        raise RuntimeError("No occupancy data found — page structure may have changed.")
+        return []
 
     rows = []
     for row in final_rows:
@@ -257,6 +251,11 @@ def append_rows_to_csv(rows: List[Dict[str, object]]) -> None:
 def main() -> int:
     try:
         rows = scrape_once()
+
+        if not rows:
+            print("WARNING: No occupancy data found. Skipping this run without changing the CSV.")
+            return 0
+
         append_rows_to_csv(rows)
 
         print(f"Saved {len(rows)} rows to {OUTPUT_CSV.name}")
