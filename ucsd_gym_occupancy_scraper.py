@@ -29,6 +29,8 @@ KNOWN_FACILITIES = {
     "triton esports center",
 }
 
+VALID_STATUSES = {"available", "busy", "full", "closed", "active"}
+
 
 def clean_text(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
@@ -45,16 +47,14 @@ def parse_card_text(card_text: str) -> Optional[Dict[str, object]]:
     text = clean_text(card_text)
 
     status = ""
-    for candidate in ["Available", "Busy", "Full", "Closed"]:
+    for candidate in ["Available", "Busy", "Full", "Closed", "Active"]:
         if re.search(rf"\b{candidate}\b", text, re.IGNORECASE):
             status = candidate
             break
 
-    # Try to extract percent (optional now)
     percent_match = re.search(r"(\d+)\s*%\s*full", text, re.IGNORECASE)
     percent_full = int(percent_match.group(1)) if percent_match else None
 
-    # Extract facility name
     facility_name = ""
     if status:
         parts = re.split(rf"\s*-\s*{status}\b", text, flags=re.IGNORECASE)
@@ -62,10 +62,18 @@ def parse_card_text(card_text: str) -> Optional[Dict[str, object]]:
             facility_name = parts[0].strip()
 
     if not facility_name:
+        # fallback: everything before percent
+        if percent_match:
+            facility_name = text[:percent_match.start()].strip(" -")
+
+    if not facility_name:
         return None
 
     facility_name = normalize_facility_name(facility_name)
     facility_key = facility_name.lower()
+
+    if facility_key not in KNOWN_FACILITIES:
+        return None
 
     return {
         "facility_name": facility_name,
@@ -75,21 +83,18 @@ def parse_card_text(card_text: str) -> Optional[Dict[str, object]]:
         "raw_text": text,
     }
 
-def extract_candidate_blocks(page) -> List[str]:
-    selectors = [
-        "div:has-text('Closed')",
-        "section:has-text('Closed')",
-        "article:has-text('Closed')",
-        "li:has-text('Closed')",
-        "*:has-text('Closed')",
-        "div:has-text('% full')",
-        "section:has-text('% full')",
-        "article:has-text('% full')",
-        "li:has-text('% full')",
-        "*:has-text('% full')",
-    ]
 
-    raw_blocks = []
+def extract_candidate_blocks(page) -> List[str]:
+    """
+    Use the actual occupancy container structure from the page:
+    #waitzLiveList contains one bordered <div> per facility card.
+    """
+    raw_blocks: List[str] = []
+
+    selectors = [
+        "#waitzLiveList > div",
+        "#waitzLiveList div[style*='border: 2px solid']",
+    ]
 
     for selector in selectors:
         locator = page.locator(selector)
@@ -104,13 +109,15 @@ def extract_candidate_blocks(page) -> List[str]:
             except Exception:
                 continue
 
-            has_percent = "% full" in txt
-            has_closed = "closed" in txt.lower()
+            lowered = txt.lower()
+            has_percent = "% full" in lowered
+            has_status = any(status in lowered for status in VALID_STATUSES)
 
-            if not has_percent and not has_closed:
+            if not has_status:
                 continue
 
-            if 8 <= len(txt) <= 220:
+            # Only keep realistic card-sized blocks
+            if 10 <= len(txt) <= 220:
                 raw_blocks.append(txt)
 
     seen = set()
@@ -119,16 +126,19 @@ def extract_candidate_blocks(page) -> List[str]:
         if block not in seen:
             seen.add(block)
             unique.append(block)
+
     return unique
+
 
 def score_row(row: Dict[str, object]) -> tuple:
     raw = str(row["raw_text"])
-    status = str(row["status"])
+    status = str(row["status"]).lower()
     name = str(row["facility_name"]).lower()
 
     return (
         1 if name in KNOWN_FACILITIES else 0,
-        1 if status != "Unknown" else 0,
+        1 if status in VALID_STATUSES else 0,
+        1 if status in {"available", "active", "busy", "full", "closed"} else 0,
         0 if "Current Occupancy" in raw else 1,
         -len(raw),
     )
@@ -143,11 +153,6 @@ def choose_best_rows(rows: List[Dict[str, object]]) -> List[Dict[str, object]]:
             best_by_facility[key] = row
 
     chosen = list(best_by_facility.values())
-
-    known = [r for r in chosen if str(r["facility_key"]) in KNOWN_FACILITIES]
-    if known:
-        chosen = known
-
     return sorted(chosen, key=lambda r: str(r["facility_name"]).lower())
 
 
@@ -165,17 +170,10 @@ def scrape_once() -> List[Dict[str, object]]:
         page = browser.new_page(viewport={"width": 1440, "height": 2400})
 
         page.goto(URL, wait_until="domcontentloaded", timeout=60000)
-
-        page.wait_for_timeout(4000)
-
-        page.evaluate("window.scrollTo(0, document.body.scrollHeight * 0.35)")
-        page.wait_for_timeout(1500)
-        page.evaluate("window.scrollTo(0, document.body.scrollHeight * 0.7)")
-        page.wait_for_timeout(1500)
-        page.evaluate("window.scrollTo(0, 0)")
-        page.wait_for_timeout(1500)
+        page.wait_for_timeout(3000)
 
         parsed_rows: List[Dict[str, object]] = []
+
         for _ in range(4):
             candidate_blocks = extract_candidate_blocks(page)
 
@@ -188,11 +186,12 @@ def scrape_once() -> List[Dict[str, object]]:
             chosen = choose_best_rows(parsed_rows)
             found_known = {str(r["facility_key"]) for r in chosen} & KNOWN_FACILITIES
 
-            if len(found_known) >= 2:
+            # We want all four if possible, but at least RIMAC + Main Gym
+            if "rimac fitness gym" in found_known and "main gym fitness gym" in found_known:
                 parsed_rows = chosen
                 break
 
-            page.wait_for_timeout(2500)
+            page.wait_for_timeout(1500)
 
         browser.close()
 
