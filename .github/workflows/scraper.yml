@@ -27,6 +27,8 @@ jobs:
           python -m playwright install chromium
 
       - name: Run scraper
+        env:
+          PYTHONUNBUFFERED: "1"
         run: python ucsd_gym_occupancy_scraper.py
 
       - name: Commit results
