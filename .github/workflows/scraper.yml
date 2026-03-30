@@ -2,8 +2,11 @@ name: Gym Scraper
 
 on:
   schedule:
-    - cron: "*/15 * * * *"  # every 15 minutes
+    - cron: "*/15 * * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   scrape:
@@ -11,25 +14,25 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
         run: |
           pip install playwright pandas matplotlib
-          playwright install chromium
+          python -m playwright install chromium
 
       - name: Run scraper
         run: python ucsd_gym_occupancy_scraper.py
 
       - name: Commit results
         run: |
-          git config --global user.name "bot"
-          git config --global user.email "bot@example.com"
-          git add .
-          git commit -m "update data" || echo "no changes"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ucsd_occupancy_history.csv
+          git diff --cached --quiet || git commit -m "update occupancy data"
           git push
