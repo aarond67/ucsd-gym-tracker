@@ -77,6 +77,11 @@ def parse_card_text(card_text: str) -> Optional[Dict[str, object]]:
 
 def extract_candidate_blocks(page) -> List[str]:
     selectors = [
+        "div:has-text('Closed')",
+        "section:has-text('Closed')",
+        "article:has-text('Closed')",
+        "li:has-text('Closed')",
+        "*:has-text('Closed')",
         "div:has-text('% full')",
         "section:has-text('% full')",
         "article:has-text('% full')",
@@ -99,7 +104,10 @@ def extract_candidate_blocks(page) -> List[str]:
             except Exception:
                 continue
 
-            if "% full" not in txt:
+            has_percent = "% full" in txt
+            has_closed = "closed" in txt.lower()
+
+            if not has_percent and not has_closed:
                 continue
 
             if 8 <= len(txt) <= 220:
@@ -112,7 +120,6 @@ def extract_candidate_blocks(page) -> List[str]:
             seen.add(block)
             unique.append(block)
     return unique
-
 
 def score_row(row: Dict[str, object]) -> tuple:
     raw = str(row["raw_text"])
