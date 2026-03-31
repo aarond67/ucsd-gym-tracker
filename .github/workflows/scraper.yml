@@ -27,14 +27,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install playwright pandas matplotlib tzdata
-          python -m playwright install chromium
+          pip install requests tzdata
 
       - name: Run scraper
         env:
           PYTHONUNBUFFERED: "1"
         run: python ucsd_gym_occupancy_scraper.py
-      
+
       - name: Commit updated CSV if present
         run: |
           git config --global user.name "github-actions[bot]"
