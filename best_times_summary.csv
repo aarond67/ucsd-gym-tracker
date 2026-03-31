@@ -1,4 +1,5 @@
 facility_name,day,hour,avg_percent
+Main Gym Fitness Gym,Monday,22,6.0
 Main Gym Fitness Gym,Monday,7,12.0
 Main Gym Fitness Gym,Monday,8,22.0
 Main Gym Fitness Gym,Monday,10,28.0
@@ -8,11 +9,11 @@ Main Gym Fitness Gym,Monday,16,35.5
 Main Gym Fitness Gym,Monday,18,36.0
 Main Gym Fitness Gym,Monday,14,37.0
 Main Gym Fitness Gym,Monday,21,39.0
-Main Gym Fitness Gym,Monday,13,40.0
 Outback Climbing Center,Monday,11,43.0
 Outback Climbing Center,Monday,16,99.0
 Outback Climbing Center,Monday,18,99.0
 Outback Climbing Center,Monday,21,99.0
+RIMAC Fitness Gym,Monday,22,20.0
 RIMAC Fitness Gym,Monday,7,41.0
 RIMAC Fitness Gym,Monday,16,79.0
 RIMAC Fitness Gym,Monday,18,79.0
