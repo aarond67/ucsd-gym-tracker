@@ -1,294 +1,153 @@
 #!/usr/bin/env python3
 """
-Scrape UCSD Recreation facility occupancy levels from:
-https://recreation.ucsd.edu/facilities/
+Fetch UCSD gym occupancy directly from the Waitz API and append results to CSV.
 
-Designed to be more reliable both locally and in GitHub Actions.
-If no occupancy data is found, this script exits cleanly without changing the CSV.
+Source:
+https://waitz.io/live/ucsd-rec
 """
 
 from __future__ import annotations
 
 import csv
-import re
-import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
 from zoneinfo import ZoneInfo
 
-from playwright.sync_api import sync_playwright
+import requests
 
-URL = "https://recreation.ucsd.edu/facilities/"
+URL = "https://waitz.io/live/ucsd-rec"
 OUTPUT_CSV = Path(__file__).with_name("ucsd_occupancy_history.csv")
+TIMEZONE = ZoneInfo("America/Los_Angeles")
+
+FIELDNAMES = [
+    "timestamp",
+    "day_of_week",
+    "date",
+    "time",
+    "facility_name",
+    "status",
+    "percent_full",
+    "raw_text",
+    "people",
+    "capacity",
+    "is_open",
+    "hour_summary",
+]
 
 KNOWN_FACILITIES = {
-    "rimac fitness gym",
-    "main gym fitness gym",
-    "outback climbing center",
-    "triton esports center",
+    "RIMAC Fitness Gym",
+    "Main Gym Fitness Gym",
+    "Outback Climbing Center",
+    "Triton Esports Center",
 }
 
-# Put longer status labels first so "Very Active" is not mistaken for just "Active".
-STATUS_CANDIDATES = [
-    "Very Active",
-    "Available",
-    "Active",
-    "Busy",
-    "Full",
-    "Closed",
-]
-VALID_STATUSES = {status.lower() for status in STATUS_CANDIDATES}
+
+def derive_status(busyness: int, is_open: bool) -> str:
+    if not is_open:
+        return "Closed"
+    if busyness >= 75:
+        return "Very Active"
+    if busyness >= 50:
+        return "Busy"
+    if busyness >= 25:
+        return "Active"
+    return "Not Busy"
 
 
-def clean_text(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip()
+def fetch_waitz_data() -> list[dict]:
+    response = requests.get(
+        URL,
+        timeout=20,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+        },
+    )
+    response.raise_for_status()
+
+    payload = response.json()
+    data = payload.get("data", [])
+
+    if not isinstance(data, list):
+        raise ValueError("Unexpected API response format: 'data' is not a list.")
+
+    return data
 
 
-def normalize_facility_name(name: str) -> str:
-    name = clean_text(name)
-    name = re.sub(r"^Current Occupancy\s+", "", name, flags=re.IGNORECASE)
-    name = re.sub(r"\s*-\s*$", "", name)
-    return name.strip()
+def build_rows(data: list[dict]) -> list[dict]:
+    now = datetime.now(TIMEZONE)
+    timestamp = now.isoformat(timespec="seconds")
 
+    rows: list[dict] = []
 
-def extract_status(text: str) -> str:
-    for candidate in STATUS_CANDIDATES:
-        if re.search(rf"\b{re.escape(candidate)}\b", text, re.IGNORECASE):
-            return candidate
-    return ""
-
-
-def parse_card_text(card_text: str) -> Optional[Dict[str, object]]:
-    text = clean_text(card_text)
-    status = extract_status(text)
-
-    percent_match = re.search(r"(\d+)\s*%\s*full", text, re.IGNORECASE)
-    percent_full = int(percent_match.group(1)) if percent_match else None
-
-    facility_name = ""
-    if status:
-        # Split on the status label to isolate the facility name.
-        parts = re.split(rf"\s*-\s*{re.escape(status)}\b", text, maxsplit=1, flags=re.IGNORECASE)
-        if parts and parts[0].strip():
-            facility_name = parts[0].strip()
-
-    if not facility_name and percent_match:
-        # Fallback: remove the trailing percent portion, then strip any known status suffix.
-        before_percent = text[:percent_match.start()].strip(" -")
-        for candidate in STATUS_CANDIDATES:
-            before_percent = re.sub(
-                rf"\s*-\s*{re.escape(candidate)}$",
-                "",
-                before_percent,
-                flags=re.IGNORECASE,
-            )
-        facility_name = before_percent.strip()
-
-    if not facility_name and status:
-        # Another fallback for cards without a visible percent.
-        facility_name = re.sub(
-            rf"\s*-\s*{re.escape(status)}.*$",
-            "",
-            text,
-            flags=re.IGNORECASE,
-        ).strip()
-
-    if not facility_name:
-        return None
-
-    facility_name = normalize_facility_name(facility_name)
-    facility_key = facility_name.lower()
-
-    if facility_key not in KNOWN_FACILITIES:
-        return None
-
-    return {
-        "facility_name": facility_name,
-        "facility_key": facility_key,
-        "status": status or "Unknown",
-        "percent_full": percent_full if percent_full is not None else 0,
-        "raw_text": text,
-    }
-
-
-def extract_candidate_blocks(page) -> List[str]:
-    """
-    Use the actual occupancy container structure from the page:
-    #waitzLiveList contains one bordered <div> per facility card.
-    """
-    raw_blocks: List[str] = []
-
-    selectors = [
-        "#waitzLiveList > div",
-        "#waitzLiveList div[style*='border: 2px solid']",
-    ]
-
-    for selector in selectors:
-        locator = page.locator(selector)
-        try:
-            count = locator.count()
-        except Exception:
+    for facility in data:
+        name = str(facility.get("name", "")).strip()
+        if name not in KNOWN_FACILITIES:
             continue
 
-        for i in range(count):
-            try:
-                txt = clean_text(locator.nth(i).inner_text(timeout=1000))
-            except Exception:
-                continue
+        is_open = bool(facility.get("isOpen", False))
+        busyness = int(facility.get("busyness", 0) or 0)
+        people = int(facility.get("people", 0) or 0)
+        capacity = int(facility.get("capacity", 0) or 0)
+        hour_summary = str(facility.get("hourSummary", "") or "").strip()
 
-            lowered = txt.lower()
-            has_percent = "% full" in lowered
-            has_status = any(status in lowered for status in VALID_STATUSES)
+        loc_html = facility.get("locHtml", {}) or {}
+        raw_text = str(loc_html.get("summary", "") or "").strip()
+        if not raw_text:
+            raw_text = f"{name} - {derive_status(busyness, is_open)} {busyness}% full".strip()
 
-            # Keep cards that have a known status, or closed cards without a percent.
-            if not has_status and not ("closed" in lowered and not has_percent):
-                continue
-
-            # Only keep realistic card-sized blocks.
-            if 10 <= len(txt) <= 220:
-                raw_blocks.append(txt)
-
-    seen = set()
-    unique = []
-    for block in raw_blocks:
-        if block not in seen:
-            seen.add(block)
-            unique.append(block)
-
-    return unique
-
-
-def score_row(row: Dict[str, object]) -> tuple:
-    raw = str(row["raw_text"])
-    status = str(row["status"]).lower()
-    name = str(row["facility_name"]).lower()
-
-    return (
-        1 if name in KNOWN_FACILITIES else 0,
-        1 if status in VALID_STATUSES else 0,
-        1 if status in {"available", "active", "very active", "busy", "full", "closed"} else 0,
-        0 if "Current Occupancy" in raw else 1,
-        -len(raw),
-    )
-
-
-def choose_best_rows(rows: List[Dict[str, object]]) -> List[Dict[str, object]]:
-    best_by_facility: Dict[str, Dict[str, object]] = {}
-
-    for row in rows:
-        key = str(row["facility_key"])
-        if key not in best_by_facility or score_row(row) > score_row(best_by_facility[key]):
-            best_by_facility[key] = row
-
-    chosen = list(best_by_facility.values())
-    return sorted(chosen, key=lambda r: str(r["facility_name"]).lower())
-
-
-def scrape_once() -> List[Dict[str, object]]:
-    now = datetime.now(ZoneInfo("America/Los_Angeles"))
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=True,
-            args=[
-                "--disable-dev-shm-usage",
-                "--no-sandbox",
-            ],
-        )
-        page = browser.new_page(viewport={"width": 1440, "height": 2400})
-
-        page.goto(URL, wait_until="domcontentloaded", timeout=60000)
-        page.wait_for_timeout(3000)
-
-        parsed_rows: List[Dict[str, object]] = []
-
-        for _ in range(4):
-            candidate_blocks = extract_candidate_blocks(page)
-
-            parsed_rows = []
-            for block in candidate_blocks:
-                parsed = parse_card_text(block)
-                if parsed:
-                    parsed_rows.append(parsed)
-
-            chosen = choose_best_rows(parsed_rows)
-            found_known = {str(r["facility_key"]) for r in chosen} & KNOWN_FACILITIES
-
-            # We want all four if possible, but at least RIMAC + Main Gym.
-            if "rimac fitness gym" in found_known and "main gym fitness gym" in found_known:
-                parsed_rows = chosen
-                break
-
-            page.wait_for_timeout(1500)
-
-        browser.close()
-
-    final_rows = choose_best_rows(parsed_rows)
-
-    if not final_rows:
-        return []
-
-    rows = []
-    for row in final_rows:
         rows.append(
             {
-                "timestamp": now.isoformat(timespec="seconds"),
+                "timestamp": timestamp,
                 "day_of_week": now.strftime("%A"),
                 "date": now.strftime("%Y-%m-%d"),
                 "time": now.strftime("%H:%M:%S"),
-                "facility_name": row["facility_name"],
-                "status": row["status"],
-                "percent_full": row["percent_full"],
-                "raw_text": row["raw_text"],
+                "facility_name": name,
+                "status": derive_status(busyness, is_open),
+                "percent_full": busyness,
+                "raw_text": raw_text,
+                "people": people,
+                "capacity": capacity,
+                "is_open": is_open,
+                "hour_summary": hour_summary,
             }
         )
 
-    return rows
+    return sorted(rows, key=lambda row: row["facility_name"])
 
 
-def append_rows_to_csv(rows: List[Dict[str, object]]) -> None:
+def append_rows(rows: list[dict]) -> None:
     file_exists = OUTPUT_CSV.exists()
 
-    with open(OUTPUT_CSV, "a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=[
-                "timestamp",
-                "day_of_week",
-                "date",
-                "time",
-                "facility_name",
-                "status",
-                "percent_full",
-                "raw_text",
-            ],
-        )
+    with OUTPUT_CSV.open("a", newline="", encoding="utf-8") as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=FIELDNAMES)
 
-        if not file_exists:
+        if not file_exists or OUTPUT_CSV.stat().st_size == 0:
             writer.writeheader()
 
-        for row in rows:
-            writer.writerow(row)
+        writer.writerows(rows)
 
 
 def main() -> int:
     try:
-        rows = scrape_once()
+        data = fetch_waitz_data()
+        rows = build_rows(data)
 
         if not rows:
-            print("WARNING: No occupancy data found. Skipping this run without changing the CSV.")
+            print("No facility rows found. CSV was not changed.")
             return 0
 
-        append_rows_to_csv(rows)
+        found_facilities = {row["facility_name"] for row in rows}
+        missing = KNOWN_FACILITIES - found_facilities
+        if missing:
+            print(f"Warning: missing facilities in this snapshot: {sorted(missing)}")
 
-        print(f"Saved {len(rows)} rows to {OUTPUT_CSV.name}")
-        for row in rows:
-            print(f"{row['facility_name']}: {row['percent_full']}% ({row['status']})")
+        append_rows(rows)
+        print(f"Wrote {len(rows)} rows to {OUTPUT_CSV.name}")
         return 0
 
-    except Exception as e:
-        print(f"ERROR: {e}", file=sys.stderr)
+    except Exception as exc:
+        print(f"Scraper failed: {exc}")
         return 1
 
 
