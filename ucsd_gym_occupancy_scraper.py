@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """
 Fetch UCSD gym occupancy directly from the Waitz API and append results to CSV.
-
-Source:
-https://waitz.io/live/ucsd-rec
 """
 
 from __future__ import annotations
@@ -69,7 +66,7 @@ def fetch_waitz_data() -> list[dict]:
     data = payload.get("data", [])
 
     if not isinstance(data, list):
-        raise ValueError("Unexpected API response format: 'data' is not a list.")
+        raise ValueError("Unexpected API response format")
 
     return data
 
@@ -78,7 +75,7 @@ def build_rows(data: list[dict]) -> list[dict]:
     now = datetime.now(TIMEZONE)
     timestamp = now.isoformat(timespec="seconds")
 
-    rows: list[dict] = []
+    rows = []
 
     for facility in data:
         name = str(facility.get("name", "")).strip()
@@ -93,8 +90,9 @@ def build_rows(data: list[dict]) -> list[dict]:
 
         loc_html = facility.get("locHtml", {}) or {}
         raw_text = str(loc_html.get("summary", "") or "").strip()
+
         if not raw_text:
-            raw_text = f"{name} - {derive_status(busyness, is_open)} {busyness}% full".strip()
+            raw_text = f"{name} - {busyness}% full"
 
         rows.append(
             {
@@ -113,43 +111,51 @@ def build_rows(data: list[dict]) -> list[dict]:
             }
         )
 
-    return sorted(rows, key=lambda row: row["facility_name"])
+    return sorted(rows, key=lambda r: r["facility_name"])
 
 
 def append_rows(rows: list[dict]) -> None:
-    file_exists = OUTPUT_CSV.exists()
+    expected_header = ",".join(FIELDNAMES)
+    needs_reset = True
 
-    with OUTPUT_CSV.open("a", newline="", encoding="utf-8") as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=FIELDNAMES)
+    if OUTPUT_CSV.exists() and OUTPUT_CSV.stat().st_size > 0:
+        with OUTPUT_CSV.open("r", encoding="utf-8") as f:
+            first_line = f.readline().strip()
+            if first_line == expected_header:
+                needs_reset = False
 
-        if not file_exists or OUTPUT_CSV.stat().st_size == 0:
+    mode = "w" if needs_reset else "a"
+
+    with OUTPUT_CSV.open(mode, newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
+
+        if needs_reset:
             writer.writeheader()
+            print("Reset CSV with correct header")
 
         writer.writerows(rows)
 
 
-def main() -> int:
+def main():
     try:
         data = fetch_waitz_data()
         rows = build_rows(data)
 
         if not rows:
-            print("No facility rows found. CSV was not changed.")
-            return 0
+            print("No data found")
+            return
 
-        found_facilities = {row["facility_name"] for row in rows}
-        missing = KNOWN_FACILITIES - found_facilities
+        found = {r["facility_name"] for r in rows}
+        missing = KNOWN_FACILITIES - found
         if missing:
-            print(f"Warning: missing facilities in this snapshot: {sorted(missing)}")
+            print("Warning: missing facilities:", missing)
 
         append_rows(rows)
-        print(f"Wrote {len(rows)} rows to {OUTPUT_CSV.name}")
-        return 0
+        print(f"Wrote {len(rows)} rows")
 
-    except Exception as exc:
-        print(f"Scraper failed: {exc}")
-        return 1
+    except Exception as e:
+        print("Error:", e)
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
