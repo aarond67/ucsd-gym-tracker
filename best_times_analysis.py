@@ -1,29 +1,39 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 INPUT_FILE = "ucsd_occupancy_history.csv"
+TIMEZONE = ZoneInfo("America/Los_Angeles")
+
+DAY_ORDER = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+]
 
 def load_data():
     df = pd.read_csv(INPUT_FILE)
+    df.columns = df.columns.str.strip()
 
-    # Ensure correct types
     df["percent_full"] = pd.to_numeric(df["percent_full"], errors="coerce")
-
-    # Drop bad rows
     df = df.dropna(subset=["percent_full", "facility_name", "time", "day_of_week"])
 
-    # Convert time → hour
     df["hour"] = pd.to_datetime(df["time"], format="%H:%M:%S", errors="coerce").dt.hour
+    df = df.dropna(subset=["hour"])
+    df["hour"] = df["hour"].astype(int)
 
     return df
 
 def filter_open(df):
-    # Prefer is_open column if present
     if "is_open" in df.columns:
         df = df[df["is_open"] == True]
     else:
         df = df[df["status"].str.lower() != "closed"]
-
     return df
 
 def compute_best_times(df):
@@ -31,10 +41,11 @@ def compute_best_times(df):
         df.groupby(["facility_name", "day_of_week", "hour"])["percent_full"]
         .mean()
         .reset_index()
+        .rename(columns={"percent_full": "avg_percent", "day_of_week": "day"})
     )
 
-    grouped = grouped.rename(columns={"percent_full": "avg_percent"})
-    grouped = grouped.sort_values("avg_percent")
+    grouped["day"] = pd.Categorical(grouped["day"], categories=DAY_ORDER, ordered=True)
+    grouped = grouped.sort_values(["avg_percent", "facility_name", "day", "hour"]).reset_index(drop=True)
 
     return grouped
 
@@ -45,18 +56,20 @@ def save_best_today(grouped):
     if grouped.empty:
         return
 
-    today = grouped["day_of_week"].iloc[0]
-    today_df = grouped[grouped["day_of_week"] == today]
+    today_name = datetime.now(TIMEZONE).strftime("%A")
+    today_df = grouped[grouped["day"] == today_name].sort_values("avg_percent")
 
     if today_df.empty:
+        with open("best_time_today.txt", "w", encoding="utf-8") as f:
+            f.write(f"No open-facility data available yet for {today_name}.")
         return
 
     best = today_df.iloc[0]
 
-    with open("best_time_today.txt", "w") as f:
+    with open("best_time_today.txt", "w", encoding="utf-8") as f:
         f.write(
             f"Best time today for {best['facility_name']}:\n"
-            f"{today} at {int(best['hour']):02d}:00\n"
+            f"{today_name} at {int(best['hour']):02d}:00\n"
             f"Avg occupancy: {best['avg_percent']:.1f}%"
         )
 
@@ -66,7 +79,6 @@ def generate_charts(df):
     for facility in facilities:
         sub = df[df["facility_name"] == facility]
 
-        # Hourly average
         hourly = sub.groupby("hour")["percent_full"].mean()
 
         plt.figure()
@@ -76,13 +88,14 @@ def generate_charts(df):
         plt.savefig(f"{facility.replace(' ', '_')}_hourly.png")
         plt.close()
 
-        # Heatmap (pivot)
         heat = sub.pivot_table(
             index="day_of_week",
             columns="hour",
             values="percent_full",
             aggfunc="mean"
         )
+
+        heat = heat.reindex([d for d in DAY_ORDER if d in heat.index])
 
         plt.figure()
         plt.imshow(heat, aspect="auto")
