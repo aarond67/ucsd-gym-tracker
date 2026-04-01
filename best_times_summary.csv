@@ -1,23 +1,29 @@
 facility_name,day_of_week,hour,avg_percent
+Triton Esports Center,Wednesday,8,9.0
+Triton Esports Center,Wednesday,9,12.0
 Triton Esports Center,Tuesday,9,15.0
 Main Gym Fitness Gym,Tuesday,9,19.0
+Main Gym Fitness Gym,Wednesday,8,25.0
 Triton Esports Center,Tuesday,10,28.0
 Main Gym Fitness Gym,Wednesday,7,32.0
+Main Gym Fitness Gym,Wednesday,9,33.0
 RIMAC Fitness Gym,Wednesday,7,33.0
 Main Gym Fitness Gym,Tuesday,14,34.0
 Main Gym Fitness Gym,Tuesday,18,37.0
 Main Gym Fitness Gym,Tuesday,10,39.0
+RIMAC Fitness Gym,Wednesday,8,41.0
 Triton Esports Center,Tuesday,21,43.0
 Outback Climbing Center,Tuesday,10,43.0
-Main Gym Fitness Gym,Tuesday,21,44.0
 Main Gym Fitness Gym,Tuesday,15,44.0
-Triton Esports Center,Tuesday,11,45.0
+Main Gym Fitness Gym,Tuesday,21,44.0
 Triton Esports Center,Tuesday,12,45.0
 Main Gym Fitness Gym,Tuesday,12,45.0
+Triton Esports Center,Tuesday,11,45.0
 Main Gym Fitness Gym,Tuesday,16,47.0
 Main Gym Fitness Gym,Tuesday,11,48.0
 RIMAC Fitness Gym,Tuesday,12,51.0
 Main Gym Fitness Gym,Tuesday,13,52.5
+RIMAC Fitness Gym,Wednesday,9,53.0
 RIMAC Fitness Gym,Tuesday,9,53.0
 Triton Esports Center,Tuesday,13,53.5
 Triton Esports Center,Tuesday,18,55.0
@@ -29,14 +35,14 @@ RIMAC Fitness Gym,Tuesday,11,63.0
 RIMAC Fitness Gym,Tuesday,10,64.0
 RIMAC Fitness Gym,Tuesday,15,69.5
 Triton Esports Center,Tuesday,16,71.5
-Outback Climbing Center,Tuesday,11,74.0
 RIMAC Fitness Gym,Tuesday,14,74.0
+Outback Climbing Center,Tuesday,11,74.0
 Triton Esports Center,Tuesday,15,74.5
 RIMAC Fitness Gym,Tuesday,18,75.0
 Outback Climbing Center,Tuesday,13,87.0
 RIMAC Fitness Gym,Tuesday,16,87.0
+Outback Climbing Center,Tuesday,16,99.0
 Outback Climbing Center,Tuesday,14,99.0
 Outback Climbing Center,Tuesday,18,99.0
-Outback Climbing Center,Tuesday,16,99.0
 Outback Climbing Center,Tuesday,15,99.0
 Outback Climbing Center,Tuesday,21,99.0
