@@ -1,8 +1,9 @@
 facility_name,day,hour,avg_percent
+RIMAC Fitness Gym,Friday,11,0.0
 Triton Esports Center,Friday,7,0.0
 Triton Esports Center,Friday,8,0.0
 Triton Esports Center,Thursday,8,2.0
-Triton Esports Center,Friday,9,3.0
+Triton Esports Center,Friday,9,2.0
 Main Gym Fitness Gym,Thursday,7,4.0
 Main Gym Fitness Gym,Friday,7,7.0
 Main Gym Fitness Gym,Friday,8,7.0
@@ -16,19 +17,22 @@ Triton Esports Center,Tuesday,9,15.0
 Main Gym Fitness Gym,Tuesday,9,19.0
 Main Gym Fitness Gym,Thursday,22,19.0
 Triton Esports Center,Thursday,10,20.0
+Main Gym Fitness Gym,Friday,11,22.0
 Main Gym Fitness Gym,Wednesday,8,25.0
 Main Gym Fitness Gym,Thursday,6,25.0
 RIMAC Fitness Gym,Thursday,6,25.0
 RIMAC Fitness Gym,Friday,6,26.0
 Triton Esports Center,Wednesday,10,26.0
 Main Gym Fitness Gym,Friday,6,27.0
-Main Gym Fitness Gym,Friday,9,27.0
 Triton Esports Center,Thursday,11,27.0
+Triton Esports Center,Friday,10,27.0
 Main Gym Fitness Gym,Thursday,9,28.0
+Main Gym Fitness Gym,Friday,10,28.0
 Triton Esports Center,Tuesday,10,28.0
 Main Gym Fitness Gym,Thursday,20,29.0
 RIMAC Fitness Gym,Thursday,7,29.0
 Main Gym Fitness Gym,Wednesday,17,30.0
+Main Gym Fitness Gym,Friday,9,30.5
 Main Gym Fitness Gym,Wednesday,7,32.0
 Main Gym Fitness Gym,Wednesday,9,33.0
 RIMAC Fitness Gym,Wednesday,7,33.0
@@ -37,6 +41,7 @@ Main Gym Fitness Gym,Wednesday,11,34.0
 RIMAC Fitness Gym,Friday,7,35.0
 Main Gym Fitness Gym,Tuesday,18,37.0
 Main Gym Fitness Gym,Thursday,10,37.0
+Triton Esports Center,Friday,11,37.0
 Main Gym Fitness Gym,Tuesday,10,39.0
 Main Gym Fitness Gym,Thursday,13,40.0
 RIMAC Fitness Gym,Wednesday,8,41.0
@@ -81,6 +86,7 @@ Triton Esports Center,Tuesday,14,57.0
 Triton Esports Center,Wednesday,17,57.0
 Outback Climbing Center,Tuesday,12,59.0
 RIMAC Fitness Gym,Wednesday,13,59.0
+RIMAC Fitness Gym,Friday,10,59.0
 RIMAC Fitness Gym,Wednesday,11,60.0
 RIMAC Fitness Gym,Wednesday,21,60.0
 RIMAC Fitness Gym,Tuesday,21,61.0
@@ -148,3 +154,5 @@ Outback Climbing Center,Thursday,15,99.0
 Outback Climbing Center,Thursday,16,99.0
 Outback Climbing Center,Thursday,17,99.0
 Outback Climbing Center,Thursday,20,99.0
+Outback Climbing Center,Friday,10,99.0
+Outback Climbing Center,Friday,11,99.0
