@@ -5,6 +5,7 @@ from zoneinfo import ZoneInfo
 
 INPUT_FILE = "ucsd_occupancy_history.csv"
 TIMEZONE = ZoneInfo("America/Los_Angeles")
+MIN_SAMPLES_PER_SLOT = 3
 
 DAY_ORDER = [
     "Monday",
@@ -29,6 +30,8 @@ def load_data():
     df["percent_full"] = pd.to_numeric(df["percent_full"], errors="coerce")
     df = df.dropna(subset=["percent_full", "facility_name", "time", "day_of_week", "status"])
 
+    df["facility_name"] = df["facility_name"].astype(str).str.strip()
+    df["day_of_week"] = df["day_of_week"].astype(str).str.strip()
     df["time"] = df["time"].astype(str).str.strip()
     df["status"] = df["status"].astype(str).str.strip()
     df["raw_text"] = df["raw_text"].fillna("").astype(str).str.strip()
@@ -41,36 +44,50 @@ def load_data():
 
 
 def filter_good_rows(df):
-    # Keep only open rows
     if "is_open" in df.columns:
         df = df[df["is_open"].astype(str).str.lower() == "true"]
     else:
         df = df[df["status"].str.lower() != "closed"]
 
-    # Remove impossible / bad values
     df = df[(df["percent_full"] >= 0) & (df["percent_full"] <= 100)]
 
-    # Remove data-unavailable rows that come through as fake 0%
     bad_raw = df["raw_text"].str.lower().str.contains("data unavailable", na=False)
     df = df[~bad_raw]
 
-    # Remove suspicious 0% rows for facilities that are "open"
-    # These have been skewing Triton/RIMAC best-time results.
+    # Remove suspicious open 0% rows that skew "best times"
     df = df[df["percent_full"] > 0]
 
     return df
 
 
+def confidence_label(count: int) -> str:
+    if count >= 10:
+        return "High"
+    if count >= 5:
+        return "Medium"
+    return "Low"
+
+
 def compute_best_times(df):
     grouped = (
-        df.groupby(["facility_name", "day_of_week", "hour"])["percent_full"]
-        .mean()
+        df.groupby(["facility_name", "day_of_week", "hour"])
+        .agg(
+            avg_percent=("percent_full", "mean"),
+            sample_count=("percent_full", "count"),
+        )
         .reset_index()
-        .rename(columns={"percent_full": "avg_percent", "day_of_week": "day"})
+        .rename(columns={"day_of_week": "day"})
     )
 
+    grouped = grouped[grouped["sample_count"] >= MIN_SAMPLES_PER_SLOT].copy()
+
+    grouped["confidence"] = grouped["sample_count"].apply(confidence_label)
     grouped["day"] = pd.Categorical(grouped["day"], categories=DAY_ORDER, ordered=True)
-    grouped = grouped.sort_values(["avg_percent", "facility_name", "day", "hour"]).reset_index(drop=True)
+
+    grouped = grouped.sort_values(
+        ["avg_percent", "sample_count", "facility_name", "day", "hour"],
+        ascending=[True, False, True, True, True]
+    ).reset_index(drop=True)
 
     return grouped
 
@@ -87,7 +104,9 @@ def save_best_today(grouped):
             f.write(f"No usable occupancy data available yet for {today_name}.")
         return
 
-    today_df = grouped[grouped["day"] == today_name].sort_values("avg_percent")
+    today_df = grouped[grouped["day"] == today_name].sort_values(
+        ["avg_percent", "sample_count"], ascending=[True, False]
+    )
 
     if today_df.empty:
         with open("best_time_today.txt", "w", encoding="utf-8") as f:
@@ -100,7 +119,9 @@ def save_best_today(grouped):
         f.write(
             f"Best time today for {best['facility_name']}:\n"
             f"{today_name} at {int(best['hour']):02d}:00\n"
-            f"Avg occupancy: {best['avg_percent']:.1f}%"
+            f"Avg occupancy: {best['avg_percent']:.1f}%\n"
+            f"Samples: {int(best['sample_count'])}\n"
+            f"Confidence: {best['confidence']}"
         )
 
 
@@ -110,10 +131,18 @@ def generate_charts(df):
     for facility in facilities:
         sub = df[df["facility_name"] == facility].copy()
 
-        hourly = sub.groupby("hour")["percent_full"].mean().sort_index()
+        hourly = (
+            sub.groupby("hour")
+            .agg(
+                avg_percent=("percent_full", "mean"),
+                sample_count=("percent_full", "count"),
+            )
+            .reset_index()
+        )
 
         plt.figure(figsize=(8, 4.5))
-        hourly.plot(title=f"{facility} Hourly Occupancy")
+        plt.plot(hourly["hour"], hourly["avg_percent"])
+        plt.title(f"{facility} Hourly Occupancy")
         plt.ylabel("Percent Full")
         plt.xlabel("Hour")
         plt.tight_layout()
