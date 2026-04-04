@@ -1,10 +1,4 @@
 facility_name,day,hour,avg_percent
-RIMAC Fitness Gym,Friday,11,0.0
-Triton Esports Center,Friday,7,0.0
-Triton Esports Center,Friday,8,0.0
-Triton Esports Center,Friday,18,0.0
-Triton Esports Center,Friday,21,0.0
-Triton Esports Center,Saturday,11,0.0
 Triton Esports Center,Saturday,12,1.0
 Triton Esports Center,Thursday,8,2.0
 Triton Esports Center,Friday,9,2.0
@@ -14,14 +8,12 @@ Main Gym Fitness Gym,Friday,8,7.0
 Triton Esports Center,Wednesday,8,9.0
 Triton Esports Center,Thursday,7,11.0
 Triton Esports Center,Wednesday,9,12.0
-Triton Esports Center,Friday,16,12.5
 RIMAC Fitness Gym,Wednesday,22,14.0
 Triton Esports Center,Thursday,9,14.0
 Main Gym Fitness Gym,Thursday,8,15.0
 Triton Esports Center,Tuesday,9,15.0
 Main Gym Fitness Gym,Saturday,10,15.5
 Main Gym Fitness Gym,Friday,21,17.0
-Triton Esports Center,Saturday,13,17.0
 Main Gym Fitness Gym,Friday,13,18.0
 Main Gym Fitness Gym,Saturday,12,18.0
 Main Gym Fitness Gym,Tuesday,9,19.0
@@ -29,17 +21,19 @@ Main Gym Fitness Gym,Thursday,22,19.0
 Main Gym Fitness Gym,Friday,18,19.0
 Triton Esports Center,Thursday,10,20.0
 Main Gym Fitness Gym,Friday,15,21.0
+Triton Esports Center,Saturday,13,21.5
 Main Gym Fitness Gym,Friday,11,22.0
 Main Gym Fitness Gym,Saturday,8,22.0
 Main Gym Fitness Gym,Saturday,9,23.0
 RIMAC Fitness Gym,Friday,22,24.0
+Main Gym Fitness Gym,Saturday,13,24.5
 Main Gym Fitness Gym,Wednesday,8,25.0
 Main Gym Fitness Gym,Thursday,6,25.0
 RIMAC Fitness Gym,Thursday,6,25.0
+Triton Esports Center,Friday,16,25.0
 RIMAC Fitness Gym,Friday,6,26.0
 Triton Esports Center,Wednesday,10,26.0
 Main Gym Fitness Gym,Friday,6,27.0
-Main Gym Fitness Gym,Saturday,13,27.0
 Triton Esports Center,Thursday,11,27.0
 Triton Esports Center,Friday,10,27.0
 Main Gym Fitness Gym,Thursday,9,28.0
@@ -78,6 +72,7 @@ Main Gym Fitness Gym,Saturday,11,44.0
 Triton Esports Center,Wednesday,13,44.0
 Triton Esports Center,Wednesday,21,44.0
 Main Gym Fitness Gym,Wednesday,16,44.5
+RIMAC Fitness Gym,Saturday,13,44.5
 Main Gym Fitness Gym,Tuesday,12,45.0
 Triton Esports Center,Tuesday,11,45.0
 Triton Esports Center,Tuesday,12,45.0
@@ -92,7 +87,6 @@ Main Gym Fitness Gym,Wednesday,15,48.0
 Triton Esports Center,Friday,12,48.5
 RIMAC Fitness Gym,Wednesday,10,49.0
 RIMAC Fitness Gym,Friday,8,49.0
-RIMAC Fitness Gym,Saturday,13,49.0
 RIMAC Fitness Gym,Thursday,9,50.0
 RIMAC Fitness Gym,Tuesday,12,51.0
 Triton Esports Center,Wednesday,18,51.0
