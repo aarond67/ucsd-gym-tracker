@@ -1,54 +1,13 @@
 name: Gym Scraper
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
-concurrency:
-  group: gym-scraper
-  cancel-in-progress: false
-
 jobs:
   scrape:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: |
-          pip install requests tzdata
-
-      - name: Run scraper
-        env:
-          PYTHONUNBUFFERED: "1"
-        run: python ucsd_gym_occupancy_scraper.py
-
-      - name: Commit updated CSV if present
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          if [ -f ucsd_occupancy_history.csv ]; then
-            git add ucsd_occupancy_history.csv
-
-            if git diff --cached --quiet; then
-              echo "No CSV changes to commit."
-            else
-              git commit -m "update occupancy data"
-              git pull --rebase origin main
-              git push origin main
-            fi
-          else
-            echo "No CSV present, skipping commit."
-          fi
+      - run: echo "Local scheduler handles scraping now."

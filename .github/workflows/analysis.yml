@@ -1,67 +1,13 @@
 name: Gym Analysis
 
 on:
-  schedule:
-    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
-concurrency:
-  group: gym-analysis
-  cancel-in-progress: false
-
 jobs:
   analyze:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: |
-          pip install pandas matplotlib tzdata
-
-      - name: Run analysis if CSV exists
-        env:
-          PYTHONUNBUFFERED: "1"
-        run: |
-          if [ -f ucsd_occupancy_history.csv ]; then
-            python best_times_analysis.py
-          else
-            echo "No occupancy CSV present, skipping analysis."
-          fi
-
-      - name: Commit updated analysis files if present
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          files_to_add=()
-
-          [ -f best_times_summary.csv ] && files_to_add+=("best_times_summary.csv")
-          [ -f best_time_today.txt ] && files_to_add+=("best_time_today.txt")
-
-          for file in *_hourly.png *_heatmap.png; do
-            [ -e "$file" ] && files_to_add+=("$file")
-          done
-
-          if [ ${#files_to_add[@]} -gt 0 ]; then
-            git add "${files_to_add[@]}"
-            if git diff --cached --quiet; then
-              echo "No changes to commit."
-            else
-              git commit -m "update analysis graphs"
-              git pull --rebase origin main
-              git push origin main
-            fi
-          else
-            echo "No analysis files present, skipping commit."
-          fi
+      - run: echo "Local scheduler handles analysis now."
