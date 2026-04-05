@@ -1,5 +1,5 @@
 Best time today for Main Gym Fitness Gym:
 Saturday at 18:00
-Avg occupancy: 11.3%
-Samples: 3
-Confidence: Low
+Avg occupancy: 10.2%
+Samples: 5
+Confidence: Medium
