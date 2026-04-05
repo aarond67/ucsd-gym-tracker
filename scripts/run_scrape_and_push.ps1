@@ -52,6 +52,7 @@ try {
 
     Write-Log "Pushing to GitHub..."
     git push origin $Branch
+    if ($LASTEXITCODE -ne 0) { throw "command failed" }
 
     Write-Log "Scrape + push complete."
 }
