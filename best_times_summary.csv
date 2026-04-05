@@ -1,5 +1,6 @@
 facility_name,day,hour,avg_percent,sample_count,confidence
 Main Gym Fitness Gym,Saturday,18,12.125,8,Medium
+Main Gym Fitness Gym,Sunday,10,14.25,4,Low
 Main Gym Fitness Gym,Saturday,14,18.5,4,Low
 Main Gym Fitness Gym,Saturday,19,20.5,4,Low
 Main Gym Fitness Gym,Saturday,20,20.5,4,Low
@@ -10,6 +11,7 @@ Triton Esports Center,Saturday,21,27.25,4,Low
 RIMAC Fitness Gym,Saturday,22,29.25,4,Low
 Triton Esports Center,Saturday,19,31.25,4,Low
 Triton Esports Center,Saturday,18,31.625,8,Medium
+RIMAC Fitness Gym,Sunday,10,36.0,4,Low
 Triton Esports Center,Saturday,20,38.0,4,Low
 RIMAC Fitness Gym,Saturday,14,39.5,4,Low
 RIMAC Fitness Gym,Saturday,19,42.0,4,Low
