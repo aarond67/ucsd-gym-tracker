@@ -1,1 +1,5 @@
-No usable occupancy data available yet for Monday.
+Best time today for Main Gym Fitness Gym:
+Monday at 06:00
+Avg occupancy: 9.5%
+Samples: 4
+Confidence: Low
