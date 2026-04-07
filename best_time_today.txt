@@ -1,5 +1,2 @@
-Best time today for Triton Esports Center:
-Tuesday at 08:00
-Avg occupancy: 4.3%
-Samples: 3
-Confidence: Low
+Main Gym Fitness Gym: 18:00 for 90 min (~27.6% avg, ~46.2% peak, all_days, Medium confidence)
+RIMAC Fitness Gym: 22:00 for 90 min (~45.8% avg, ~76.2% peak, all_days, Low confidence)
