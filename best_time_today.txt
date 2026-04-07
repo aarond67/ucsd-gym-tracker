@@ -1,5 +1,5 @@
-Best time today for Main Gym Fitness Gym:
-Tuesday at 06:00
-Avg occupancy: 10.0%
-Samples: 4
+Best time today for Triton Esports Center:
+Tuesday at 08:00
+Avg occupancy: 4.3%
+Samples: 3
 Confidence: Low

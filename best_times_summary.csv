@@ -1,5 +1,6 @@
 facility_name,day,hour,avg_percent,sample_count,confidence
 Triton Esports Center,Monday,9,3.5,4,Low
+Triton Esports Center,Tuesday,8,4.333333333333333,3,Low
 Main Gym Fitness Gym,Monday,6,9.5,4,Low
 Triton Esports Center,Sunday,13,9.5,4,Low
 Main Gym Fitness Gym,Tuesday,6,10.0,4,Low
@@ -36,6 +37,7 @@ Main Gym Fitness Gym,Monday,10,27.0,4,Low
 RIMAC Fitness Gym,Sunday,12,27.0,4,Low
 Triton Esports Center,Saturday,21,27.25,4,Low
 Triton Esports Center,Sunday,15,27.5,4,Low
+Main Gym Fitness Gym,Tuesday,8,28.75,4,Low
 RIMAC Fitness Gym,Saturday,22,29.25,4,Low
 Triton Esports Center,Sunday,18,30.0,4,Low
 Triton Esports Center,Sunday,19,30.5,4,Low
@@ -79,6 +81,7 @@ Main Gym Fitness Gym,Monday,19,50.75,4,Low
 Main Gym Fitness Gym,Monday,16,52.25,4,Low
 Triton Esports Center,Monday,13,52.25,4,Low
 Main Gym Fitness Gym,Monday,17,52.5,4,Low
+RIMAC Fitness Gym,Tuesday,8,53.5,4,Low
 RIMAC Fitness Gym,Sunday,19,53.5,4,Low
 Triton Esports Center,Monday,18,53.5,4,Low
 Triton Esports Center,Monday,12,54.666666666666664,3,Low
