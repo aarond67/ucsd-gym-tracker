@@ -1,161 +1,309 @@
 #!/usr/bin/env python3
 """
-Fetch UCSD gym occupancy directly from the Waitz API and append results to CSV.
+Scrape UCSD Recreation facility occupancy levels from:
+https://recreation.ucsd.edu/facilities/
+
+Safer local/task-scheduler version:
+- hard timeouts
+- logs useful errors
+- exits nonzero on failure
+- never waits for user input
 """
 
 from __future__ import annotations
 
 import csv
+import re
+import sys
+import traceback
 from datetime import datetime
 from pathlib import Path
+from typing import Dict, List, Optional
 from zoneinfo import ZoneInfo
 
-import requests
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import sync_playwright
 
-URL = "https://waitz.io/live/ucsd-rec"
+URL = "https://recreation.ucsd.edu/facilities/"
 OUTPUT_CSV = Path(__file__).with_name("ucsd_occupancy_history.csv")
-TIMEZONE = ZoneInfo("America/Los_Angeles")
-
-FIELDNAMES = [
-    "timestamp",
-    "day_of_week",
-    "date",
-    "time",
-    "facility_name",
-    "status",
-    "percent_full",
-    "raw_text",
-    "people",
-    "capacity",
-    "is_open",
-    "hour_summary",
-]
+LOG_DIR = Path(__file__).with_name("logs")
+LOG_DIR.mkdir(exist_ok=True)
+LOG_FILE = LOG_DIR / f"scraper_{datetime.now(ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d')}.log"
 
 KNOWN_FACILITIES = {
-    "RIMAC Fitness Gym",
-    "Main Gym Fitness Gym",
-    "Outback Climbing Center",
-    "Triton Esports Center",
+    "rimac fitness gym",
+    "main gym fitness gym",
+    "outback climbing center",
+    "triton esports center",
 }
 
 
-def derive_status(busyness: int, is_open: bool) -> str:
-    if not is_open:
-        return "Closed"
-    if busyness >= 75:
-        return "Very Active"
-    if busyness >= 50:
-        return "Busy"
-    if busyness >= 25:
-        return "Active"
-    return "Not Busy"
+def log(message: str, *, error: bool = False) -> None:
+    now = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d %H:%M:%S")
+    line = f"[{now}] {message}"
+    print(line, file=sys.stderr if error else sys.stdout, flush=True)
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(line + "\n")
 
 
-def fetch_waitz_data() -> list[dict]:
-    response = requests.get(
-        URL,
-        timeout=20,
-        headers={
-            "User-Agent": "Mozilla/5.0",
-            "Accept": "application/json",
-        },
-    )
-    response.raise_for_status()
-
-    payload = response.json()
-    data = payload.get("data", [])
-
-    if not isinstance(data, list):
-        raise ValueError("Unexpected API response format")
-
-    return data
+def clean_text(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
 
 
-def build_rows(data: list[dict]) -> list[dict]:
-    now = datetime.now(TIMEZONE)
-    timestamp = now.isoformat(timespec="seconds")
+def normalize_facility_name(name: str) -> str:
+    name = clean_text(name)
+    name = re.sub(r"^Current Occupancy\s+", "", name, flags=re.IGNORECASE)
+    name = re.sub(r"\s*-\s*$", "", name)
+    return name.strip()
 
-    rows = []
 
-    for facility in data:
-        name = str(facility.get("name", "")).strip()
-        if name not in KNOWN_FACILITIES:
+def parse_card_text(card_text: str) -> Optional[Dict[str, object]]:
+    text = clean_text(card_text)
+
+    status = ""
+    for candidate in ["Available", "Busy", "Full", "Closed"]:
+        if re.search(rf"\b{candidate}\b", text, re.IGNORECASE):
+            status = candidate
+            break
+
+    percent_match = re.search(r"(\d+)\s*%\s*full", text, re.IGNORECASE)
+    percent_full = int(percent_match.group(1)) if percent_match else None
+
+    facility_name = ""
+    if status:
+        parts = re.split(rf"\s*-\s*{status}\b", text, flags=re.IGNORECASE)
+        if parts and parts[0].strip():
+            facility_name = parts[0].strip()
+
+    if not facility_name:
+        return None
+
+    facility_name = normalize_facility_name(facility_name)
+    facility_key = facility_name.lower()
+
+    return {
+        "facility_name": facility_name,
+        "facility_key": facility_key,
+        "status": status or "Unknown",
+        "percent_full": percent_full if percent_full is not None else 0,
+        "raw_text": text,
+    }
+
+
+def extract_candidate_blocks(page) -> List[str]:
+    selectors = [
+        "div:has-text('Closed')",
+        "section:has-text('Closed')",
+        "article:has-text('Closed')",
+        "li:has-text('Closed')",
+        "*:has-text('Closed')",
+        "div:has-text('% full')",
+        "section:has-text('% full')",
+        "article:has-text('% full')",
+        "li:has-text('% full')",
+        "*:has-text('% full')",
+    ]
+
+    raw_blocks: List[str] = []
+
+    for selector in selectors:
+        locator = page.locator(selector)
+        try:
+            count = locator.count()
+        except Exception:
             continue
 
-        is_open = bool(facility.get("isOpen", False))
-        busyness = int(facility.get("busyness", 0) or 0)
-        people = int(facility.get("people", 0) or 0)
-        capacity = int(facility.get("capacity", 0) or 0)
-        hour_summary = str(facility.get("hourSummary", "") or "").strip()
+        for i in range(count):
+            try:
+                txt = clean_text(locator.nth(i).inner_text(timeout=1000))
+            except Exception:
+                continue
 
-        loc_html = facility.get("locHtml", {}) or {}
-        raw_text = str(loc_html.get("summary", "") or "").strip()
+            has_percent = "% full" in txt
+            has_closed = "closed" in txt.lower()
 
-        if not raw_text:
-            raw_text = f"{name} - {busyness}% full"
+            if not has_percent and not has_closed:
+                continue
 
-        rows.append(
-            {
-                "timestamp": timestamp,
-                "day_of_week": now.strftime("%A"),
-                "date": now.strftime("%Y-%m-%d"),
-                "time": now.strftime("%H:%M:%S"),
-                "facility_name": name,
-                "status": derive_status(busyness, is_open),
-                "percent_full": busyness,
-                "raw_text": raw_text,
-                "people": people,
-                "capacity": capacity,
-                "is_open": is_open,
-                "hour_summary": hour_summary,
-            }
+            if 8 <= len(txt) <= 220:
+                raw_blocks.append(txt)
+
+    seen = set()
+    unique: List[str] = []
+    for block in raw_blocks:
+        if block not in seen:
+            seen.add(block)
+            unique.append(block)
+
+    return unique
+
+
+def score_row(row: Dict[str, object]) -> tuple:
+    raw = str(row["raw_text"])
+    status = str(row["status"])
+    name = str(row["facility_name"]).lower()
+
+    return (
+        1 if name in KNOWN_FACILITIES else 0,
+        1 if status != "Unknown" else 0,
+        0 if "Current Occupancy" in raw else 1,
+        -len(raw),
+    )
+
+
+def choose_best_rows(rows: List[Dict[str, object]]) -> List[Dict[str, object]]:
+    best_by_facility: Dict[str, Dict[str, object]] = {}
+
+    for row in rows:
+        key = str(row["facility_key"])
+        if key not in best_by_facility or score_row(row) > score_row(best_by_facility[key]):
+            best_by_facility[key] = row
+
+    chosen = list(best_by_facility.values())
+
+    known = [r for r in chosen if str(r["facility_key"]) in KNOWN_FACILITIES]
+    if known:
+        chosen = known
+
+    return sorted(chosen, key=lambda r: str(r["facility_name"]).lower())
+
+
+def scrape_once() -> List[Dict[str, object]]:
+    now = datetime.now(ZoneInfo("America/Los_Angeles"))
+    browser = None
+
+    with sync_playwright() as p:
+        try:
+            browser = p.chromium.launch(
+                headless=True,
+                args=[
+                    "--disable-dev-shm-usage",
+                    "--no-sandbox",
+                ],
+            )
+            page = browser.new_page(viewport={"width": 1440, "height": 2400})
+            page.set_default_timeout(15000)
+            page.set_default_navigation_timeout(30000)
+
+            log(f"Opening {URL}")
+            page.goto(URL, wait_until="domcontentloaded", timeout=30000)
+
+            page.wait_for_timeout(4000)
+
+            page.evaluate("window.scrollTo(0, document.body.scrollHeight * 0.35)")
+            page.wait_for_timeout(1500)
+            page.evaluate("window.scrollTo(0, document.body.scrollHeight * 0.7)")
+            page.wait_for_timeout(1500)
+            page.evaluate("window.scrollTo(0, 0)")
+            page.wait_for_timeout(1500)
+
+            parsed_rows: List[Dict[str, object]] = []
+
+            for attempt in range(1, 5):
+                log(f"Parsing attempt {attempt}/4")
+                candidate_blocks = extract_candidate_blocks(page)
+                log(f"Candidate blocks found: {len(candidate_blocks)}")
+
+                parsed_rows = []
+                for block in candidate_blocks:
+                    parsed = parse_card_text(block)
+                    if parsed:
+                        parsed_rows.append(parsed)
+
+                chosen = choose_best_rows(parsed_rows)
+                found_known = {str(r["facility_key"]) for r in chosen} & KNOWN_FACILITIES
+                log(f"Known facilities found this attempt: {sorted(found_known)}")
+
+                if len(found_known) >= 2:
+                    parsed_rows = chosen
+                    break
+
+                page.wait_for_timeout(2500)
+
+            final_rows = choose_best_rows(parsed_rows)
+
+            if not final_rows:
+                return []
+
+            rows: List[Dict[str, object]] = []
+            for row in final_rows:
+                rows.append(
+                    {
+                        "timestamp": now.isoformat(timespec="seconds"),
+                        "day_of_week": now.strftime("%A"),
+                        "date": now.strftime("%Y-%m-%d"),
+                        "time": now.strftime("%H:%M:%S"),
+                        "facility_name": row["facility_name"],
+                        "status": row["status"],
+                        "percent_full": row["percent_full"],
+                        "raw_text": row["raw_text"],
+                    }
+                )
+
+            return rows
+
+        except PlaywrightTimeoutError as e:
+            log(f"PLAYWRIGHT TIMEOUT: {e}", error=True)
+            raise
+        finally:
+            if browser is not None:
+                try:
+                    browser.close()
+                except Exception:
+                    pass
+
+
+def append_rows_to_csv(rows: List[Dict[str, object]]) -> None:
+    file_exists = OUTPUT_CSV.exists()
+
+    with open(OUTPUT_CSV, "a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=[
+                "timestamp",
+                "day_of_week",
+                "date",
+                "time",
+                "facility_name",
+                "status",
+                "percent_full",
+                "raw_text",
+            ],
         )
 
-    return sorted(rows, key=lambda r: r["facility_name"])
-
-
-def append_rows(rows: list[dict]) -> None:
-    expected_header = ",".join(FIELDNAMES)
-    needs_reset = True
-
-    if OUTPUT_CSV.exists() and OUTPUT_CSV.stat().st_size > 0:
-        with OUTPUT_CSV.open("r", encoding="utf-8") as f:
-            first_line = f.readline().strip()
-            if first_line == expected_header:
-                needs_reset = False
-
-    mode = "w" if needs_reset else "a"
-
-    with OUTPUT_CSV.open(mode, newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
-
-        if needs_reset:
+        if not file_exists:
             writer.writeheader()
-            print("Reset CSV with correct header")
 
-        writer.writerows(rows)
+        for row in rows:
+            writer.writerow(row)
 
 
-def main():
+def main() -> int:
     try:
-        data = fetch_waitz_data()
-        rows = build_rows(data)
+        log("=== SCRAPE START ===")
+        rows = scrape_once()
 
         if not rows:
-            print("No data found")
-            return
+            log("No occupancy data found. Failing this run so Task Scheduler can show an error.", error=True)
+            return 1
 
-        found = {r["facility_name"] for r in rows}
-        missing = KNOWN_FACILITIES - found
-        if missing:
-            print("Warning: missing facilities:", missing)
+        append_rows_to_csv(rows)
 
-        append_rows(rows)
-        print(f"Wrote {len(rows)} rows")
+        log(f"Saved {len(rows)} rows to {OUTPUT_CSV.name}")
+        for row in rows:
+            log(f"{row['facility_name']}: {row['percent_full']}% ({row['status']})")
+
+        log("=== SCRAPE END OK ===")
+        return 0
 
     except Exception as e:
-        print("Error:", e)
+        log(f"SCRAPER ERROR: {e}", error=True)
+        tb = traceback.format_exc()
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(tb + "\n")
+        print(tb, file=sys.stderr, flush=True)
+        return 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
