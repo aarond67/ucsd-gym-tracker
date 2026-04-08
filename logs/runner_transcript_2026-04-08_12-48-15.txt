@@ -1,0 +1,44 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260408124815
+Username: DESKTOP-B65DT82\pisce
+RunAs User: DESKTOP-B65DT82\pisce
+Configuration Name: 
+Machine: DESKTOP-B65DT82 (Microsoft Windows NT 10.0.26200.0)
+Host Application: powershell.exe -NoProfile -ExecutionPolicy Bypass -Command & {
+    $repo = 'C:\Users\pisce\OneDrive\Documents\Aaron''s Gym Scraper\ucsd-gym-tracker'
+    $log = Join-Path $repo 'gym_log.txt'
+    $script = Join-Path $repo 'scripts\run_scrape_and_push.ps1'
+
+    $start = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
+    Add-Content -Path $log -Value "`n===== RUN START $start ====="
+
+    & $script -RepoPath $repo -PythonExe 'C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe' -Branch 'main' *>> $log
+
+    $exitCode = $LASTEXITCODE
+    $end = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
+
+    Add-Content -Path $log -Value "===== RUN END $end (Exit $exitCode) ====="
+
+    if ($exitCode -ne 0) { exit $exitCode }
+}
+Process ID: 48504
+PSVersion: 5.1.26100.8115
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8115
+BuildVersion: 10.0.26100.8115
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+[2026-04-08 12:48:15] ===== RUN START =====
+[2026-04-08 12:48:15] RepoPath: C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker
+[2026-04-08 12:48:15] PythonExe: C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe
+[2026-04-08 12:48:15] Working directory set to C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker
+[2026-04-08 12:48:15] PowerShell version: 5.1.26100.8115
+PS>TerminatingError(run_scrape_and_push.ps1): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: The term 'C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again."
+**********************
+Windows PowerShell transcript end
+End time: 20260408124816
+**********************

@@ -1,0 +1,45 @@
+[2026-04-08 12:44:38] ===== RUN START =====
+[2026-04-08 12:44:38] RepoPath: C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker
+[2026-04-08 12:44:38] PythonExe: C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe
+[2026-04-08 12:44:38] Working directory set to C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker
+[2026-04-08 12:44:38] PowerShell version: 5.1.26100.8115
+& : The term 'C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe' is not recognized as the name of a 
+cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify 
+that the path is correct and try again.
+At C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker\scripts\run_scrape_and_push.ps1:61 char:7
++     & $PythonExe --version *>> $LogFile
++       ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\pisce\...n311\python.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+
+[2026-04-08 12:45:01] ===== RUN START =====
+[2026-04-08 12:45:01] RepoPath: C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker
+[2026-04-08 12:45:01] PythonExe: C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe
+[2026-04-08 12:45:01] Working directory set to C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker
+[2026-04-08 12:45:01] PowerShell version: 5.1.26100.8115
+& : The term 'C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe' is not recognized as the name of a 
+cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify 
+that the path is correct and try again.
+At C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker\scripts\run_scrape_and_push.ps1:61 char:7
++     & $PythonExe --version *>> $LogFile
++       ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\pisce\...n311\python.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+
+[2026-04-08 12:48:15] ===== RUN START =====
+[2026-04-08 12:48:15] RepoPath: C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker
+[2026-04-08 12:48:15] PythonExe: C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe
+[2026-04-08 12:48:15] Working directory set to C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker
+[2026-04-08 12:48:15] PowerShell version: 5.1.26100.8115
+& : The term 'C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe' is not recognized as the name of a 
+cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify 
+that the path is correct and try again.
+At C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker\scripts\run_scrape_and_push.ps1:61 char:7
++     & $PythonExe --version *>> $LogFile
++       ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\pisce\...n311\python.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+
