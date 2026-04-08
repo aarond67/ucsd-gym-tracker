@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Scrape UCSD Recreation facility occupancy levels from:
-https://recreation.ucsd.edu/facilities/
+Fetch UCSD Recreation occupancy data from Waitz JSON endpoint:
+https://waitz.io/live/ucsd-rec
 
 Safer local/task-scheduler version:
-- hard timeouts
+- no Playwright
+- reads structured JSON directly
 - logs useful errors
 - exits nonzero on failure
 - never waits for user input
@@ -13,28 +14,26 @@ Safer local/task-scheduler version:
 from __future__ import annotations
 
 import csv
-import re
 import sys
 import traceback
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List
 from zoneinfo import ZoneInfo
 
-from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
-from playwright.sync_api import sync_playwright
+import requests
 
-URL = "https://recreation.ucsd.edu/facilities/"
+URL = "https://waitz.io/live/ucsd-rec"
 OUTPUT_CSV = Path(__file__).with_name("ucsd_occupancy_history.csv")
 LOG_DIR = Path(__file__).with_name("logs")
 LOG_DIR.mkdir(exist_ok=True)
 LOG_FILE = LOG_DIR / f"scraper_{datetime.now(ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d')}.log"
 
 KNOWN_FACILITIES = {
-    "rimac fitness gym",
-    "main gym fitness gym",
-    "outback climbing center",
-    "triton esports center",
+    "RIMAC Fitness Gym",
+    "Main Gym Fitness Gym",
+    "Outback Climbing Center",
+    "Triton Esports Center",
 }
 
 
@@ -46,211 +45,102 @@ def log(message: str, *, error: bool = False) -> None:
         f.write(line + "\n")
 
 
-def clean_text(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip()
+def normalize_status(item: Dict[str, object]) -> str:
+    summary = str((item.get("locHtml") or {}).get("summary") or "").strip()
+
+    if summary:
+        if summary.startswith("Not Busy"):
+            return "Not Busy"
+        if summary.startswith("Active"):
+            return "Active"
+        if summary.startswith("Busy"):
+            return "Busy"
+        if summary.startswith("Very Busy"):
+            return "Very Active"
+        if summary.startswith("Data Unavailable"):
+            return "Data Unavailable"
+        if summary.startswith("Closed"):
+            return "Closed"
+
+    is_open = bool(item.get("isOpen", False))
+    is_available = bool(item.get("isAvailable", False))
+    percent = int(item.get("busyness", 0) or 0)
+
+    if not is_open:
+        return "Closed"
+    if not is_available:
+        return "Data Unavailable"
+    if percent >= 75:
+        return "Very Active"
+    if percent >= 50:
+        return "Busy"
+    if percent >= 25:
+        return "Active"
+    return "Not Busy"
 
 
-def normalize_facility_name(name: str) -> str:
-    name = clean_text(name)
-    name = re.sub(r"^Current Occupancy\s+", "", name, flags=re.IGNORECASE)
-    name = re.sub(r"\s*-\s*$", "", name)
-    return name.strip()
+def fetch_waitz_data() -> List[Dict[str, object]]:
+    log(f"Fetching {URL}")
+
+    response = requests.get(
+        URL,
+        timeout=20,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json,text/plain,*/*",
+        },
+    )
+    response.raise_for_status()
+
+    payload = response.json()
+    data = payload.get("data", [])
+
+    if not isinstance(data, list):
+        raise ValueError("Unexpected Waitz response shape: 'data' is not a list")
+
+    return data
 
 
-def parse_card_text(card_text: str) -> Optional[Dict[str, object]]:
-    text = clean_text(card_text)
+def build_rows(data: List[Dict[str, object]]) -> List[Dict[str, object]]:
+    now = datetime.now(ZoneInfo("America/Los_Angeles"))
+    rows: List[Dict[str, object]] = []
 
-    status = ""
-    for candidate in ["Available", "Busy", "Full", "Closed"]:
-        if re.search(rf"\b{candidate}\b", text, re.IGNORECASE):
-            status = candidate
-            break
-
-    percent_match = re.search(r"(\d+)\s*%\s*full", text, re.IGNORECASE)
-    percent_full = int(percent_match.group(1)) if percent_match else None
-
-    facility_name = ""
-    if status:
-        parts = re.split(rf"\s*-\s*{status}\b", text, flags=re.IGNORECASE)
-        if parts and parts[0].strip():
-            facility_name = parts[0].strip()
-
-    if not facility_name:
-        return None
-
-    facility_name = normalize_facility_name(facility_name)
-    facility_key = facility_name.lower()
-
-    return {
-        "facility_name": facility_name,
-        "facility_key": facility_key,
-        "status": status or "Unknown",
-        "percent_full": percent_full if percent_full is not None else 0,
-        "raw_text": text,
-    }
-
-
-def extract_candidate_blocks(page) -> List[str]:
-    selectors = [
-        "div:has-text('Closed')",
-        "section:has-text('Closed')",
-        "article:has-text('Closed')",
-        "li:has-text('Closed')",
-        "*:has-text('Closed')",
-        "div:has-text('% full')",
-        "section:has-text('% full')",
-        "article:has-text('% full')",
-        "li:has-text('% full')",
-        "*:has-text('% full')",
-    ]
-
-    raw_blocks: List[str] = []
-
-    for selector in selectors:
-        locator = page.locator(selector)
-        try:
-            count = locator.count()
-        except Exception:
+    for item in data:
+        name = str(item.get("name") or "").strip()
+        if name not in KNOWN_FACILITIES:
             continue
 
-        for i in range(count):
-            try:
-                txt = clean_text(locator.nth(i).inner_text(timeout=1000))
-            except Exception:
-                continue
+        percent_full = int(item.get("busyness", 0) or 0)
+        people = int(item.get("people", 0) or 0)
+        capacity = int(item.get("capacity", 0) or 0)
+        is_open = bool(item.get("isOpen", False))
+        hour_summary = str(item.get("hourSummary") or "").strip() or "unknown"
+        is_available = bool(item.get("isAvailable", False))
+        summary = str((item.get("locHtml") or {}).get("summary") or "").strip()
 
-            has_percent = "% full" in txt
-            has_closed = "closed" in txt.lower()
+        status = normalize_status(item)
+        raw_text = summary or status
 
-            if not has_percent and not has_closed:
-                continue
+        row = {
+            "timestamp": now.isoformat(timespec="seconds"),
+            "day_of_week": now.strftime("%A"),
+            "date": now.strftime("%Y-%m-%d"),
+            "time": now.strftime("%H:%M:%S"),
+            "facility_name": name,
+            "status": status,
+            "percent_full": percent_full,
+            "raw_text": raw_text,
+            "people": people,
+            "capacity": capacity,
+            "is_open": is_open,
+            "hour_summary": hour_summary,
+            "is_data_unavailable": (not is_available) and is_open,
+            "is_valid_predictor_row": is_open and is_available and 0 <= percent_full <= 100,
+        }
+        rows.append(row)
 
-            if 8 <= len(txt) <= 220:
-                raw_blocks.append(txt)
-
-    seen = set()
-    unique: List[str] = []
-    for block in raw_blocks:
-        if block not in seen:
-            seen.add(block)
-            unique.append(block)
-
-    return unique
-
-
-def score_row(row: Dict[str, object]) -> tuple:
-    raw = str(row["raw_text"])
-    status = str(row["status"])
-    name = str(row["facility_name"]).lower()
-
-    return (
-        1 if name in KNOWN_FACILITIES else 0,
-        1 if status != "Unknown" else 0,
-        0 if "Current Occupancy" in raw else 1,
-        -len(raw),
-    )
-
-
-def choose_best_rows(rows: List[Dict[str, object]]) -> List[Dict[str, object]]:
-    best_by_facility: Dict[str, Dict[str, object]] = {}
-
-    for row in rows:
-        key = str(row["facility_key"])
-        if key not in best_by_facility or score_row(row) > score_row(best_by_facility[key]):
-            best_by_facility[key] = row
-
-    chosen = list(best_by_facility.values())
-
-    known = [r for r in chosen if str(r["facility_key"]) in KNOWN_FACILITIES]
-    if known:
-        chosen = known
-
-    return sorted(chosen, key=lambda r: str(r["facility_name"]).lower())
-
-
-def scrape_once() -> List[Dict[str, object]]:
-    now = datetime.now(ZoneInfo("America/Los_Angeles"))
-    browser = None
-
-    with sync_playwright() as p:
-        try:
-            browser = p.chromium.launch(
-                headless=True,
-                args=[
-                    "--disable-dev-shm-usage",
-                    "--no-sandbox",
-                ],
-            )
-            page = browser.new_page(viewport={"width": 1440, "height": 2400})
-            page.set_default_timeout(15000)
-            page.set_default_navigation_timeout(30000)
-
-            log(f"Opening {URL}")
-            page.goto(URL, wait_until="domcontentloaded", timeout=30000)
-
-            page.wait_for_timeout(4000)
-
-            page.evaluate("window.scrollTo(0, document.body.scrollHeight * 0.35)")
-            page.wait_for_timeout(1500)
-            page.evaluate("window.scrollTo(0, document.body.scrollHeight * 0.7)")
-            page.wait_for_timeout(1500)
-            page.evaluate("window.scrollTo(0, 0)")
-            page.wait_for_timeout(1500)
-
-            parsed_rows: List[Dict[str, object]] = []
-
-            for attempt in range(1, 5):
-                log(f"Parsing attempt {attempt}/4")
-                candidate_blocks = extract_candidate_blocks(page)
-                log(f"Candidate blocks found: {len(candidate_blocks)}")
-
-                parsed_rows = []
-                for block in candidate_blocks:
-                    parsed = parse_card_text(block)
-                    if parsed:
-                        parsed_rows.append(parsed)
-
-                chosen = choose_best_rows(parsed_rows)
-                found_known = {str(r["facility_key"]) for r in chosen} & KNOWN_FACILITIES
-                log(f"Known facilities found this attempt: {sorted(found_known)}")
-
-                if len(found_known) >= 2:
-                    parsed_rows = chosen
-                    break
-
-                page.wait_for_timeout(2500)
-
-            final_rows = choose_best_rows(parsed_rows)
-
-            if not final_rows:
-                return []
-
-            rows: List[Dict[str, object]] = []
-            for row in final_rows:
-                rows.append(
-                    {
-                        "timestamp": now.isoformat(timespec="seconds"),
-                        "day_of_week": now.strftime("%A"),
-                        "date": now.strftime("%Y-%m-%d"),
-                        "time": now.strftime("%H:%M:%S"),
-                        "facility_name": row["facility_name"],
-                        "status": row["status"],
-                        "percent_full": row["percent_full"],
-                        "raw_text": row["raw_text"],
-                    }
-                )
-
-            return rows
-
-        except PlaywrightTimeoutError as e:
-            log(f"PLAYWRIGHT TIMEOUT: {e}", error=True)
-            raise
-        finally:
-            if browser is not None:
-                try:
-                    browser.close()
-                except Exception:
-                    pass
+    rows.sort(key=lambda r: str(r["facility_name"]).lower())
+    return rows
 
 
 def append_rows_to_csv(rows: List[Dict[str, object]]) -> None:
@@ -268,6 +158,12 @@ def append_rows_to_csv(rows: List[Dict[str, object]]) -> None:
                 "status",
                 "percent_full",
                 "raw_text",
+                "people",
+                "capacity",
+                "is_open",
+                "hour_summary",
+                "is_data_unavailable",
+                "is_valid_predictor_row",
             ],
         )
 
@@ -281,20 +177,38 @@ def append_rows_to_csv(rows: List[Dict[str, object]]) -> None:
 def main() -> int:
     try:
         log("=== SCRAPE START ===")
-        rows = scrape_once()
+        data = fetch_waitz_data()
+        rows = build_rows(data)
 
         if not rows:
-            log("No occupancy data found. Failing this run so Task Scheduler can show an error.", error=True)
+            log("No occupancy data found for known facilities.", error=True)
             return 1
+
+        found = {str(r["facility_name"]) for r in rows}
+        missing = KNOWN_FACILITIES - found
+        if missing:
+            log(f"Missing facilities in this run: {sorted(missing)}", error=True)
 
         append_rows_to_csv(rows)
 
         log(f"Saved {len(rows)} rows to {OUTPUT_CSV.name}")
         for row in rows:
-            log(f"{row['facility_name']}: {row['percent_full']}% ({row['status']})")
+            log(
+                f"{row['facility_name']}: {row['percent_full']}% "
+                f"({row['status']}) people={row['people']} capacity={row['capacity']} "
+                f"is_open={row['is_open']} hour_summary={row['hour_summary']}"
+            )
 
         log("=== SCRAPE END OK ===")
         return 0
+
+    except requests.RequestException as e:
+        log(f"HTTP ERROR: {e}", error=True)
+        tb = traceback.format_exc()
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(tb + "\n")
+        print(tb, file=sys.stderr, flush=True)
+        return 1
 
     except Exception as e:
         log(f"SCRAPER ERROR: {e}", error=True)
