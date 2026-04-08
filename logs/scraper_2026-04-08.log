@@ -1,0 +1,90 @@
+[2026-04-08 12:58:14] === SCRAPE START ===
+[2026-04-08 12:58:15] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 12:58:26] Parsing attempt 1/4
+[2026-04-08 12:58:27] Candidate blocks found: 23
+[2026-04-08 12:58:27] Known facilities found this attempt: []
+[2026-04-08 12:58:29] Parsing attempt 2/4
+[2026-04-08 12:58:30] Candidate blocks found: 23
+[2026-04-08 12:58:30] Known facilities found this attempt: []
+[2026-04-08 12:58:32] Parsing attempt 3/4
+[2026-04-08 12:58:33] Candidate blocks found: 23
+[2026-04-08 12:58:33] Known facilities found this attempt: []
+[2026-04-08 12:58:36] Parsing attempt 4/4
+[2026-04-08 12:58:37] Candidate blocks found: 23
+[2026-04-08 12:58:37] Known facilities found this attempt: []
+[2026-04-08 12:58:39] Saved 22 rows to ucsd_occupancy_history.csv
+[2026-04-08 12:58:39] 48% full: 48% (Full)
+[2026-04-08 12:58:39] 54% full: 54% (Full)
+[2026-04-08 12:58:39] 67% full: 67% (Full)
+[2026-04-08 12:58:39] 99% full: 99% (Full)
+[2026-04-08 12:58:39] CANYONVIEW CLOSED W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 12:58:39] Canyonview Fitness Gym CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 12:58:39] CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 12:58:39] CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 12:58:39] Lap Swim & Spa CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm M-F, 1:00pm-3:00pm CLOSED Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 12:58:39] M-F, 12:00pm-6:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] M-F, 1:00pm-3:00pm CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] Main Gym Fitness Gym - Active 48% full: 48% (Full)
+[2026-04-08 12:58:39] Masters Swim CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-9:00am M–Th, 6:00pm-7:30pm Sa, 7:30am-9:00am: 0% (Closed)
+[2026-04-08 12:58:39] Natatorium Indoor Pool CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] Outback Climbing Center - Very Active 99% full: 99% (Full)
+[2026-04-08 12:58:39] Outback Climbing Center CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26 M-F, 10:00am-10:00pm Sa, 11:00am-4:00pm Su, 4:00pm–10:00pm: 0% (Closed)
+[2026-04-08 12:58:39] OUTBACK RENTAL SHOP M-F, 12:00pm-6:00pm Sa-Su, CLOSED OPEN REC Weekly Open Rec hours Indoor Basketball Indoor Volleyball Badminton Open Field Space Roller Rink Track: 0% (Closed)
+[2026-04-08 12:58:39] RIMAC Fitness Gym - Active 67% full: 67% (Full)
+[2026-04-08 12:58:39] RIMAC Fitness Gym - Active 67% full Main Gym Fitness Gym - Active 48% full Outback Climbing Center - Very Active 99% full Triton Esports Center - Active 54% full: 67% (Full)
+[2026-04-08 12:58:39] TEC Café M-Th, 7:30am-4:30pm F, 7:30am-1:30pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] Triton Esports Center - Active 54% full: 54% (Full)
+[2026-04-08 12:58:39] Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] === SCRAPE END OK ===
+[2026-04-08 12:58:55] === SCRAPE START ===
+[2026-04-08 12:58:56] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 12:59:05] Parsing attempt 1/4
+[2026-04-08 12:59:06] Candidate blocks found: 23
+[2026-04-08 12:59:06] Known facilities found this attempt: []
+[2026-04-08 12:59:09] Parsing attempt 2/4
+[2026-04-08 12:59:09] Candidate blocks found: 0
+[2026-04-08 12:59:09] Known facilities found this attempt: []
+[2026-04-08 12:59:11] Parsing attempt 3/4
+[2026-04-08 12:59:11] Candidate blocks found: 0
+[2026-04-08 12:59:11] Known facilities found this attempt: []
+[2026-04-08 12:59:14] Parsing attempt 4/4
+[2026-04-08 12:59:14] Candidate blocks found: 0
+[2026-04-08 12:59:14] Known facilities found this attempt: []
+[2026-04-08 12:59:40] === SCRAPE START ===
+[2026-04-08 12:59:41] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 12:59:50] Parsing attempt 1/4
+[2026-04-08 12:59:51] Candidate blocks found: 23
+[2026-04-08 12:59:51] Known facilities found this attempt: []
+[2026-04-08 12:59:54] Parsing attempt 2/4
+[2026-04-08 12:59:54] Candidate blocks found: 23
+[2026-04-08 12:59:54] Known facilities found this attempt: []
+[2026-04-08 12:59:57] Parsing attempt 3/4
+[2026-04-08 12:59:58] Candidate blocks found: 23
+[2026-04-08 12:59:58] Known facilities found this attempt: []
+[2026-04-08 13:00:00] Parsing attempt 4/4
+[2026-04-08 13:00:01] Candidate blocks found: 23
+[2026-04-08 13:00:01] Known facilities found this attempt: []
+[2026-04-08 13:00:04] Saved 22 rows to ucsd_occupancy_history.csv
+[2026-04-08 13:00:04] 51% full: 51% (Full)
+[2026-04-08 13:00:04] 53% full: 53% (Full)
+[2026-04-08 13:00:04] 68% full: 68% (Full)
+[2026-04-08 13:00:04] 99% full: 99% (Full)
+[2026-04-08 13:00:04] CANYONVIEW CLOSED W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 13:00:04] Canyonview Fitness Gym CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 13:00:04] CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 13:00:04] CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 13:00:04] Lap Swim & Spa CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm M-F, 1:00pm-3:00pm CLOSED Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 13:00:04] M-F, 12:00pm-6:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] M-F, 1:00pm-3:00pm CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] Main Gym Fitness Gym - Active 51% full: 51% (Full)
+[2026-04-08 13:00:04] Masters Swim CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-9:00am M–Th, 6:00pm-7:30pm Sa, 7:30am-9:00am: 0% (Closed)
+[2026-04-08 13:00:04] Natatorium Indoor Pool CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] Outback Climbing Center - Very Active 99% full: 99% (Full)
+[2026-04-08 13:00:04] Outback Climbing Center CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26 M-F, 10:00am-10:00pm Sa, 11:00am-4:00pm Su, 4:00pm–10:00pm: 0% (Closed)
+[2026-04-08 13:00:04] OUTBACK RENTAL SHOP M-F, 12:00pm-6:00pm Sa-Su, CLOSED OPEN REC Weekly Open Rec hours Indoor Basketball Indoor Volleyball Badminton Open Field Space Roller Rink Track: 0% (Closed)
+[2026-04-08 13:00:04] RIMAC Fitness Gym - Active 68% full: 68% (Full)
+[2026-04-08 13:00:04] RIMAC Fitness Gym - Active 68% full Main Gym Fitness Gym - Active 51% full Outback Climbing Center - Very Active 99% full Triton Esports Center - Active 53% full: 68% (Full)
+[2026-04-08 13:00:04] TEC Café M-Th, 7:30am-4:30pm F, 7:30am-1:30pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] Triton Esports Center - Active 53% full: 53% (Full)
+[2026-04-08 13:00:04] Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] === SCRAPE END OK ===

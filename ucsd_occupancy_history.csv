@@ -1607,3 +1607,47 @@ timestamp,day_of_week,date,time,facility_name,status,percent_full,raw_text,peopl
 2026-04-08T09:30:04-07:00,Wednesday,2026-04-08,09:30:04,Outback Climbing Center,Closed,15,Closed,4,30,False,Closed until 10:00am
 2026-04-08T09:30:04-07:00,Wednesday,2026-04-08,09:30:04,RIMAC Fitness Gym,Busy,71,Busy (71%),107,150,True,open
 2026-04-08T09:30:04-07:00,Wednesday,2026-04-08,09:30:04,Triton Esports Center,Not Busy,14,Not Busy (14%),5,35,True,open
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,48% full,Full,48,48% full
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,54% full,Full,54,54% full
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,67% full,Full,67,67% full
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,99% full,Full,99,99% full
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"CANYONVIEW CLOSED W-Su, 4/22-4/26",Closed,0,"CANYONVIEW CLOSED W-Su, 4/22-4/26"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"Canyonview Fitness Gym CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm Sa-Su, 11:00am-4:00pm",Closed,0,"Canyonview Fitness Gym CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm Sa-Su, 11:00am-4:00pm"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26",Closed,0,"CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"CLOSED, W-Su, 4/22-4/26",Closed,0,"CLOSED, W-Su, 4/22-4/26"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"Lap Swim & Spa CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm M-F, 1:00pm-3:00pm CLOSED Sa-Su, 11:00am-4:00pm",Closed,0,"Lap Swim & Spa CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm M-F, 1:00pm-3:00pm CLOSED Sa-Su, 11:00am-4:00pm"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"M-F, 12:00pm-6:00pm Sa-Su, CLOSED",Closed,0,"M-F, 12:00pm-6:00pm Sa-Su, CLOSED"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"M-F, 1:00pm-3:00pm CLOSED",Closed,0,"M-F, 1:00pm-3:00pm CLOSED"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,Main Gym Fitness Gym - Active 48% full,Full,48,Main Gym Fitness Gym - Active 48% full
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"Masters Swim CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-9:00am M–Th, 6:00pm-7:30pm Sa, 7:30am-9:00am",Closed,0,"Masters Swim CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-9:00am M–Th, 6:00pm-7:30pm Sa, 7:30am-9:00am"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,Natatorium Indoor Pool CLOSED,Closed,0,Natatorium Indoor Pool CLOSED
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,Outback Climbing Center - Very Active 99% full,Full,99,Outback Climbing Center - Very Active 99% full
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"Outback Climbing Center CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26 M-F, 10:00am-10:00pm Sa, 11:00am-4:00pm Su, 4:00pm–10:00pm",Closed,0,"Outback Climbing Center CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26 M-F, 10:00am-10:00pm Sa, 11:00am-4:00pm Su, 4:00pm–10:00pm"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"OUTBACK RENTAL SHOP M-F, 12:00pm-6:00pm Sa-Su, CLOSED OPEN REC Weekly Open Rec hours Indoor Basketball Indoor Volleyball Badminton Open Field Space Roller Rink Track",Closed,0,"OUTBACK RENTAL SHOP M-F, 12:00pm-6:00pm Sa-Su, CLOSED OPEN REC Weekly Open Rec hours Indoor Basketball Indoor Volleyball Badminton Open Field Space Roller Rink Track"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,RIMAC Fitness Gym - Active 67% full,Full,67,RIMAC Fitness Gym - Active 67% full
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,RIMAC Fitness Gym - Active 67% full Main Gym Fitness Gym - Active 48% full Outback Climbing Center - Very Active 99% full Triton Esports Center - Active 54% full,Full,67,RIMAC Fitness Gym - Active 67% full Main Gym Fitness Gym - Active 48% full Outback Climbing Center - Very Active 99% full Triton Esports Center - Active 54% full
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"TEC Café M-Th, 7:30am-4:30pm F, 7:30am-1:30pm Sa-Su, CLOSED",Closed,0,"TEC Café M-Th, 7:30am-4:30pm F, 7:30am-1:30pm Sa-Su, CLOSED"
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,Triton Esports Center - Active 54% full,Full,54,Triton Esports Center - Active 54% full
+2026-04-08T12:58:14-07:00,Wednesday,2026-04-08,12:58:14,"Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED",Closed,0,"Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,51% full,Full,51,51% full
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,53% full,Full,53,53% full
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,68% full,Full,68,68% full
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,99% full,Full,99,99% full
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"CANYONVIEW CLOSED W-Su, 4/22-4/26",Closed,0,"CANYONVIEW CLOSED W-Su, 4/22-4/26"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"Canyonview Fitness Gym CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm Sa-Su, 11:00am-4:00pm",Closed,0,"Canyonview Fitness Gym CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm Sa-Su, 11:00am-4:00pm"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26",Closed,0,"CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"CLOSED, W-Su, 4/22-4/26",Closed,0,"CLOSED, W-Su, 4/22-4/26"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"Lap Swim & Spa CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm M-F, 1:00pm-3:00pm CLOSED Sa-Su, 11:00am-4:00pm",Closed,0,"Lap Swim & Spa CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm M-F, 1:00pm-3:00pm CLOSED Sa-Su, 11:00am-4:00pm"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"M-F, 12:00pm-6:00pm Sa-Su, CLOSED",Closed,0,"M-F, 12:00pm-6:00pm Sa-Su, CLOSED"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"M-F, 1:00pm-3:00pm CLOSED",Closed,0,"M-F, 1:00pm-3:00pm CLOSED"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,Main Gym Fitness Gym - Active 51% full,Full,51,Main Gym Fitness Gym - Active 51% full
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"Masters Swim CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-9:00am M–Th, 6:00pm-7:30pm Sa, 7:30am-9:00am",Closed,0,"Masters Swim CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-9:00am M–Th, 6:00pm-7:30pm Sa, 7:30am-9:00am"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,Natatorium Indoor Pool CLOSED,Closed,0,Natatorium Indoor Pool CLOSED
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,Outback Climbing Center - Very Active 99% full,Full,99,Outback Climbing Center - Very Active 99% full
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"Outback Climbing Center CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26 M-F, 10:00am-10:00pm Sa, 11:00am-4:00pm Su, 4:00pm–10:00pm",Closed,0,"Outback Climbing Center CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26 M-F, 10:00am-10:00pm Sa, 11:00am-4:00pm Su, 4:00pm–10:00pm"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"OUTBACK RENTAL SHOP M-F, 12:00pm-6:00pm Sa-Su, CLOSED OPEN REC Weekly Open Rec hours Indoor Basketball Indoor Volleyball Badminton Open Field Space Roller Rink Track",Closed,0,"OUTBACK RENTAL SHOP M-F, 12:00pm-6:00pm Sa-Su, CLOSED OPEN REC Weekly Open Rec hours Indoor Basketball Indoor Volleyball Badminton Open Field Space Roller Rink Track"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,RIMAC Fitness Gym - Active 68% full,Full,68,RIMAC Fitness Gym - Active 68% full
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,RIMAC Fitness Gym - Active 68% full Main Gym Fitness Gym - Active 51% full Outback Climbing Center - Very Active 99% full Triton Esports Center - Active 53% full,Full,68,RIMAC Fitness Gym - Active 68% full Main Gym Fitness Gym - Active 51% full Outback Climbing Center - Very Active 99% full Triton Esports Center - Active 53% full
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"TEC Café M-Th, 7:30am-4:30pm F, 7:30am-1:30pm Sa-Su, CLOSED",Closed,0,"TEC Café M-Th, 7:30am-4:30pm F, 7:30am-1:30pm Sa-Su, CLOSED"
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,Triton Esports Center - Active 53% full,Full,53,Triton Esports Center - Active 53% full
+2026-04-08T12:59:40-07:00,Wednesday,2026-04-08,12:59:40,"Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED",Closed,0,"Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED"

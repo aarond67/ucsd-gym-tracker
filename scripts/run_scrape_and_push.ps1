@@ -1,6 +1,6 @@
 param(
     [string]$RepoPath = "C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker",
-    [string]$PythonExe = "C:\Users\pisce\AppData\Local\Programs\Python\Python311\python.exe",
+    [string]$PythonExe = "C:\Python314\python.exe",
     [string]$Branch = "main"
 )
 
@@ -56,7 +56,21 @@ try {
     Write-Log "Skipping python --version probe"
 
     Run-Step -Label "Python scraper" -FilePath $PythonExe -Arguments @(".\ucsd_gym_occupancy_scraper.py")
-    Run-Step -Label "Git checkout branch" -FilePath "git" -Arguments @("checkout", $Branch)
+
+    $currentBranch = (& git branch --show-current).Trim()
+    Write-Log "Current git branch: $currentBranch"
+
+    if ([string]::IsNullOrWhiteSpace($currentBranch)) {
+        throw "Could not determine current git branch."
+    }
+
+    if ($currentBranch -ne $Branch) {
+        Run-Step -Label "Git checkout branch" -FilePath "git" -Arguments @("checkout", $Branch)
+    }
+    else {
+        Write-Log "Already on branch $Branch"
+    }
+
     Run-Step -Label "Git status" -FilePath "git" -Arguments @("status", "--short")
     Run-Step -Label "Git add" -FilePath "git" -Arguments @("add", "ucsd_occupancy_history.csv", "ucsd_occupancy_history_cleaned.csv", "best_times_summary.csv", "*.png", "logs")
 
