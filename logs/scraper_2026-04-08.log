@@ -88,3 +88,20 @@
 [2026-04-08 13:00:04] Triton Esports Center - Active 53% full: 53% (Full)
 [2026-04-08 13:00:04] Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED: 0% (Closed)
 [2026-04-08 13:00:04] === SCRAPE END OK ===
+[2026-04-08 13:07:59] === SCRAPE START ===
+[2026-04-08 13:07:59] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 13:08:09] Parsing attempt 1/4
+[2026-04-08 13:08:09] Candidate blocks found: 23
+[2026-04-08 13:08:09] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:08:12] Parsing attempt 2/4
+[2026-04-08 13:08:13] Candidate blocks found: 23
+[2026-04-08 13:08:13] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:08:15] Parsing attempt 3/4
+[2026-04-08 13:08:16] Candidate blocks found: 23
+[2026-04-08 13:08:16] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:08:19] Parsing attempt 4/4
+[2026-04-08 13:08:19] Candidate blocks found: 23
+[2026-04-08 13:08:19] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:08:22] Saved 1 rows to ucsd_occupancy_history.csv
+[2026-04-08 13:08:22] Main Gym Fitness Gym: 37% (Available)
+[2026-04-08 13:08:22] === SCRAPE END OK ===
