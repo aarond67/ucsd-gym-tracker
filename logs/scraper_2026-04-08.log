@@ -177,3 +177,20 @@
 [2026-04-08 13:45:27] Saved 1 rows to ucsd_occupancy_history.csv
 [2026-04-08 13:45:27] Main Gym Fitness Gym: 17% (Available)
 [2026-04-08 13:45:27] === SCRAPE END OK ===
+[2026-04-08 14:00:02] === SCRAPE START ===
+[2026-04-08 14:00:03] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 14:00:13] Parsing attempt 1/4
+[2026-04-08 14:00:14] Candidate blocks found: 23
+[2026-04-08 14:00:14] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 14:00:16] Parsing attempt 2/4
+[2026-04-08 14:00:17] Candidate blocks found: 23
+[2026-04-08 14:00:17] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 14:00:20] Parsing attempt 3/4
+[2026-04-08 14:00:21] Candidate blocks found: 23
+[2026-04-08 14:00:21] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 14:00:23] Parsing attempt 4/4
+[2026-04-08 14:00:24] Candidate blocks found: 23
+[2026-04-08 14:00:24] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 14:00:26] Saved 1 rows to ucsd_occupancy_history.csv
+[2026-04-08 14:00:26] Main Gym Fitness Gym: 44% (Available)
+[2026-04-08 14:00:26] === SCRAPE END OK ===
