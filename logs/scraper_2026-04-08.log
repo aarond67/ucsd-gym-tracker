@@ -1,0 +1,509 @@
+[2026-04-08 12:58:14] === SCRAPE START ===
+[2026-04-08 12:58:15] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 12:58:26] Parsing attempt 1/4
+[2026-04-08 12:58:27] Candidate blocks found: 23
+[2026-04-08 12:58:27] Known facilities found this attempt: []
+[2026-04-08 12:58:29] Parsing attempt 2/4
+[2026-04-08 12:58:30] Candidate blocks found: 23
+[2026-04-08 12:58:30] Known facilities found this attempt: []
+[2026-04-08 12:58:32] Parsing attempt 3/4
+[2026-04-08 12:58:33] Candidate blocks found: 23
+[2026-04-08 12:58:33] Known facilities found this attempt: []
+[2026-04-08 12:58:36] Parsing attempt 4/4
+[2026-04-08 12:58:37] Candidate blocks found: 23
+[2026-04-08 12:58:37] Known facilities found this attempt: []
+[2026-04-08 12:58:39] Saved 22 rows to ucsd_occupancy_history.csv
+[2026-04-08 12:58:39] 48% full: 48% (Full)
+[2026-04-08 12:58:39] 54% full: 54% (Full)
+[2026-04-08 12:58:39] 67% full: 67% (Full)
+[2026-04-08 12:58:39] 99% full: 99% (Full)
+[2026-04-08 12:58:39] CANYONVIEW CLOSED W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 12:58:39] Canyonview Fitness Gym CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 12:58:39] CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 12:58:39] CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 12:58:39] Lap Swim & Spa CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm M-F, 1:00pm-3:00pm CLOSED Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 12:58:39] M-F, 12:00pm-6:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] M-F, 1:00pm-3:00pm CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] Main Gym Fitness Gym - Active 48% full: 48% (Full)
+[2026-04-08 12:58:39] Masters Swim CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-9:00am M–Th, 6:00pm-7:30pm Sa, 7:30am-9:00am: 0% (Closed)
+[2026-04-08 12:58:39] Natatorium Indoor Pool CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] Outback Climbing Center - Very Active 99% full: 99% (Full)
+[2026-04-08 12:58:39] Outback Climbing Center CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26 M-F, 10:00am-10:00pm Sa, 11:00am-4:00pm Su, 4:00pm–10:00pm: 0% (Closed)
+[2026-04-08 12:58:39] OUTBACK RENTAL SHOP M-F, 12:00pm-6:00pm Sa-Su, CLOSED OPEN REC Weekly Open Rec hours Indoor Basketball Indoor Volleyball Badminton Open Field Space Roller Rink Track: 0% (Closed)
+[2026-04-08 12:58:39] RIMAC Fitness Gym - Active 67% full: 67% (Full)
+[2026-04-08 12:58:39] RIMAC Fitness Gym - Active 67% full Main Gym Fitness Gym - Active 48% full Outback Climbing Center - Very Active 99% full Triton Esports Center - Active 54% full: 67% (Full)
+[2026-04-08 12:58:39] TEC Café M-Th, 7:30am-4:30pm F, 7:30am-1:30pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] Triton Esports Center - Active 54% full: 54% (Full)
+[2026-04-08 12:58:39] Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 12:58:39] === SCRAPE END OK ===
+[2026-04-08 12:58:55] === SCRAPE START ===
+[2026-04-08 12:58:56] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 12:59:05] Parsing attempt 1/4
+[2026-04-08 12:59:06] Candidate blocks found: 23
+[2026-04-08 12:59:06] Known facilities found this attempt: []
+[2026-04-08 12:59:09] Parsing attempt 2/4
+[2026-04-08 12:59:09] Candidate blocks found: 0
+[2026-04-08 12:59:09] Known facilities found this attempt: []
+[2026-04-08 12:59:11] Parsing attempt 3/4
+[2026-04-08 12:59:11] Candidate blocks found: 0
+[2026-04-08 12:59:11] Known facilities found this attempt: []
+[2026-04-08 12:59:14] Parsing attempt 4/4
+[2026-04-08 12:59:14] Candidate blocks found: 0
+[2026-04-08 12:59:14] Known facilities found this attempt: []
+[2026-04-08 12:59:40] === SCRAPE START ===
+[2026-04-08 12:59:41] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 12:59:50] Parsing attempt 1/4
+[2026-04-08 12:59:51] Candidate blocks found: 23
+[2026-04-08 12:59:51] Known facilities found this attempt: []
+[2026-04-08 12:59:54] Parsing attempt 2/4
+[2026-04-08 12:59:54] Candidate blocks found: 23
+[2026-04-08 12:59:54] Known facilities found this attempt: []
+[2026-04-08 12:59:57] Parsing attempt 3/4
+[2026-04-08 12:59:58] Candidate blocks found: 23
+[2026-04-08 12:59:58] Known facilities found this attempt: []
+[2026-04-08 13:00:00] Parsing attempt 4/4
+[2026-04-08 13:00:01] Candidate blocks found: 23
+[2026-04-08 13:00:01] Known facilities found this attempt: []
+[2026-04-08 13:00:04] Saved 22 rows to ucsd_occupancy_history.csv
+[2026-04-08 13:00:04] 51% full: 51% (Full)
+[2026-04-08 13:00:04] 53% full: 53% (Full)
+[2026-04-08 13:00:04] 68% full: 68% (Full)
+[2026-04-08 13:00:04] 99% full: 99% (Full)
+[2026-04-08 13:00:04] CANYONVIEW CLOSED W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 13:00:04] Canyonview Fitness Gym CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 13:00:04] CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 13:00:04] CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 13:00:04] Lap Swim & Spa CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm M-F, 1:00pm-3:00pm CLOSED Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 13:00:04] M-F, 12:00pm-6:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] M-F, 1:00pm-3:00pm CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] Main Gym Fitness Gym - Active 51% full: 51% (Full)
+[2026-04-08 13:00:04] Masters Swim CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-9:00am M–Th, 6:00pm-7:30pm Sa, 7:30am-9:00am: 0% (Closed)
+[2026-04-08 13:00:04] Natatorium Indoor Pool CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] Outback Climbing Center - Very Active 99% full: 99% (Full)
+[2026-04-08 13:00:04] Outback Climbing Center CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26 M-F, 10:00am-10:00pm Sa, 11:00am-4:00pm Su, 4:00pm–10:00pm: 0% (Closed)
+[2026-04-08 13:00:04] OUTBACK RENTAL SHOP M-F, 12:00pm-6:00pm Sa-Su, CLOSED OPEN REC Weekly Open Rec hours Indoor Basketball Indoor Volleyball Badminton Open Field Space Roller Rink Track: 0% (Closed)
+[2026-04-08 13:00:04] RIMAC Fitness Gym - Active 68% full: 68% (Full)
+[2026-04-08 13:00:04] RIMAC Fitness Gym - Active 68% full Main Gym Fitness Gym - Active 51% full Outback Climbing Center - Very Active 99% full Triton Esports Center - Active 53% full: 68% (Full)
+[2026-04-08 13:00:04] TEC Café M-Th, 7:30am-4:30pm F, 7:30am-1:30pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] Triton Esports Center - Active 53% full: 53% (Full)
+[2026-04-08 13:00:04] Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 13:00:04] === SCRAPE END OK ===
+[2026-04-08 13:07:59] === SCRAPE START ===
+[2026-04-08 13:07:59] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 13:08:09] Parsing attempt 1/4
+[2026-04-08 13:08:09] Candidate blocks found: 23
+[2026-04-08 13:08:09] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:08:12] Parsing attempt 2/4
+[2026-04-08 13:08:13] Candidate blocks found: 23
+[2026-04-08 13:08:13] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:08:15] Parsing attempt 3/4
+[2026-04-08 13:08:16] Candidate blocks found: 23
+[2026-04-08 13:08:16] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:08:19] Parsing attempt 4/4
+[2026-04-08 13:08:19] Candidate blocks found: 23
+[2026-04-08 13:08:19] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:08:22] Saved 1 rows to ucsd_occupancy_history.csv
+[2026-04-08 13:08:22] Main Gym Fitness Gym: 37% (Available)
+[2026-04-08 13:08:22] === SCRAPE END OK ===
+[2026-04-08 13:15:02] === SCRAPE START ===
+[2026-04-08 13:15:03] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 13:15:12] Parsing attempt 1/4
+[2026-04-08 13:15:13] Candidate blocks found: 23
+[2026-04-08 13:15:13] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:15:15] Parsing attempt 2/4
+[2026-04-08 13:15:16] Candidate blocks found: 23
+[2026-04-08 13:15:16] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:15:18] Parsing attempt 3/4
+[2026-04-08 13:15:19] Candidate blocks found: 23
+[2026-04-08 13:15:19] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:15:22] Parsing attempt 4/4
+[2026-04-08 13:15:23] Candidate blocks found: 23
+[2026-04-08 13:15:23] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:15:25] Saved 1 rows to ucsd_occupancy_history.csv
+[2026-04-08 13:15:25] Main Gym Fitness Gym: 45% (Available)
+[2026-04-08 13:15:25] === SCRAPE END OK ===
+[2026-04-08 13:30:02] === SCRAPE START ===
+[2026-04-08 13:30:03] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 13:30:13] Parsing attempt 1/4
+[2026-04-08 13:30:14] Candidate blocks found: 23
+[2026-04-08 13:30:14] Known facilities found this attempt: []
+[2026-04-08 13:30:16] Parsing attempt 2/4
+[2026-04-08 13:30:17] Candidate blocks found: 23
+[2026-04-08 13:30:17] Known facilities found this attempt: []
+[2026-04-08 13:30:20] Parsing attempt 3/4
+[2026-04-08 13:30:21] Candidate blocks found: 23
+[2026-04-08 13:30:21] Known facilities found this attempt: []
+[2026-04-08 13:30:23] Parsing attempt 4/4
+[2026-04-08 13:30:24] Candidate blocks found: 23
+[2026-04-08 13:30:24] Known facilities found this attempt: []
+[2026-04-08 13:30:27] Saved 22 rows to ucsd_occupancy_history.csv
+[2026-04-08 13:30:27] 51% full: 51% (Full)
+[2026-04-08 13:30:27] 69% full: 69% (Full)
+[2026-04-08 13:30:27] 89% full: 89% (Full)
+[2026-04-08 13:30:27] 99% full: 99% (Full)
+[2026-04-08 13:30:27] CANYONVIEW CLOSED W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 13:30:27] Canyonview Fitness Gym CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 13:30:27] CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 13:30:27] CLOSED, W-Su, 4/22-4/26: 0% (Closed)
+[2026-04-08 13:30:27] Lap Swim & Spa CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-8:00pm M-F, 1:00pm-3:00pm CLOSED Sa-Su, 11:00am-4:00pm: 0% (Closed)
+[2026-04-08 13:30:27] M-F, 12:00pm-6:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 13:30:27] M-F, 1:00pm-3:00pm CLOSED: 0% (Closed)
+[2026-04-08 13:30:27] Main Gym Fitness Gym - Active 51% full: 51% (Full)
+[2026-04-08 13:30:27] Masters Swim CLOSED, W-Su, 4/22-4/26 M-F, 6:00am-9:00am M–Th, 6:00pm-7:30pm Sa, 7:30am-9:00am: 0% (Closed)
+[2026-04-08 13:30:27] Natatorium Indoor Pool CLOSED: 0% (Closed)
+[2026-04-08 13:30:27] Outback Climbing Center - Very Active 99% full: 99% (Full)
+[2026-04-08 13:30:27] Outback Climbing Center CLOSED Su, 4/12 CLOSED, W-Su, 4/22-4/26 M-F, 10:00am-10:00pm Sa, 11:00am-4:00pm Su, 4:00pm–10:00pm: 0% (Closed)
+[2026-04-08 13:30:27] OUTBACK RENTAL SHOP M-F, 12:00pm-6:00pm Sa-Su, CLOSED OPEN REC Weekly Open Rec hours Indoor Basketball Indoor Volleyball Badminton Open Field Space Roller Rink Track: 0% (Closed)
+[2026-04-08 13:30:27] RIMAC Fitness Gym - Very Active 89% full: 89% (Full)
+[2026-04-08 13:30:27] RIMAC Fitness Gym - Very Active 89% full Main Gym Fitness Gym - Active 51% full Outback Climbing Center - Very Active 99% full Triton Esports Center - Active 69% full: 89% (Full)
+[2026-04-08 13:30:27] TEC Café M-Th, 7:30am-4:30pm F, 7:30am-1:30pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 13:30:27] Triton Esports Center - Active 69% full: 69% (Full)
+[2026-04-08 13:30:27] Triton Fit Park M-Th, 1:00pm-5:00pm F, 4:00pm-7:00pm Sa-Su, CLOSED: 0% (Closed)
+[2026-04-08 13:30:27] === SCRAPE END OK ===
+[2026-04-08 13:45:02] === SCRAPE START ===
+[2026-04-08 13:45:03] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 13:45:14] Parsing attempt 1/4
+[2026-04-08 13:45:15] Candidate blocks found: 23
+[2026-04-08 13:45:15] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:45:17] Parsing attempt 2/4
+[2026-04-08 13:45:18] Candidate blocks found: 23
+[2026-04-08 13:45:18] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:45:21] Parsing attempt 3/4
+[2026-04-08 13:45:21] Candidate blocks found: 23
+[2026-04-08 13:45:21] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:45:24] Parsing attempt 4/4
+[2026-04-08 13:45:25] Candidate blocks found: 23
+[2026-04-08 13:45:25] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 13:45:27] Saved 1 rows to ucsd_occupancy_history.csv
+[2026-04-08 13:45:27] Main Gym Fitness Gym: 17% (Available)
+[2026-04-08 13:45:27] === SCRAPE END OK ===
+[2026-04-08 14:00:02] === SCRAPE START ===
+[2026-04-08 14:00:03] Opening https://recreation.ucsd.edu/facilities/
+[2026-04-08 14:00:13] Parsing attempt 1/4
+[2026-04-08 14:00:14] Candidate blocks found: 23
+[2026-04-08 14:00:14] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 14:00:16] Parsing attempt 2/4
+[2026-04-08 14:00:17] Candidate blocks found: 23
+[2026-04-08 14:00:17] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 14:00:20] Parsing attempt 3/4
+[2026-04-08 14:00:21] Candidate blocks found: 23
+[2026-04-08 14:00:21] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 14:00:23] Parsing attempt 4/4
+[2026-04-08 14:00:24] Candidate blocks found: 23
+[2026-04-08 14:00:24] Known facilities found this attempt: ['main gym fitness gym']
+[2026-04-08 14:00:26] Saved 1 rows to ucsd_occupancy_history.csv
+[2026-04-08 14:00:26] Main Gym Fitness Gym: 44% (Available)
+[2026-04-08 14:00:26] === SCRAPE END OK ===
+[2026-04-08 14:05:13] === SCRAPE START ===
+[2026-04-08 14:05:13] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 14:05:15] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 14:05:15] Main Gym Fitness Gym: 38% (Not Busy) people=28 capacity=72 is_open=True hour_summary=open
+[2026-04-08 14:05:15] Outback Climbing Center: 99% (Very Active) people=60 capacity=30 is_open=True hour_summary=open
+[2026-04-08 14:05:15] RIMAC Fitness Gym: 93% (Very Active) people=140 capacity=150 is_open=True hour_summary=open
+[2026-04-08 14:05:15] Triton Esports Center: 67% (Busy) people=23 capacity=35 is_open=True hour_summary=open
+[2026-04-08 14:05:15] === SCRAPE END OK ===
+[2026-04-08 14:15:02] === SCRAPE START ===
+[2026-04-08 14:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 14:15:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 14:15:04] Main Gym Fitness Gym: 24% (Not Busy) people=17 capacity=72 is_open=True hour_summary=open
+[2026-04-08 14:15:04] Outback Climbing Center: 99% (Very Active) people=48 capacity=30 is_open=True hour_summary=open
+[2026-04-08 14:15:04] RIMAC Fitness Gym: 84% (Very Active) people=126 capacity=150 is_open=True hour_summary=open
+[2026-04-08 14:15:04] Triton Esports Center: 75% (Busy) people=26 capacity=35 is_open=True hour_summary=open
+[2026-04-08 14:15:04] === SCRAPE END OK ===
+[2026-04-08 14:30:02] === SCRAPE START ===
+[2026-04-08 14:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 14:30:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 14:30:04] Main Gym Fitness Gym: 49% (Busy) people=35 capacity=72 is_open=True hour_summary=open
+[2026-04-08 14:30:04] Outback Climbing Center: 99% (Very Active) people=40 capacity=30 is_open=True hour_summary=open
+[2026-04-08 14:30:04] RIMAC Fitness Gym: 97% (Very Active) people=145 capacity=150 is_open=True hour_summary=open
+[2026-04-08 14:30:04] Triton Esports Center: 72% (Busy) people=25 capacity=35 is_open=True hour_summary=open
+[2026-04-08 14:30:04] === SCRAPE END OK ===
+[2026-04-08 14:45:02] === SCRAPE START ===
+[2026-04-08 14:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 14:45:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 14:45:03] Main Gym Fitness Gym: 23% (Not Busy) people=17 capacity=72 is_open=True hour_summary=open
+[2026-04-08 14:45:03] Outback Climbing Center: 99% (Very Active) people=38 capacity=30 is_open=True hour_summary=open
+[2026-04-08 14:45:03] RIMAC Fitness Gym: 99% (Very Active) people=148 capacity=150 is_open=True hour_summary=open
+[2026-04-08 14:45:03] Triton Esports Center: 82% (Very Active) people=29 capacity=35 is_open=True hour_summary=open
+[2026-04-08 14:45:03] === SCRAPE END OK ===
+[2026-04-08 15:00:02] === SCRAPE START ===
+[2026-04-08 15:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 15:00:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 15:00:03] Main Gym Fitness Gym: 65% (Busy) people=47 capacity=72 is_open=True hour_summary=open
+[2026-04-08 15:00:03] Outback Climbing Center: 93% (Very Active) people=28 capacity=30 is_open=True hour_summary=open
+[2026-04-08 15:00:03] RIMAC Fitness Gym: 94% (Very Active) people=141 capacity=150 is_open=True hour_summary=open
+[2026-04-08 15:00:03] Triton Esports Center: 70% (Busy) people=24 capacity=35 is_open=True hour_summary=open
+[2026-04-08 15:00:03] === SCRAPE END OK ===
+[2026-04-08 15:15:02] === SCRAPE START ===
+[2026-04-08 15:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 15:15:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 15:15:03] Main Gym Fitness Gym: 40% (Not Busy) people=29 capacity=72 is_open=True hour_summary=open
+[2026-04-08 15:15:03] Outback Climbing Center: 93% (Very Active) people=28 capacity=30 is_open=True hour_summary=open
+[2026-04-08 15:15:03] RIMAC Fitness Gym: 95% (Very Active) people=142 capacity=150 is_open=True hour_summary=open
+[2026-04-08 15:15:03] Triton Esports Center: 83% (Very Active) people=29 capacity=35 is_open=True hour_summary=open
+[2026-04-08 15:15:03] === SCRAPE END OK ===
+[2026-04-08 15:30:02] === SCRAPE START ===
+[2026-04-08 15:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 15:30:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 15:30:04] Main Gym Fitness Gym: 53% (Busy) people=38 capacity=72 is_open=True hour_summary=open
+[2026-04-08 15:30:04] Outback Climbing Center: 99% (Very Active) people=46 capacity=30 is_open=True hour_summary=open
+[2026-04-08 15:30:04] RIMAC Fitness Gym: 99% (Very Active) people=152 capacity=150 is_open=True hour_summary=open
+[2026-04-08 15:30:04] Triton Esports Center: 69% (Busy) people=24 capacity=35 is_open=True hour_summary=open
+[2026-04-08 15:30:04] === SCRAPE END OK ===
+[2026-04-08 15:45:02] === SCRAPE START ===
+[2026-04-08 15:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 15:45:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 15:45:03] Main Gym Fitness Gym: 63% (Busy) people=45 capacity=72 is_open=True hour_summary=open
+[2026-04-08 15:45:03] Outback Climbing Center: 99% (Very Active) people=64 capacity=30 is_open=True hour_summary=open
+[2026-04-08 15:45:03] RIMAC Fitness Gym: 94% (Very Active) people=141 capacity=150 is_open=True hour_summary=open
+[2026-04-08 15:45:03] Triton Esports Center: 67% (Busy) people=23 capacity=35 is_open=True hour_summary=open
+[2026-04-08 15:45:03] === SCRAPE END OK ===
+[2026-04-08 16:00:02] === SCRAPE START ===
+[2026-04-08 16:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 16:00:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 16:00:03] Main Gym Fitness Gym: 91% (Very Active) people=66 capacity=72 is_open=True hour_summary=open
+[2026-04-08 16:00:03] Outback Climbing Center: 99% (Very Active) people=82 capacity=30 is_open=True hour_summary=open
+[2026-04-08 16:00:03] RIMAC Fitness Gym: 97% (Very Active) people=145 capacity=150 is_open=True hour_summary=open
+[2026-04-08 16:00:03] Triton Esports Center: 69% (Busy) people=24 capacity=35 is_open=True hour_summary=open
+[2026-04-08 16:00:03] === SCRAPE END OK ===
+[2026-04-08 16:15:02] === SCRAPE START ===
+[2026-04-08 16:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 16:15:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 16:15:04] Main Gym Fitness Gym: 38% (Not Busy) people=28 capacity=72 is_open=True hour_summary=open
+[2026-04-08 16:15:04] Outback Climbing Center: 99% (Very Active) people=70 capacity=30 is_open=True hour_summary=open
+[2026-04-08 16:15:04] RIMAC Fitness Gym: 99% (Very Active) people=162 capacity=150 is_open=True hour_summary=open
+[2026-04-08 16:15:04] Triton Esports Center: 46% (Busy) people=16 capacity=35 is_open=True hour_summary=open
+[2026-04-08 16:15:04] === SCRAPE END OK ===
+[2026-04-08 16:30:02] === SCRAPE START ===
+[2026-04-08 16:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 16:30:04] SCRAPER ERROR: 'int' object has no attribute 'get'
+[2026-04-08 16:45:02] === SCRAPE START ===
+[2026-04-08 16:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 16:45:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 16:45:03] Main Gym Fitness Gym: 60% (Busy) people=43 capacity=72 is_open=True hour_summary=open
+[2026-04-08 16:45:03] Outback Climbing Center: 99% (Very Active) people=77 capacity=30 is_open=True hour_summary=open
+[2026-04-08 16:45:03] RIMAC Fitness Gym: 97% (Very Active) people=145 capacity=150 is_open=True hour_summary=open
+[2026-04-08 16:45:03] Triton Esports Center: 52% (Busy) people=18 capacity=35 is_open=True hour_summary=open
+[2026-04-08 16:45:03] === SCRAPE END OK ===
+[2026-04-08 17:00:02] === SCRAPE START ===
+[2026-04-08 17:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 17:00:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 17:00:04] Main Gym Fitness Gym: 56% (Busy) people=40 capacity=72 is_open=True hour_summary=open
+[2026-04-08 17:00:04] Outback Climbing Center: 99% (Very Active) people=68 capacity=30 is_open=True hour_summary=open
+[2026-04-08 17:00:04] RIMAC Fitness Gym: 99% (Very Active) people=150 capacity=150 is_open=True hour_summary=open
+[2026-04-08 17:00:04] Triton Esports Center: 59% (Busy) people=21 capacity=35 is_open=True hour_summary=open
+[2026-04-08 17:00:04] === SCRAPE END OK ===
+[2026-04-08 17:15:02] === SCRAPE START ===
+[2026-04-08 17:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 17:15:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 17:15:03] Main Gym Fitness Gym: 46% (Busy) people=33 capacity=72 is_open=True hour_summary=open
+[2026-04-08 17:15:03] Outback Climbing Center: 99% (Very Active) people=73 capacity=30 is_open=True hour_summary=open
+[2026-04-08 17:15:03] RIMAC Fitness Gym: 99% (Very Active) people=153 capacity=150 is_open=True hour_summary=open
+[2026-04-08 17:15:03] Triton Esports Center: 53% (Busy) people=18 capacity=35 is_open=True hour_summary=open
+[2026-04-08 17:15:03] === SCRAPE END OK ===
+[2026-04-08 17:30:02] === SCRAPE START ===
+[2026-04-08 17:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 17:30:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 17:30:03] Main Gym Fitness Gym: 69% (Busy) people=50 capacity=72 is_open=True hour_summary=open
+[2026-04-08 17:30:03] Outback Climbing Center: 99% (Very Active) people=75 capacity=30 is_open=True hour_summary=open
+[2026-04-08 17:30:03] RIMAC Fitness Gym: 99% (Very Active) people=177 capacity=150 is_open=True hour_summary=open
+[2026-04-08 17:30:03] Triton Esports Center: 45% (Not Busy) people=16 capacity=35 is_open=True hour_summary=open
+[2026-04-08 17:30:03] === SCRAPE END OK ===
+[2026-04-08 17:45:03] === SCRAPE START ===
+[2026-04-08 17:45:03] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 17:45:05] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 17:45:05] Main Gym Fitness Gym: 54% (Busy) people=39 capacity=72 is_open=True hour_summary=open
+[2026-04-08 17:45:05] Outback Climbing Center: 99% (Very Active) people=67 capacity=30 is_open=True hour_summary=open
+[2026-04-08 17:45:05] RIMAC Fitness Gym: 99% (Very Active) people=164 capacity=150 is_open=True hour_summary=open
+[2026-04-08 17:45:05] Triton Esports Center: 44% (Not Busy) people=15 capacity=35 is_open=True hour_summary=open
+[2026-04-08 17:45:05] === SCRAPE END OK ===
+[2026-04-08 18:00:02] === SCRAPE START ===
+[2026-04-08 18:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 18:00:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 18:00:04] Main Gym Fitness Gym: 46% (Busy) people=33 capacity=72 is_open=True hour_summary=open
+[2026-04-08 18:00:04] Outback Climbing Center: 99% (Very Active) people=85 capacity=30 is_open=True hour_summary=open
+[2026-04-08 18:00:04] RIMAC Fitness Gym: 91% (Very Active) people=136 capacity=150 is_open=True hour_summary=open
+[2026-04-08 18:00:04] Triton Esports Center: 37% (Not Busy) people=13 capacity=35 is_open=True hour_summary=open
+[2026-04-08 18:00:04] === SCRAPE END OK ===
+[2026-04-08 18:15:02] === SCRAPE START ===
+[2026-04-08 18:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 18:15:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 18:15:03] Main Gym Fitness Gym: 30% (Not Busy) people=21 capacity=72 is_open=True hour_summary=open
+[2026-04-08 18:15:03] Outback Climbing Center: 99% (Very Active) people=68 capacity=30 is_open=True hour_summary=open
+[2026-04-08 18:15:03] RIMAC Fitness Gym: 80% (Busy) people=120 capacity=150 is_open=True hour_summary=open
+[2026-04-08 18:15:03] Triton Esports Center: 40% (Not Busy) people=14 capacity=35 is_open=True hour_summary=open
+[2026-04-08 18:15:03] === SCRAPE END OK ===
+[2026-04-08 18:30:03] === SCRAPE START ===
+[2026-04-08 18:30:03] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 18:30:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 18:30:04] Main Gym Fitness Gym: 68% (Busy) people=49 capacity=72 is_open=True hour_summary=open
+[2026-04-08 18:30:04] Outback Climbing Center: 99% (Very Active) people=68 capacity=30 is_open=True hour_summary=open
+[2026-04-08 18:30:04] RIMAC Fitness Gym: 83% (Very Active) people=124 capacity=150 is_open=True hour_summary=open
+[2026-04-08 18:30:04] Triton Esports Center: 48% (Busy) people=17 capacity=35 is_open=True hour_summary=open
+[2026-04-08 18:30:04] === SCRAPE END OK ===
+[2026-04-08 18:45:02] === SCRAPE START ===
+[2026-04-08 18:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 18:45:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 18:45:03] Main Gym Fitness Gym: 51% (Busy) people=36 capacity=72 is_open=True hour_summary=open
+[2026-04-08 18:45:03] Outback Climbing Center: 99% (Very Active) people=72 capacity=30 is_open=True hour_summary=open
+[2026-04-08 18:45:03] RIMAC Fitness Gym: 84% (Very Active) people=126 capacity=150 is_open=True hour_summary=open
+[2026-04-08 18:45:03] Triton Esports Center: 36% (Not Busy) people=13 capacity=35 is_open=True hour_summary=open
+[2026-04-08 18:45:03] === SCRAPE END OK ===
+[2026-04-08 19:00:02] === SCRAPE START ===
+[2026-04-08 19:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 19:00:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 19:00:04] Main Gym Fitness Gym: 54% (Busy) people=39 capacity=72 is_open=True hour_summary=open
+[2026-04-08 19:00:04] Outback Climbing Center: 99% (Very Active) people=74 capacity=30 is_open=True hour_summary=open
+[2026-04-08 19:00:04] RIMAC Fitness Gym: 93% (Very Active) people=140 capacity=150 is_open=True hour_summary=open
+[2026-04-08 19:00:04] Triton Esports Center: 39% (Not Busy) people=14 capacity=35 is_open=True hour_summary=open
+[2026-04-08 19:00:04] === SCRAPE END OK ===
+[2026-04-08 19:15:02] === SCRAPE START ===
+[2026-04-08 19:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 19:15:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 19:15:03] Main Gym Fitness Gym: 45% (Not Busy) people=33 capacity=72 is_open=True hour_summary=open
+[2026-04-08 19:15:03] Outback Climbing Center: 99% (Very Active) people=78 capacity=30 is_open=True hour_summary=open
+[2026-04-08 19:15:03] RIMAC Fitness Gym: 99% (Very Active) people=150 capacity=150 is_open=True hour_summary=open
+[2026-04-08 19:15:03] Triton Esports Center: 44% (Not Busy) people=15 capacity=35 is_open=True hour_summary=open
+[2026-04-08 19:15:03] === SCRAPE END OK ===
+[2026-04-08 19:30:02] === SCRAPE START ===
+[2026-04-08 19:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 19:30:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 19:30:03] Main Gym Fitness Gym: 40% (Not Busy) people=29 capacity=72 is_open=True hour_summary=open
+[2026-04-08 19:30:03] Outback Climbing Center: 99% (Very Active) people=60 capacity=30 is_open=True hour_summary=open
+[2026-04-08 19:30:03] RIMAC Fitness Gym: 99% (Very Active) people=149 capacity=150 is_open=True hour_summary=open
+[2026-04-08 19:30:03] Triton Esports Center: 54% (Busy) people=19 capacity=35 is_open=True hour_summary=open
+[2026-04-08 19:30:03] === SCRAPE END OK ===
+[2026-04-08 19:45:02] === SCRAPE START ===
+[2026-04-08 19:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 19:45:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 19:45:03] Main Gym Fitness Gym: 36% (Not Busy) people=26 capacity=72 is_open=True hour_summary=open
+[2026-04-08 19:45:03] Outback Climbing Center: 99% (Very Active) people=74 capacity=30 is_open=True hour_summary=open
+[2026-04-08 19:45:03] RIMAC Fitness Gym: 99% (Very Active) people=206 capacity=150 is_open=True hour_summary=open
+[2026-04-08 19:45:03] Triton Esports Center: 60% (Busy) people=21 capacity=35 is_open=True hour_summary=open
+[2026-04-08 19:45:03] === SCRAPE END OK ===
+[2026-04-08 20:00:02] === SCRAPE START ===
+[2026-04-08 20:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 20:00:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 20:00:03] Main Gym Fitness Gym: 27% (Not Busy) people=19 capacity=72 is_open=True hour_summary=open
+[2026-04-08 20:00:03] Outback Climbing Center: 99% (Very Active) people=85 capacity=30 is_open=True hour_summary=open
+[2026-04-08 20:00:03] RIMAC Fitness Gym: 77% (Busy) people=116 capacity=150 is_open=True hour_summary=open
+[2026-04-08 20:00:03] Triton Esports Center: 47% (Busy) people=17 capacity=35 is_open=True hour_summary=open
+[2026-04-08 20:00:03] === SCRAPE END OK ===
+[2026-04-08 20:15:02] === SCRAPE START ===
+[2026-04-08 20:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 20:15:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 20:15:03] Main Gym Fitness Gym: 21% (Not Busy) people=15 capacity=72 is_open=True hour_summary=open
+[2026-04-08 20:15:03] Outback Climbing Center: 99% (Very Active) people=39 capacity=30 is_open=True hour_summary=open
+[2026-04-08 20:15:03] RIMAC Fitness Gym: 82% (Very Active) people=123 capacity=150 is_open=True hour_summary=open
+[2026-04-08 20:15:03] Triton Esports Center: 29% (Not Busy) people=10 capacity=35 is_open=True hour_summary=open
+[2026-04-08 20:15:03] === SCRAPE END OK ===
+[2026-04-08 20:30:02] === SCRAPE START ===
+[2026-04-08 20:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 20:30:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 20:30:03] Main Gym Fitness Gym: 38% (Not Busy) people=27 capacity=72 is_open=True hour_summary=open
+[2026-04-08 20:30:03] Outback Climbing Center: 99% (Very Active) people=41 capacity=30 is_open=True hour_summary=open
+[2026-04-08 20:30:03] RIMAC Fitness Gym: 83% (Very Active) people=124 capacity=150 is_open=True hour_summary=open
+[2026-04-08 20:30:03] Triton Esports Center: 26% (Not Busy) people=9 capacity=35 is_open=True hour_summary=open
+[2026-04-08 20:30:03] === SCRAPE END OK ===
+[2026-04-08 20:45:02] === SCRAPE START ===
+[2026-04-08 20:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 20:45:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 20:45:03] Main Gym Fitness Gym: 61% (Busy) people=44 capacity=72 is_open=True hour_summary=open
+[2026-04-08 20:45:03] Outback Climbing Center: 99% (Very Active) people=37 capacity=30 is_open=True hour_summary=open
+[2026-04-08 20:45:03] RIMAC Fitness Gym: 90% (Very Active) people=135 capacity=150 is_open=True hour_summary=open
+[2026-04-08 20:45:03] Triton Esports Center: 27% (Not Busy) people=9 capacity=35 is_open=True hour_summary=open
+[2026-04-08 20:45:03] === SCRAPE END OK ===
+[2026-04-08 21:00:02] === SCRAPE START ===
+[2026-04-08 21:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 21:00:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 21:00:04] Main Gym Fitness Gym: 47% (Busy) people=34 capacity=72 is_open=True hour_summary=open
+[2026-04-08 21:00:04] Outback Climbing Center: 99% (Very Active) people=38 capacity=30 is_open=True hour_summary=open
+[2026-04-08 21:00:04] RIMAC Fitness Gym: 83% (Very Active) people=124 capacity=150 is_open=True hour_summary=open
+[2026-04-08 21:00:04] Triton Esports Center: 28% (Not Busy) people=10 capacity=35 is_open=True hour_summary=open
+[2026-04-08 21:00:04] === SCRAPE END OK ===
+[2026-04-08 21:15:02] === SCRAPE START ===
+[2026-04-08 21:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 21:15:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 21:15:04] Main Gym Fitness Gym: 30% (Not Busy) people=21 capacity=72 is_open=True hour_summary=open
+[2026-04-08 21:15:04] Outback Climbing Center: 99% (Very Active) people=33 capacity=30 is_open=True hour_summary=open
+[2026-04-08 21:15:04] RIMAC Fitness Gym: 85% (Very Active) people=128 capacity=150 is_open=True hour_summary=open
+[2026-04-08 21:15:04] Triton Esports Center: 29% (Not Busy) people=10 capacity=35 is_open=True hour_summary=open
+[2026-04-08 21:15:04] === SCRAPE END OK ===
+[2026-04-08 21:30:02] === SCRAPE START ===
+[2026-04-08 21:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 21:30:04] Outback Climbing Center: 99% (Very Active) people=42 capacity=30 is_open=True hour_summary=open
+[2026-04-08 21:30:04] RIMAC Fitness Gym: 79% (Busy) people=118 capacity=150 is_open=True hour_summary=open
+[2026-04-08 21:30:04] Triton Esports Center: 21% (Not Busy) people=7 capacity=35 is_open=True hour_summary=open
+[2026-04-08 21:30:04] === SCRAPE END OK ===
+[2026-04-08 21:45:02] === SCRAPE START ===
+[2026-04-08 21:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 21:45:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 21:45:04] Main Gym Fitness Gym: 54% (Busy) people=39 capacity=72 is_open=True hour_summary=open
+[2026-04-08 21:45:04] Outback Climbing Center: 99% (Very Active) people=37 capacity=30 is_open=True hour_summary=open
+[2026-04-08 21:45:04] RIMAC Fitness Gym: 76% (Busy) people=114 capacity=150 is_open=True hour_summary=open
+[2026-04-08 21:45:04] Triton Esports Center: 13% (Not Busy) people=5 capacity=35 is_open=True hour_summary=open
+[2026-04-08 21:45:04] === SCRAPE END OK ===
+[2026-04-08 22:00:02] === SCRAPE START ===
+[2026-04-08 22:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 22:00:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 22:00:04] Main Gym Fitness Gym: 29% (Not Busy) people=21 capacity=72 is_open=True hour_summary=open
+[2026-04-08 22:00:04] Outback Climbing Center: 99% (Closed) people=41 capacity=30 is_open=False hour_summary=Closed until 10:00am
+[2026-04-08 22:00:04] RIMAC Fitness Gym: 78% (Busy) people=117 capacity=150 is_open=True hour_summary=open
+[2026-04-08 22:00:04] Triton Esports Center: 15% (Closed) people=5 capacity=35 is_open=False hour_summary=Closed until 7:30am
+[2026-04-08 22:00:04] === SCRAPE END OK ===
+[2026-04-08 22:15:02] === SCRAPE START ===
+[2026-04-08 22:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 22:15:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 22:15:03] Main Gym Fitness Gym: 60% (Busy) people=43 capacity=72 is_open=True hour_summary=open
+[2026-04-08 22:15:03] Outback Climbing Center: 22% (Closed) people=7 capacity=30 is_open=False hour_summary=Closed until 10:00am
+[2026-04-08 22:15:03] RIMAC Fitness Gym: 66% (Busy) people=99 capacity=150 is_open=True hour_summary=open
+[2026-04-08 22:15:03] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=Closed until 7:30am
+[2026-04-08 22:15:03] === SCRAPE END OK ===
+[2026-04-08 22:30:02] === SCRAPE START ===
+[2026-04-08 22:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 22:30:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 22:30:04] Main Gym Fitness Gym: 37% (Not Busy) people=27 capacity=72 is_open=True hour_summary=open
+[2026-04-08 22:30:04] Outback Climbing Center: 30% (Closed) people=9 capacity=30 is_open=False hour_summary=Closed until 10:00am
+[2026-04-08 22:30:04] RIMAC Fitness Gym: 60% (Busy) people=89 capacity=150 is_open=True hour_summary=open
+[2026-04-08 22:30:04] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=Closed until 7:30am
+[2026-04-08 22:30:04] === SCRAPE END OK ===
+[2026-04-08 22:45:02] === SCRAPE START ===
+[2026-04-08 22:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 22:45:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 22:45:03] Main Gym Fitness Gym: 19% (Not Busy) people=14 capacity=72 is_open=True hour_summary=open
+[2026-04-08 22:45:03] Outback Climbing Center: 1% (Closed) people=0 capacity=30 is_open=False hour_summary=Closed until 10:00am
+[2026-04-08 22:45:03] RIMAC Fitness Gym: 33% (Not Busy) people=50 capacity=150 is_open=True hour_summary=open
+[2026-04-08 22:45:03] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=Closed until 7:30am
+[2026-04-08 22:45:03] === SCRAPE END OK ===
+[2026-04-08 23:00:02] === SCRAPE START ===
+[2026-04-08 23:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 23:00:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 23:00:03] Main Gym Fitness Gym: 15% (Closed) people=11 capacity=72 is_open=False hour_summary=Closed until 6:00am
+[2026-04-08 23:00:03] Outback Climbing Center: 3% (Closed) people=1 capacity=30 is_open=False hour_summary=Closed until 10:00am
+[2026-04-08 23:00:03] RIMAC Fitness Gym: 19% (Closed) people=28 capacity=150 is_open=False hour_summary=Closed until 6:00am
+[2026-04-08 23:00:03] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=Closed until 7:30am
+[2026-04-08 23:00:03] === SCRAPE END OK ===
+[2026-04-08 23:15:02] === SCRAPE START ===
+[2026-04-08 23:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 23:15:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 23:15:03] Main Gym Fitness Gym: 1% (Closed) people=1 capacity=72 is_open=False hour_summary=Closed until 6:00am
+[2026-04-08 23:15:03] Outback Climbing Center: 3% (Closed) people=1 capacity=30 is_open=False hour_summary=Closed until 10:00am
+[2026-04-08 23:15:03] RIMAC Fitness Gym: 0% (Closed) people=1 capacity=150 is_open=False hour_summary=Closed until 6:00am
+[2026-04-08 23:15:03] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=Closed until 7:30am
+[2026-04-08 23:15:03] === SCRAPE END OK ===
+[2026-04-08 23:30:02] === SCRAPE START ===
+[2026-04-08 23:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 23:30:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 23:30:04] Main Gym Fitness Gym: 1% (Closed) people=1 capacity=72 is_open=False hour_summary=Closed until 6:00am
+[2026-04-08 23:30:04] Outback Climbing Center: 4% (Closed) people=1 capacity=30 is_open=False hour_summary=Closed until 10:00am
+[2026-04-08 23:30:04] RIMAC Fitness Gym: 0% (Closed) people=1 capacity=150 is_open=False hour_summary=Closed until 6:00am
+[2026-04-08 23:30:04] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=Closed until 7:30am
+[2026-04-08 23:30:04] === SCRAPE END OK ===
+[2026-04-08 23:45:02] === SCRAPE START ===
+[2026-04-08 23:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-08 23:45:04] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-08 23:45:04] Main Gym Fitness Gym: 2% (Closed) people=1 capacity=72 is_open=False hour_summary=Closed until 6:00am
+[2026-04-08 23:45:04] Outback Climbing Center: 3% (Closed) people=1 capacity=30 is_open=False hour_summary=Closed until 10:00am
+[2026-04-08 23:45:04] RIMAC Fitness Gym: 9% (Closed) people=13 capacity=150 is_open=False hour_summary=Closed until 6:00am
+[2026-04-08 23:45:04] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=Closed until 7:30am
+[2026-04-08 23:45:04] === SCRAPE END OK ===

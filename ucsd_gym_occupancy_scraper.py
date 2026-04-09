@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
-Fetch UCSD Recreation occupancy data from Waitz:
+Fetch UCSD Recreation occupancy data from Waitz JSON endpoint:
 https://waitz.io/live/ucsd-rec
 
-This version:
-- uses structured JSON instead of scraping page text
-- only keeps the 4 known facilities
-- logs clearly
+Safer local/task-scheduler version:
+- no Playwright
+- reads structured JSON directly
+- logs useful errors
 - exits nonzero on failure
+- never waits for user input
 """
 
 from __future__ import annotations
@@ -45,8 +46,7 @@ def log(message: str, *, error: bool = False) -> None:
 
 
 def normalize_status(item: Dict[str, object]) -> str:
-    loc_html = item.get("locHtml") or {}
-    summary = str(loc_html.get("summary") or "").strip()
+    summary = str((item.get("locHtml") or {}).get("summary") or "").strip()
 
     if summary:
         if summary.startswith("Not Busy"):
@@ -96,7 +96,7 @@ def fetch_waitz_data() -> List[Dict[str, object]]:
     data = payload.get("data", [])
 
     if not isinstance(data, list):
-        raise ValueError("Unexpected response shape: 'data' is not a list")
+        raise ValueError("Unexpected Waitz response shape: 'data' is not a list")
 
     return data
 
@@ -106,40 +106,40 @@ def build_rows(data: List[Dict[str, object]]) -> List[Dict[str, object]]:
     rows: List[Dict[str, object]] = []
 
     for item in data:
-        facility_name = str(item.get("name") or "").strip()
-        if facility_name not in KNOWN_FACILITIES:
+        name = str(item.get("name") or "").strip()
+        if name not in KNOWN_FACILITIES:
             continue
 
         percent_full = int(item.get("busyness", 0) or 0)
         people = int(item.get("people", 0) or 0)
         capacity = int(item.get("capacity", 0) or 0)
         is_open = bool(item.get("isOpen", False))
-        is_available = bool(item.get("isAvailable", False))
         hour_summary = str(item.get("hourSummary") or "").strip() or "unknown"
-        loc_html = item.get("locHtml") or {}
-        raw_text = str(loc_html.get("summary") or "").strip()
+        is_available = bool(item.get("isAvailable", False))
+        summary = str((item.get("locHtml") or {}).get("summary") or "").strip()
+
         status = normalize_status(item)
+        raw_text = summary or status
 
-        rows.append(
-            {
-                "timestamp": now.isoformat(timespec="seconds"),
-                "day_of_week": now.strftime("%A"),
-                "date": now.strftime("%Y-%m-%d"),
-                "time": now.strftime("%H:%M:%S"),
-                "facility_name": facility_name,
-                "status": status,
-                "percent_full": percent_full,
-                "raw_text": raw_text or status,
-                "people": people,
-                "capacity": capacity,
-                "is_open": is_open,
-                "hour_summary": hour_summary,
-                "is_data_unavailable": (not is_available) and is_open,
-                "is_valid_predictor_row": is_open and is_available and 0 <= percent_full <= 100,
-            }
-        )
+        row = {
+            "timestamp": now.isoformat(timespec="seconds"),
+            "day_of_week": now.strftime("%A"),
+            "date": now.strftime("%Y-%m-%d"),
+            "time": now.strftime("%H:%M:%S"),
+            "facility_name": name,
+            "status": status,
+            "percent_full": percent_full,
+            "raw_text": raw_text,
+            "people": people,
+            "capacity": capacity,
+            "is_open": is_open,
+            "hour_summary": hour_summary,
+            "is_data_unavailable": (not is_available) and is_open,
+            "is_valid_predictor_row": is_open and is_available and 0 <= percent_full <= 100,
+        }
+        rows.append(row)
 
-    rows.sort(key=lambda row: row["facility_name"].lower())
+    rows.sort(key=lambda r: str(r["facility_name"]).lower())
     return rows
 
 
@@ -170,7 +170,8 @@ def append_rows_to_csv(rows: List[Dict[str, object]]) -> None:
         if not file_exists:
             writer.writeheader()
 
-        writer.writerows(rows)
+        for row in rows:
+            writer.writerow(row)
 
 
 def main() -> int:
@@ -183,10 +184,10 @@ def main() -> int:
             log("No occupancy data found for known facilities.", error=True)
             return 1
 
-        found = {row["facility_name"] for row in rows}
+        found = {str(r["facility_name"]) for r in rows}
         missing = KNOWN_FACILITIES - found
         if missing:
-            log(f"Missing facilities this run: {sorted(missing)}", error=True)
+            log(f"Missing facilities in this run: {sorted(missing)}", error=True)
 
         append_rows_to_csv(rows)
 
@@ -194,9 +195,8 @@ def main() -> int:
         for row in rows:
             log(
                 f"{row['facility_name']}: {row['percent_full']}% "
-                f"({row['status']}) people={row['people']} "
-                f"capacity={row['capacity']} is_open={row['is_open']} "
-                f"hour_summary={row['hour_summary']}"
+                f"({row['status']}) people={row['people']} capacity={row['capacity']} "
+                f"is_open={row['is_open']} hour_summary={row['hour_summary']}"
             )
 
         log("=== SCRAPE END OK ===")

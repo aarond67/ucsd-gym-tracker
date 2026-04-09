@@ -105,6 +105,11 @@ def clean_data(df):
     )
 
     df["is_valid_percent"] = df["percent_full"].between(0, 100, inclusive="both")
+    df["predictor_exclusion_reason"] = "ok"
+    df.loc[~df["is_open"].fillna(False), "predictor_exclusion_reason"] = "closed"
+    df.loc[status_lower.eq("closed"), "predictor_exclusion_reason"] = "closed"
+    df.loc[df["is_data_unavailable"], "predictor_exclusion_reason"] = "data_unavailable"
+    df.loc[~df["is_valid_percent"], "predictor_exclusion_reason"] = "invalid_percent"
     df["is_valid_predictor_row"] = (
         df["is_open"].fillna(False)
         & ~status_lower.eq("closed")
@@ -134,6 +139,7 @@ def clean_data(df):
         "hour_summary",
         "is_data_unavailable",
         "is_valid_percent",
+        "predictor_exclusion_reason",
         "is_valid_predictor_row",
     ]
     existing = [c for c in preferred if c in df.columns]
