@@ -9,7 +9,6 @@ Safer local/task-scheduler version:
 - logs useful errors
 - exits nonzero on failure
 - never waits for user input
-a comment
 """
 
 from __future__ import annotations
