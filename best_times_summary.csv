@@ -5,9 +5,9 @@ Main Gym Fitness Gym,Monday,14,07:00,18.75,4,16.5,21.25,Low
 Main Gym Fitness Gym,Monday,15,07:30,11.75,4,13.0,16.0,Low
 Main Gym Fitness Gym,Monday,16,08:00,20.0,4,17.0,24.25,Low
 Main Gym Fitness Gym,Monday,17,08:30,23.5,4,23.5,25.0,Low
-Main Gym Fitness Gym,Monday,18,09:00,17.666666666666668,3,16.0,20.0,Low
-Main Gym Fitness Gym,Monday,19,09:30,19.0,2,19.0,23.5,Low
-Main Gym Fitness Gym,Monday,20,10:00,24.5,2,24.5,26.75,Low
+Main Gym Fitness Gym,Monday,18,09:00,18.0,4,17.5,20.25,Low
+Main Gym Fitness Gym,Monday,19,09:30,21.25,4,23.0,28.25,Low
+Main Gym Fitness Gym,Monday,20,10:00,23.666666666666668,3,22.0,25.5,Low
 Main Gym Fitness Gym,Monday,21,10:30,25.5,2,25.5,26.25,Low
 Main Gym Fitness Gym,Monday,22,11:00,37.5,2,37.5,37.75,Low
 Main Gym Fitness Gym,Monday,23,11:30,28.0,2,28.0,28.5,Low
@@ -379,9 +379,9 @@ RIMAC Fitness Gym,Monday,14,07:00,39.25,4,40.0,43.25,Low
 RIMAC Fitness Gym,Monday,15,07:30,47.75,4,47.0,52.5,Low
 RIMAC Fitness Gym,Monday,16,08:00,53.25,4,50.0,54.75,Low
 RIMAC Fitness Gym,Monday,17,08:30,50.25,4,50.5,57.0,Low
-RIMAC Fitness Gym,Monday,18,09:00,57.0,3,57.0,61.0,Low
-RIMAC Fitness Gym,Monday,19,09:30,56.5,2,56.5,58.25,Low
-RIMAC Fitness Gym,Monday,20,10:00,49.0,2,49.0,51.5,Low
+RIMAC Fitness Gym,Monday,18,09:00,60.0,4,61.0,66.0,Low
+RIMAC Fitness Gym,Monday,19,09:30,66.25,4,66.5,74.5,Low
+RIMAC Fitness Gym,Monday,20,10:00,55.0,3,54.0,60.5,Low
 RIMAC Fitness Gym,Monday,21,10:30,59.0,2,59.0,60.5,Low
 RIMAC Fitness Gym,Monday,22,11:00,72.0,2,72.0,73.0,Low
 RIMAC Fitness Gym,Monday,23,11:30,66.0,1,66.0,66.0,Low
@@ -604,9 +604,9 @@ RIMAC Fitness Gym,Sunday,46,23:00,33.5,2,33.5,34.75,Low
 Triton Esports Center,Monday,15,07:30,0.0,2,0.0,0.0,Low
 Triton Esports Center,Monday,16,08:00,0.0,4,0.0,0.0,Low
 Triton Esports Center,Monday,17,08:30,0.5,4,0.5,1.0,Low
-Triton Esports Center,Monday,18,09:00,5.333333333333333,3,2.0,7.5,Low
-Triton Esports Center,Monday,19,09:30,3.5,2,3.5,4.25,Low
-Triton Esports Center,Monday,20,10:00,9.0,2,9.0,10.5,Low
+Triton Esports Center,Monday,18,09:00,5.25,4,3.5,7.0,Low
+Triton Esports Center,Monday,19,09:30,3.75,4,4.0,4.25,Low
+Triton Esports Center,Monday,20,10:00,10.0,3,12.0,12.0,Low
 Triton Esports Center,Monday,21,10:30,20.0,2,20.0,20.5,Low
 Triton Esports Center,Monday,22,11:00,24.0,2,24.0,25.5,Low
 Triton Esports Center,Monday,23,11:30,46.0,2,46.0,47.5,Low
