@@ -1,7 +1,7 @@
 facility_name,day,bucket_index,time_bucket_30,avg_percent,sample_count,median_percent,p75_percent,confidence
-Main Gym Fitness Gym,Monday,12,06:00,2.0,2,2.0,2.0,Low
-Main Gym Fitness Gym,Monday,13,06:30,13.75,4,11.0,16.0,Low
-Main Gym Fitness Gym,Monday,14,07:00,18.75,4,16.5,21.25,Low
+Main Gym Fitness Gym,Monday,12,06:00,1.6666666666666667,3,2.0,2.0,Low
+Main Gym Fitness Gym,Monday,13,06:30,13.333333333333334,6,11.0,21.25,Medium
+Main Gym Fitness Gym,Monday,14,07:00,17.5,6,16.5,19.5,Medium
 Main Gym Fitness Gym,Monday,15,07:30,11.75,4,13.0,16.0,Low
 Main Gym Fitness Gym,Monday,16,08:00,20.0,4,17.0,24.25,Low
 Main Gym Fitness Gym,Monday,17,08:30,23.5,4,23.5,25.0,Low
@@ -385,9 +385,9 @@ Outback Climbing Center,Sunday,41,20:30,72.66666666666667,6,99.0,99.0,Medium
 Outback Climbing Center,Sunday,42,21:00,71.66666666666667,6,95.5,99.0,Medium
 Outback Climbing Center,Sunday,43,21:30,50.833333333333336,6,55.0,68.5,Medium
 Outback Climbing Center,Sunday,44,22:00,56.0,3,71.0,72.5,Low
-RIMAC Fitness Gym,Monday,12,06:00,1.0,2,1.0,1.0,Low
-RIMAC Fitness Gym,Monday,13,06:30,26.0,4,26.0,31.25,Low
-RIMAC Fitness Gym,Monday,14,07:00,39.25,4,40.0,43.25,Low
+RIMAC Fitness Gym,Monday,12,06:00,2.3333333333333335,3,1.0,3.0,Low
+RIMAC Fitness Gym,Monday,13,06:30,27.166666666666668,6,26.0,33.75,Medium
+RIMAC Fitness Gym,Monday,14,07:00,41.166666666666664,6,43.5,44.75,Medium
 RIMAC Fitness Gym,Monday,15,07:30,47.75,4,47.0,52.5,Low
 RIMAC Fitness Gym,Monday,16,08:00,53.25,4,50.0,54.75,Low
 RIMAC Fitness Gym,Monday,17,08:30,50.25,4,50.5,57.0,Low
