@@ -1,0 +1,8 @@
+[2026-04-23 00:00:01] === SCRAPE START ===
+[2026-04-23 00:00:01] Fetching https://waitz.io/live/ucsd-rec
+[2026-04-23 00:00:03] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-04-23 00:00:03] Main Gym Fitness Gym: 1% (Closed) people=1 capacity=72 is_open=False hour_summary=Closed until 6:00am
+[2026-04-23 00:00:03] Outback Climbing Center: 4% (Closed) people=1 capacity=30 is_open=False hour_summary=Closed until 10:00am
+[2026-04-23 00:00:03] RIMAC Fitness Gym: 0% (Closed) people=1 capacity=150 is_open=False hour_summary=Closed until 6:00am
+[2026-04-23 00:00:03] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=Closed until 7:30am
+[2026-04-23 00:00:03] === SCRAPE END OK ===
