@@ -119,8 +119,8 @@ Main Gym Fitness Gym,Thursday,23,11:30,37.285714285714285,7,40.0,40.5,Medium
 Main Gym Fitness Gym,Thursday,24,12:00,37.0,6,34.0,40.75,Medium
 Main Gym Fitness Gym,Thursday,25,12:30,38.0,7,38.0,44.0,Medium
 Main Gym Fitness Gym,Thursday,26,13:00,36.8,5,37.0,37.0,Low
-Main Gym Fitness Gym,Thursday,27,13:30,38.4,5,40.0,40.0,Low
-Main Gym Fitness Gym,Thursday,28,14:00,43.6,5,43.0,56.0,Low
+Main Gym Fitness Gym,Thursday,27,13:30,38.285714285714285,7,40.0,41.0,Medium
+Main Gym Fitness Gym,Thursday,28,14:00,42.166666666666664,6,39.0,52.75,Medium
 Main Gym Fitness Gym,Thursday,29,14:30,43.25,4,44.5,58.0,Low
 Main Gym Fitness Gym,Thursday,30,15:00,34.4,5,32.0,35.0,Low
 Main Gym Fitness Gym,Thursday,31,15:30,56.6,5,53.0,65.0,Low
@@ -318,8 +318,8 @@ Outback Climbing Center,Thursday,23,11:30,64.0,7,81.0,92.0,Medium
 Outback Climbing Center,Thursday,24,12:00,50.166666666666664,6,51.5,81.5,Medium
 Outback Climbing Center,Thursday,25,12:30,58.142857142857146,7,72.0,83.5,Medium
 Outback Climbing Center,Thursday,26,13:00,53.2,5,73.0,85.0,Low
-Outback Climbing Center,Thursday,27,13:30,79.8,5,99.0,99.0,Low
-Outback Climbing Center,Thursday,28,14:00,77.4,5,76.0,99.0,Low
+Outback Climbing Center,Thursday,27,13:30,58.42857142857143,7,52.0,99.0,Medium
+Outback Climbing Center,Thursday,28,14:00,66.0,6,66.5,93.25,Medium
 Outback Climbing Center,Thursday,29,14:30,85.75,4,91.0,99.0,Low
 Outback Climbing Center,Thursday,30,15:00,98.0,5,99.0,99.0,Low
 Outback Climbing Center,Thursday,31,15:30,99.0,5,99.0,99.0,Low
@@ -505,8 +505,8 @@ RIMAC Fitness Gym,Thursday,23,11:30,67.71428571428571,7,63.0,78.5,Medium
 RIMAC Fitness Gym,Thursday,24,12:00,78.5,6,74.0,84.75,Medium
 RIMAC Fitness Gym,Thursday,25,12:30,71.42857142857143,7,68.0,76.0,Medium
 RIMAC Fitness Gym,Thursday,26,13:00,75.8,5,70.0,87.0,Low
-RIMAC Fitness Gym,Thursday,27,13:30,69.2,5,67.0,70.0,Low
-RIMAC Fitness Gym,Thursday,28,14:00,59.2,5,62.0,64.0,Low
+RIMAC Fitness Gym,Thursday,27,13:30,65.71428571428571,7,66.0,68.5,Medium
+RIMAC Fitness Gym,Thursday,28,14:00,56.833333333333336,6,60.5,63.5,Medium
 RIMAC Fitness Gym,Thursday,29,14:30,78.0,4,75.5,84.25,Low
 RIMAC Fitness Gym,Thursday,30,15:00,75.2,5,76.0,81.0,Low
 RIMAC Fitness Gym,Thursday,31,15:30,66.2,5,58.0,80.0,Low
@@ -724,8 +724,8 @@ Triton Esports Center,Thursday,23,11:30,33.714285714285715,7,35.0,42.0,Medium
 Triton Esports Center,Thursday,24,12:00,40.666666666666664,6,40.5,41.0,Medium
 Triton Esports Center,Thursday,25,12:30,55.857142857142854,7,57.0,64.5,Medium
 Triton Esports Center,Thursday,26,13:00,54.6,5,68.0,71.0,Low
-Triton Esports Center,Thursday,27,13:30,64.4,5,62.0,70.0,Low
-Triton Esports Center,Thursday,28,14:00,60.6,5,62.0,67.0,Low
+Triton Esports Center,Thursday,27,13:30,53.42857142857143,7,57.0,66.0,Medium
+Triton Esports Center,Thursday,28,14:00,56.666666666666664,6,57.0,65.75,Medium
 Triton Esports Center,Thursday,29,14:30,63.0,4,62.5,67.25,Low
 Triton Esports Center,Thursday,30,15:00,69.8,5,66.0,74.0,Low
 Triton Esports Center,Thursday,31,15:30,60.0,5,61.0,62.0,Low
