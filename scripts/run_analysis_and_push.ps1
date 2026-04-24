@@ -1,6 +1,6 @@
 param(
-    [string]$RepoPath = "C:\path\to\ucsd-gym-tracker-main",
-    [string]$PythonExe = "python",
+    [string]$RepoPath = "C:\Users\pisce\OneDrive\Documents\Aaron's Gym Scraper\ucsd-gym-tracker",
+    [string]$PythonExe = "C:\Python314\python.exe",
     [string]$Branch = "main"
 )
 
@@ -38,6 +38,7 @@ try {
     }
 
     Set-Location $RepoPath
+    Write-Log "Working directory set to $RepoPath"
 
     if (!(Test-Path ".\clean_gym_history_patched.py")) {
         throw "clean_gym_history_patched.py not found in $RepoPath"
@@ -67,15 +68,35 @@ try {
         ".\ucsd_occupancy_predictor_15min.csv",
         ".\best_times_summary.csv",
         ".\next_best_windows_today.csv",
-        ".\best_time_today.txt"
+        ".\best_time_today.txt",
+        ".\Main_Gym_Fitness_Gym_hourly.png",
+        ".\Main_Gym_Fitness_Gym_heatmap.png",
+        ".\RIMAC_Fitness_Gym_hourly.png",
+        ".\RIMAC_Fitness_Gym_heatmap.png"
     )
-
-    $filesToAdd += Get-ChildItem -Path . -Filter "*_hourly.png" -File -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName }
-    $filesToAdd += Get-ChildItem -Path . -Filter "*_heatmap.png" -File -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName }
 
     foreach ($file in $filesToAdd) {
         if (Test-Path $file) {
             Run-Step -Label "Git add $file" -FilePath "git" -Arguments @("add", $file)
+        }
+    }
+
+    # Remove old facility charts from git if they still exist/tracked
+    $oldFiles = @(
+        ".\Outback_Climbing_Center_hourly.png",
+        ".\Outback_Climbing_Center_heatmap.png",
+        ".\Triton_Esports_Center_hourly.png",
+        ".\Triton_Esports_Center_heatmap.png"
+    )
+
+    foreach ($oldFile in $oldFiles) {
+        if (Test-Path $oldFile) {
+            Remove-Item $oldFile -Force
+        }
+
+        & git ls-files --error-unmatch $oldFile 2>$null
+        if ($LASTEXITCODE -eq 0) {
+            Run-Step -Label "Git remove $oldFile" -FilePath "git" -Arguments @("rm", "--ignore-unmatch", $oldFile)
         }
     }
 
