@@ -12,12 +12,36 @@ function Write-Log {
     Write-Host "[$timestamp] $Message"
 }
 
+function Run-Step {
+    param(
+        [string]$Label,
+        [string]$FilePath,
+        [string[]]$Arguments = @()
+    )
+
+    Write-Log "START: $Label"
+    Write-Log "CMD: $FilePath $($Arguments -join ' ')"
+
+    & $FilePath @Arguments 2>&1
+    $exitCode = $LASTEXITCODE
+
+    if ($exitCode -ne 0) {
+        throw "$Label failed with exit code $exitCode"
+    }
+
+    Write-Log "END: $Label"
+}
+
 try {
     if (!(Test-Path $RepoPath)) {
         throw "RepoPath not found: $RepoPath"
     }
 
     Set-Location $RepoPath
+
+    if (!(Test-Path ".\clean_gym_history_patched.py")) {
+        throw "clean_gym_history_patched.py not found in $RepoPath"
+    }
 
     if (!(Test-Path ".\best_times_analysis.py")) {
         throw "best_times_analysis.py not found in $RepoPath"
@@ -28,15 +52,21 @@ try {
     }
 
     Write-Log "Pulling latest repo state..."
-    git fetch origin
-    git checkout $Branch
-    git pull --rebase origin $Branch
+    Run-Step -Label "Git fetch" -FilePath "git" -Arguments @("fetch", "origin")
+    Run-Step -Label "Git checkout branch" -FilePath "git" -Arguments @("checkout", $Branch)
+    Run-Step -Label "Git pull rebase" -FilePath "git" -Arguments @("pull", "--rebase", "origin", $Branch)
+
+    Write-Log "Running cleaner before analysis..."
+    Run-Step -Label "CSV cleaner" -FilePath $PythonExe -Arguments @(".\clean_gym_history_patched.py")
 
     Write-Log "Running analysis..."
-    & $PythonExe ".\best_times_analysis.py"
+    Run-Step -Label "Best-times analysis" -FilePath $PythonExe -Arguments @(".\best_times_analysis.py")
 
     $filesToAdd = @(
+        ".\ucsd_occupancy_history_cleaned.csv",
+        ".\ucsd_occupancy_predictor_15min.csv",
         ".\best_times_summary.csv",
+        ".\next_best_windows_today.csv",
         ".\best_time_today.txt"
     )
 
@@ -45,7 +75,7 @@ try {
 
     foreach ($file in $filesToAdd) {
         if (Test-Path $file) {
-            git add $file
+            Run-Step -Label "Git add $file" -FilePath "git" -Arguments @("add", $file)
         }
     }
 
@@ -57,16 +87,16 @@ try {
 
     $commitMessage = "update analysis outputs $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
     Write-Log "Committing analysis update..."
-    git commit -m $commitMessage
+    Run-Step -Label "Git commit" -FilePath "git" -Arguments @("commit", "-m", $commitMessage)
 
     Write-Log "Rebasing before push..."
-    git pull --rebase origin $Branch
+    Run-Step -Label "Git pull rebase before push" -FilePath "git" -Arguments @("pull", "--rebase", "origin", $Branch)
 
     Write-Log "Pushing to GitHub..."
-    git push origin $Branch
-    if ($LASTEXITCODE -ne 0) { throw "command failed" }
+    Run-Step -Label "Git push" -FilePath "git" -Arguments @("push", "origin", $Branch)
 
     Write-Log "Analysis + push complete."
+    exit 0
 }
 catch {
     Write-Error $_

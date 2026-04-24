@@ -32,10 +32,11 @@ function Run-Step {
     Write-Log "START: $Label"
     Write-Log "CMD: $FilePath $($Arguments -join ' ')"
 
-    & $FilePath @Arguments *>> $LogFile
+    & $FilePath @Arguments 2>&1 | Tee-Object -FilePath $LogFile -Append
+    $exitCode = $LASTEXITCODE
 
-    if ($LASTEXITCODE -ne 0) {
-        throw "$Label failed with exit code $LASTEXITCODE"
+    if ($exitCode -ne 0) {
+        throw "$Label failed with exit code $exitCode"
     }
 
     Write-Log "END: $Label"
@@ -57,6 +58,8 @@ try {
 
     Run-Step -Label "Python scraper" -FilePath $PythonExe -Arguments @(".\ucsd_gym_occupancy_scraper.py")
 
+    Run-Step -Label "CSV cleaner" -FilePath $PythonExe -Arguments @(".\clean_gym_history_patched.py")
+
     $currentBranch = (& git branch --show-current).Trim()
     Write-Log "Current git branch: $currentBranch"
 
@@ -72,7 +75,17 @@ try {
     }
 
     Run-Step -Label "Git status" -FilePath "git" -Arguments @("status", "--short")
-    Run-Step -Label "Git add" -FilePath "git" -Arguments @("add", "ucsd_occupancy_history.csv", "ucsd_occupancy_history_cleaned.csv", "best_times_summary.csv", "*.png", "logs")
+
+    Run-Step -Label "Git add" -FilePath "git" -Arguments @(
+        "add",
+        "ucsd_occupancy_history.csv",
+        "ucsd_occupancy_history_cleaned.csv",
+        "ucsd_occupancy_predictor_15min.csv",
+        "best_times_summary.csv",
+        "next_best_windows_today.csv",
+        "*.png",
+        "logs"
+    )
 
     & git diff --cached --quiet
     $gitDiffExit = $LASTEXITCODE
