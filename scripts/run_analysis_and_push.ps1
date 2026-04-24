@@ -94,23 +94,7 @@ try {
         }
     }
 
-    $oldFiles = @(
-        ".\Outback_Climbing_Center_hourly.png",
-        ".\Outback_Climbing_Center_heatmap.png",
-        ".\Triton_Esports_Center_hourly.png",
-        ".\Triton_Esports_Center_heatmap.png"
-    )
-
-    foreach ($oldFile in $oldFiles) {
-        if (Test-Path $oldFile) {
-            Remove-Item $oldFile -Force
-        }
-
-        & git ls-files --error-unmatch $oldFile 2>$null
-        if ($LASTEXITCODE -eq 0) {
-            Run-Step -Label "Git remove $oldFile" -FilePath "git" -Arguments @("rm", "--ignore-unmatch", $oldFile)
-        }
-    }
+   
 
     $hasChanges = git diff --cached --name-only
 
