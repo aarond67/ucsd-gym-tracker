@@ -22,8 +22,12 @@ function Run-Step {
     Write-Log "START: $Label"
     Write-Log "CMD: $FilePath $($Arguments -join ' ')"
 
-    & $FilePath @Arguments 2>&1
+    $output = & $FilePath @Arguments 2>&1
     $exitCode = $LASTEXITCODE
+
+    if ($output) {
+        $output | ForEach-Object { Write-Host $_ }
+    }
 
     if ($exitCode -ne 0) {
         throw "$Label failed with exit code $exitCode"
@@ -52,10 +56,19 @@ try {
         throw "ucsd_occupancy_history.csv not found yet. Run scraper first."
     }
 
-    Write-Log "Pulling latest repo state..."
-    Run-Step -Label "Git fetch" -FilePath "git" -Arguments @("fetch", "origin")
-    Run-Step -Label "Git checkout branch" -FilePath "git" -Arguments @("checkout", $Branch)
-    Run-Step -Label "Git pull rebase" -FilePath "git" -Arguments @("pull", "--rebase", "origin", $Branch)
+    $currentBranch = (& git branch --show-current).Trim()
+    Write-Log "Current git branch: $currentBranch"
+
+    if ([string]::IsNullOrWhiteSpace($currentBranch)) {
+        throw "Could not determine current git branch."
+    }
+
+    if ($currentBranch -ne $Branch) {
+        Run-Step -Label "Git checkout branch" -FilePath "git" -Arguments @("checkout", $Branch)
+    }
+    else {
+        Write-Log "Already on branch $Branch"
+    }
 
     Write-Log "Running cleaner before analysis..."
     Run-Step -Label "CSV cleaner" -FilePath $PythonExe -Arguments @(".\clean_gym_history_patched.py")
@@ -81,7 +94,6 @@ try {
         }
     }
 
-    # Remove old facility charts from git if they still exist/tracked
     $oldFiles = @(
         ".\Outback_Climbing_Center_hourly.png",
         ".\Outback_Climbing_Center_heatmap.png",
@@ -101,17 +113,16 @@ try {
     }
 
     $hasChanges = git diff --cached --name-only
+
     if (-not $hasChanges) {
         Write-Log "No analysis changes detected. Nothing to commit."
         exit 0
     }
 
     $commitMessage = "update analysis outputs $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+
     Write-Log "Committing analysis update..."
     Run-Step -Label "Git commit" -FilePath "git" -Arguments @("commit", "-m", $commitMessage)
-
-    Write-Log "Rebasing before push..."
-    Run-Step -Label "Git pull rebase before push" -FilePath "git" -Arguments @("pull", "--rebase", "origin", $Branch)
 
     Write-Log "Pushing to GitHub..."
     Run-Step -Label "Git push" -FilePath "git" -Arguments @("push", "origin", $Branch)
