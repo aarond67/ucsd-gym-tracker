@@ -4899,3 +4899,5 @@ timestamp,day_of_week,date,time,time_bucket_15,bucket_index_15,time_bucket_30,bu
 2026-04-30T17:00:04-07:00,Thursday,2026-04-30,17:00:04,17:00,68,17:00,34,RIMAC Fitness Gym,Busy,75,Busy (75%),112,150,True,open,False,True,ok,True,17,0,0,0
 2026-04-30T17:15:03-07:00,Thursday,2026-04-30,17:15:03,17:15,69,17:00,34,Main Gym Fitness Gym,Not Busy,22,Not Busy (22%),16,72,True,open,False,True,ok,True,17,15,15,0
 2026-04-30T17:15:03-07:00,Thursday,2026-04-30,17:15:03,17:15,69,17:00,34,RIMAC Fitness Gym,Busy,72,Busy (72%),108,150,True,open,False,True,ok,True,17,15,15,0
+2026-04-30T17:30:03-07:00,Thursday,2026-04-30,17:30:03,17:30,70,17:30,35,Main Gym Fitness Gym,Very Active,97,Very Busy (98%),70,72,True,open,False,True,ok,True,17,30,30,30
+2026-04-30T17:30:03-07:00,Thursday,2026-04-30,17:30:03,17:30,70,17:30,35,RIMAC Fitness Gym,Very Active,81,Busy (80%),121,150,True,open,False,True,ok,True,17,30,30,30
