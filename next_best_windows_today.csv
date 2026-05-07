@@ -1,3 +1,3 @@
 facility_name,day,start_bucket,start_time,end_time,window_minutes,window_label,avg_percent,peak_percent,sample_floor,sample_total,confidence,source_scope,score
-Main Gym Fitness Gym,Wednesday,85,21:15,22:45,90,21:15 -> 21:30 -> 21:45 -> 22:00 -> 22:15 -> 22:30,36.94,54.75,4,25,Low,same_day,52.154
-RIMAC Fitness Gym,Wednesday,86,21:30,23:00,90,21:30 -> 21:45 -> 22:00 -> 22:15 -> 22:30 -> 22:45,65.85,81.5,3,24,Low,same_day,90.552
+Main Gym Fitness Gym,Wednesday,,,,,No future data-backed window left today,,,,,N/A,none,
+RIMAC Fitness Gym,Wednesday,,,,,No future data-backed window left today,,,,,N/A,none,
