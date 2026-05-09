@@ -1,0 +1,921 @@
+facility_name,day,bucket_index,time_bucket_15,avg_percent,sample_count,median_percent,p75_percent,confidence
+Main Gym Fitness Gym,Monday,24,06:00,1.0,5,1.0,1.0,Low
+Main Gym Fitness Gym,Monday,25,06:15,4.4,5,4.0,8.0,Low
+Main Gym Fitness Gym,Monday,26,06:30,17.2,5,17.0,24.0,Low
+Main Gym Fitness Gym,Monday,27,06:45,14.4,5,15.0,17.0,Low
+Main Gym Fitness Gym,Monday,28,07:00,18.6,5,18.0,19.0,Low
+Main Gym Fitness Gym,Monday,29,07:15,10.2,5,10.0,14.0,Low
+Main Gym Fitness Gym,Monday,30,07:30,10.0,5,10.0,14.0,Low
+Main Gym Fitness Gym,Monday,31,07:45,13.8,5,11.0,14.0,Low
+Main Gym Fitness Gym,Monday,32,08:00,27.0,5,25.0,29.0,Low
+Main Gym Fitness Gym,Monday,33,08:15,22.0,5,22.0,22.0,Low
+Main Gym Fitness Gym,Monday,34,08:30,21.2,5,22.0,24.0,Low
+Main Gym Fitness Gym,Monday,35,08:45,19.2,5,17.0,24.0,Low
+Main Gym Fitness Gym,Monday,36,09:00,22.2,5,19.0,24.0,Low
+Main Gym Fitness Gym,Monday,37,09:15,17.0,5,18.0,21.0,Low
+Main Gym Fitness Gym,Monday,38,09:30,30.8,5,29.0,29.0,Low
+Main Gym Fitness Gym,Monday,39,09:45,26.0,5,24.0,29.0,Low
+Main Gym Fitness Gym,Monday,40,10:00,47.8,5,24.0,25.0,Low
+Main Gym Fitness Gym,Monday,41,10:15,25.0,5,24.0,28.0,Low
+Main Gym Fitness Gym,Monday,42,10:30,22.4,5,24.0,24.0,Low
+Main Gym Fitness Gym,Monday,43,10:45,29.2,5,32.0,33.0,Low
+Main Gym Fitness Gym,Monday,44,11:00,40.0,5,38.0,46.0,Low
+Main Gym Fitness Gym,Monday,45,11:15,33.2,5,35.0,38.0,Low
+Main Gym Fitness Gym,Monday,46,11:30,29.8,5,29.0,31.0,Low
+Main Gym Fitness Gym,Monday,47,11:45,84.5,4,37.0,91.0,Low
+Main Gym Fitness Gym,Monday,48,12:00,41.75,4,41.0,45.25,Low
+Main Gym Fitness Gym,Monday,49,12:15,37.0,5,39.0,39.0,Low
+Main Gym Fitness Gym,Monday,50,12:30,33.8,5,36.0,38.0,Low
+Main Gym Fitness Gym,Monday,51,12:45,33.8,5,38.0,39.0,Low
+Main Gym Fitness Gym,Monday,52,13:00,41.8,5,36.0,40.0,Low
+Main Gym Fitness Gym,Monday,53,13:15,86.0,5,42.0,57.0,Low
+Main Gym Fitness Gym,Monday,54,13:30,41.2,5,44.0,50.0,Low
+Main Gym Fitness Gym,Monday,55,13:45,34.0,5,32.0,42.0,Low
+Main Gym Fitness Gym,Monday,56,14:00,47.0,5,44.0,57.0,Low
+Main Gym Fitness Gym,Monday,57,14:15,54.6,5,33.0,47.0,Low
+Main Gym Fitness Gym,Monday,58,14:30,36.0,5,33.0,39.0,Low
+Main Gym Fitness Gym,Monday,59,14:45,32.75,4,35.0,36.25,Low
+Main Gym Fitness Gym,Monday,60,15:00,37.4,5,36.0,42.0,Low
+Main Gym Fitness Gym,Monday,61,15:15,35.6,5,38.0,40.0,Low
+Main Gym Fitness Gym,Monday,62,15:30,35.25,4,38.0,38.25,Low
+Main Gym Fitness Gym,Monday,63,15:45,36.25,4,33.5,37.75,Low
+Main Gym Fitness Gym,Monday,64,16:00,97.5,4,41.5,102.75,Low
+Main Gym Fitness Gym,Monday,65,16:15,47.5,4,47.0,52.75,Low
+Main Gym Fitness Gym,Monday,66,16:30,52.25,4,55.5,60.0,Low
+Main Gym Fitness Gym,Monday,67,16:45,46.0,4,46.0,52.75,Low
+Main Gym Fitness Gym,Monday,68,17:00,41.5,4,44.5,50.0,Low
+Main Gym Fitness Gym,Monday,69,17:15,44.2,5,44.0,49.0,Low
+Main Gym Fitness Gym,Monday,70,17:30,56.2,5,56.0,65.0,Low
+Main Gym Fitness Gym,Monday,71,17:45,105.25,4,48.0,114.5,Low
+Main Gym Fitness Gym,Monday,72,18:00,85.0,5,50.0,51.0,Low
+Main Gym Fitness Gym,Monday,73,18:15,42.2,5,46.0,56.0,Low
+Main Gym Fitness Gym,Monday,74,18:30,128.8,5,39.0,269.0,Low
+Main Gym Fitness Gym,Monday,75,18:45,47.6,5,51.0,51.0,Low
+Main Gym Fitness Gym,Monday,76,19:00,45.6,5,43.0,50.0,Low
+Main Gym Fitness Gym,Monday,77,19:15,49.0,5,44.0,53.0,Low
+Main Gym Fitness Gym,Monday,78,19:30,42.8,5,42.0,50.0,Low
+Main Gym Fitness Gym,Monday,79,19:45,86.0,5,47.0,58.0,Low
+Main Gym Fitness Gym,Monday,80,20:00,51.0,5,42.0,72.0,Low
+Main Gym Fitness Gym,Monday,81,20:15,39.4,5,36.0,46.0,Low
+Main Gym Fitness Gym,Monday,82,20:30,51.2,5,51.0,57.0,Low
+Main Gym Fitness Gym,Monday,83,20:45,37.8,5,43.0,44.0,Low
+Main Gym Fitness Gym,Monday,84,21:00,37.0,5,39.0,39.0,Low
+Main Gym Fitness Gym,Monday,85,21:15,46.2,5,39.0,49.0,Low
+Main Gym Fitness Gym,Monday,86,21:30,45.2,5,42.0,44.0,Low
+Main Gym Fitness Gym,Monday,87,21:45,44.4,5,51.0,53.0,Low
+Main Gym Fitness Gym,Monday,88,22:00,41.5,4,45.5,47.5,Low
+Main Gym Fitness Gym,Monday,89,22:15,37.2,5,33.0,44.0,Low
+Main Gym Fitness Gym,Monday,90,22:30,31.2,5,33.0,35.0,Low
+Main Gym Fitness Gym,Monday,91,22:45,26.0,5,24.0,36.0,Low
+Main Gym Fitness Gym,Tuesday,24,06:00,1.6,5,1.0,1.0,Low
+Main Gym Fitness Gym,Tuesday,25,06:15,12.2,5,15.0,15.0,Low
+Main Gym Fitness Gym,Tuesday,26,06:30,19.0,5,19.0,22.0,Low
+Main Gym Fitness Gym,Tuesday,27,06:45,13.8,5,15.0,15.0,Low
+Main Gym Fitness Gym,Tuesday,28,07:00,16.2,5,18.0,19.0,Low
+Main Gym Fitness Gym,Tuesday,29,07:15,16.0,5,14.0,15.0,Low
+Main Gym Fitness Gym,Tuesday,30,07:30,13.0,5,17.0,19.0,Low
+Main Gym Fitness Gym,Tuesday,31,07:45,32.0,5,18.0,18.0,Low
+Main Gym Fitness Gym,Tuesday,32,08:00,51.4,5,29.0,31.0,Low
+Main Gym Fitness Gym,Tuesday,33,08:15,26.8,5,25.0,38.0,Low
+Main Gym Fitness Gym,Tuesday,34,08:30,26.8,5,29.0,40.0,Low
+Main Gym Fitness Gym,Tuesday,35,08:45,19.6,5,18.0,19.0,Low
+Main Gym Fitness Gym,Tuesday,36,09:00,27.6,5,28.0,29.0,Low
+Main Gym Fitness Gym,Tuesday,37,09:15,22.6,5,25.0,28.0,Low
+Main Gym Fitness Gym,Tuesday,38,09:30,34.333333333333336,6,33.5,37.25,Medium
+Main Gym Fitness Gym,Tuesday,39,09:45,36.8,5,29.0,31.0,Low
+Main Gym Fitness Gym,Tuesday,40,10:00,28.0,5,32.0,35.0,Low
+Main Gym Fitness Gym,Tuesday,41,10:15,28.666666666666668,6,30.5,35.0,Medium
+Main Gym Fitness Gym,Tuesday,42,10:30,25.6,5,24.0,28.0,Low
+Main Gym Fitness Gym,Tuesday,43,10:45,28.6,5,28.0,38.0,Low
+Main Gym Fitness Gym,Tuesday,44,11:00,41.5,6,42.5,45.25,Medium
+Main Gym Fitness Gym,Tuesday,45,11:15,27.6,5,29.0,38.0,Low
+Main Gym Fitness Gym,Tuesday,46,11:30,33.6,5,33.0,36.0,Low
+Main Gym Fitness Gym,Tuesday,47,11:45,30.2,5,33.0,33.0,Low
+Main Gym Fitness Gym,Tuesday,48,12:00,28.4,5,25.0,35.0,Low
+Main Gym Fitness Gym,Tuesday,49,12:15,33.8,5,31.0,44.0,Low
+Main Gym Fitness Gym,Tuesday,50,12:30,40.0,5,43.0,56.0,Low
+Main Gym Fitness Gym,Tuesday,51,12:45,28.6,5,28.0,33.0,Low
+Main Gym Fitness Gym,Tuesday,52,13:00,33.2,5,29.0,32.0,Low
+Main Gym Fitness Gym,Tuesday,53,13:15,29.0,4,28.5,29.5,Low
+Main Gym Fitness Gym,Tuesday,54,13:30,35.2,5,36.0,38.0,Low
+Main Gym Fitness Gym,Tuesday,55,13:45,31.166666666666668,6,28.5,39.25,Medium
+Main Gym Fitness Gym,Tuesday,56,14:00,43.5,4,44.5,52.5,Low
+Main Gym Fitness Gym,Tuesday,57,14:15,37.666666666666664,6,34.0,35.0,Medium
+Main Gym Fitness Gym,Tuesday,58,14:30,77.0,5,39.0,75.0,Low
+Main Gym Fitness Gym,Tuesday,59,14:45,37.6,5,36.0,38.0,Low
+Main Gym Fitness Gym,Tuesday,60,15:00,32.0,6,31.5,38.75,Medium
+Main Gym Fitness Gym,Tuesday,61,15:15,31.2,5,26.0,33.0,Low
+Main Gym Fitness Gym,Tuesday,62,15:30,46.2,5,43.0,57.0,Low
+Main Gym Fitness Gym,Tuesday,63,15:45,65.33333333333333,6,37.0,47.0,Medium
+Main Gym Fitness Gym,Tuesday,64,16:00,89.2,5,47.0,85.0,Low
+Main Gym Fitness Gym,Tuesday,65,16:15,34.666666666666664,6,32.0,39.75,Medium
+Main Gym Fitness Gym,Tuesday,66,16:30,39.0,5,36.0,42.0,Low
+Main Gym Fitness Gym,Tuesday,67,16:45,40.0,6,36.5,52.5,Medium
+Main Gym Fitness Gym,Tuesday,68,17:00,40.8,5,39.0,46.0,Low
+Main Gym Fitness Gym,Tuesday,69,17:15,47.25,4,47.0,50.25,Low
+Main Gym Fitness Gym,Tuesday,70,17:30,50.0,5,47.0,53.0,Low
+Main Gym Fitness Gym,Tuesday,71,17:45,47.6,5,42.0,57.0,Low
+Main Gym Fitness Gym,Tuesday,72,18:00,44.166666666666664,6,41.0,51.25,Medium
+Main Gym Fitness Gym,Tuesday,73,18:15,45.2,5,40.0,60.0,Low
+Main Gym Fitness Gym,Tuesday,74,18:30,105.8,5,51.0,61.0,Low
+Main Gym Fitness Gym,Tuesday,75,18:45,41.6,5,32.0,44.0,Low
+Main Gym Fitness Gym,Tuesday,76,19:00,41.0,5,40.0,42.0,Low
+Main Gym Fitness Gym,Tuesday,77,19:15,91.6,5,40.0,46.0,Low
+Main Gym Fitness Gym,Tuesday,78,19:30,36.2,5,35.0,36.0,Low
+Main Gym Fitness Gym,Tuesday,79,19:45,60.8,5,42.0,60.0,Low
+Main Gym Fitness Gym,Tuesday,80,20:00,73.2,5,46.0,68.0,Low
+Main Gym Fitness Gym,Tuesday,81,20:15,35.6,5,39.0,42.0,Low
+Main Gym Fitness Gym,Tuesday,82,20:30,50.8,5,31.0,40.0,Low
+Main Gym Fitness Gym,Tuesday,83,20:45,41.2,5,44.0,50.0,Low
+Main Gym Fitness Gym,Tuesday,84,21:00,33.2,5,29.0,39.0,Low
+Main Gym Fitness Gym,Tuesday,85,21:15,44.333333333333336,6,40.5,52.75,Medium
+Main Gym Fitness Gym,Tuesday,86,21:30,36.25,4,34.0,45.5,Low
+Main Gym Fitness Gym,Tuesday,87,21:45,44.0,4,39.0,45.0,Low
+Main Gym Fitness Gym,Tuesday,88,22:00,35.5,4,33.0,41.0,Low
+Main Gym Fitness Gym,Tuesday,89,22:15,40.75,4,42.5,48.5,Low
+Main Gym Fitness Gym,Tuesday,90,22:30,30.75,4,28.5,33.75,Low
+Main Gym Fitness Gym,Tuesday,91,22:45,27.5,4,27.5,31.5,Low
+Main Gym Fitness Gym,Wednesday,24,06:00,2.3333333333333335,3,3.0,3.5,Low
+Main Gym Fitness Gym,Wednesday,25,06:15,7.0,3,7.0,7.5,Low
+Main Gym Fitness Gym,Wednesday,26,06:30,17.333333333333332,3,18.0,18.5,Low
+Main Gym Fitness Gym,Wednesday,27,06:45,9.0,3,8.0,10.0,Low
+Main Gym Fitness Gym,Wednesday,28,07:00,6.333333333333333,3,6.0,9.0,Low
+Main Gym Fitness Gym,Wednesday,29,07:15,14.5,4,11.0,16.25,Low
+Main Gym Fitness Gym,Wednesday,30,07:30,15.666666666666666,3,10.0,19.5,Low
+Main Gym Fitness Gym,Wednesday,31,07:45,32.0,3,18.0,41.0,Low
+Main Gym Fitness Gym,Wednesday,32,08:00,15.333333333333334,3,18.0,21.0,Low
+Main Gym Fitness Gym,Wednesday,33,08:15,10.0,3,11.0,14.5,Low
+Main Gym Fitness Gym,Wednesday,34,08:30,20.0,3,17.0,23.0,Low
+Main Gym Fitness Gym,Wednesday,35,08:45,20.75,4,20.0,22.0,Low
+Main Gym Fitness Gym,Wednesday,36,09:00,18.0,3,12.0,21.5,Low
+Main Gym Fitness Gym,Wednesday,37,09:15,23.875,4,23.5,27.875,Low
+Main Gym Fitness Gym,Wednesday,38,09:30,28.2,5,32.0,32.0,Low
+Main Gym Fitness Gym,Wednesday,39,09:45,24.666666666666668,3,26.0,28.5,Low
+Main Gym Fitness Gym,Wednesday,40,10:00,50.0,2,50.0,53.0,Low
+Main Gym Fitness Gym,Wednesday,41,10:15,29.333333333333332,3,29.0,33.5,Low
+Main Gym Fitness Gym,Wednesday,42,10:30,35.75,4,36.0,41.75,Low
+Main Gym Fitness Gym,Wednesday,43,10:45,23.0,3,26.0,29.0,Low
+Main Gym Fitness Gym,Wednesday,44,11:00,35.333333333333336,3,38.0,40.5,Low
+Main Gym Fitness Gym,Wednesday,45,11:15,25.0,3,28.0,28.0,Low
+Main Gym Fitness Gym,Wednesday,46,11:30,35.0,4,39.0,43.25,Low
+Main Gym Fitness Gym,Wednesday,47,11:45,29.333333333333332,3,21.0,35.5,Low
+Main Gym Fitness Gym,Wednesday,48,12:00,31.333333333333332,3,32.0,35.0,Low
+Main Gym Fitness Gym,Wednesday,49,12:15,37.5,2,37.5,38.75,Low
+Main Gym Fitness Gym,Wednesday,50,12:30,59.75,4,53.5,73.75,Low
+Main Gym Fitness Gym,Wednesday,51,12:45,34.25,4,34.0,44.0,Low
+Main Gym Fitness Gym,Wednesday,52,13:00,39.5,4,38.5,50.75,Low
+Main Gym Fitness Gym,Wednesday,53,13:15,43.0,3,35.0,51.5,Low
+Main Gym Fitness Gym,Wednesday,54,13:30,37.0,3,39.0,43.0,Low
+Main Gym Fitness Gym,Wednesday,55,13:45,33.333333333333336,3,33.0,36.0,Low
+Main Gym Fitness Gym,Wednesday,56,14:00,35.0,5,36.0,39.0,Low
+Main Gym Fitness Gym,Wednesday,57,14:15,26.5,4,28.0,32.25,Low
+Main Gym Fitness Gym,Wednesday,58,14:30,33.5,4,31.5,41.5,Low
+Main Gym Fitness Gym,Wednesday,59,14:45,68.4,5,26.0,64.0,Low
+Main Gym Fitness Gym,Wednesday,60,15:00,47.5,4,45.0,53.75,Low
+Main Gym Fitness Gym,Wednesday,61,15:15,29.0,4,30.5,34.0,Low
+Main Gym Fitness Gym,Wednesday,62,15:30,42.8,5,40.0,47.0,Low
+Main Gym Fitness Gym,Wednesday,63,15:45,67.75,4,50.5,82.0,Low
+Main Gym Fitness Gym,Wednesday,64,16:00,49.6,5,47.0,49.0,Low
+Main Gym Fitness Gym,Wednesday,65,16:15,40.583333333333336,6,37.5,39.0,Medium
+Main Gym Fitness Gym,Wednesday,66,16:30,63.5,4,50.0,69.75,Low
+Main Gym Fitness Gym,Wednesday,67,16:45,42.333333333333336,6,39.5,51.25,Medium
+Main Gym Fitness Gym,Wednesday,68,17:00,47.666666666666664,6,49.5,54.5,Medium
+Main Gym Fitness Gym,Wednesday,69,17:15,35.2,5,40.0,43.0,Low
+Main Gym Fitness Gym,Wednesday,70,17:30,44.4,5,46.0,50.0,Low
+Main Gym Fitness Gym,Wednesday,71,17:45,46.6,5,40.0,54.0,Low
+Main Gym Fitness Gym,Wednesday,72,18:00,44.2,5,46.0,46.0,Low
+Main Gym Fitness Gym,Wednesday,73,18:15,41.0,5,29.0,42.0,Low
+Main Gym Fitness Gym,Wednesday,74,18:30,46.8,5,44.0,46.0,Low
+Main Gym Fitness Gym,Wednesday,75,18:45,52.5,6,44.5,49.0,Medium
+Main Gym Fitness Gym,Wednesday,76,19:00,41.4,5,43.0,50.0,Low
+Main Gym Fitness Gym,Wednesday,77,19:15,31.6,5,29.0,44.0,Low
+Main Gym Fitness Gym,Wednesday,78,19:30,38.2,5,40.0,43.0,Low
+Main Gym Fitness Gym,Wednesday,79,19:45,37.8,5,33.0,36.0,Low
+Main Gym Fitness Gym,Wednesday,80,20:00,35.8,5,39.0,40.0,Low
+Main Gym Fitness Gym,Wednesday,81,20:15,38.0,5,39.0,40.0,Low
+Main Gym Fitness Gym,Wednesday,82,20:30,36.2,5,38.0,39.0,Low
+Main Gym Fitness Gym,Wednesday,83,20:45,40.0,5,39.0,43.0,Low
+Main Gym Fitness Gym,Wednesday,84,21:00,44.0,5,47.0,49.0,Low
+Main Gym Fitness Gym,Wednesday,85,21:15,36.0,6,33.5,38.75,Medium
+Main Gym Fitness Gym,Wednesday,86,21:30,35.0,5,31.0,39.0,Low
+Main Gym Fitness Gym,Wednesday,87,21:45,34.4,5,32.0,38.0,Low
+Main Gym Fitness Gym,Wednesday,88,22:00,35.4,5,29.0,47.0,Low
+Main Gym Fitness Gym,Wednesday,89,22:15,47.0,5,47.0,53.0,Low
+Main Gym Fitness Gym,Wednesday,90,22:30,39.2,5,38.0,44.0,Low
+Main Gym Fitness Gym,Wednesday,91,22:45,33.5,6,29.0,35.75,Medium
+Main Gym Fitness Gym,Thursday,24,06:00,2.0,5,1.0,1.0,Low
+Main Gym Fitness Gym,Thursday,25,06:15,4.4,5,6.0,6.0,Low
+Main Gym Fitness Gym,Thursday,26,06:30,9.8,5,11.0,14.0,Low
+Main Gym Fitness Gym,Thursday,27,06:45,21.5,6,20.0,32.5,Medium
+Main Gym Fitness Gym,Thursday,28,07:00,21.6,5,21.0,31.0,Low
+Main Gym Fitness Gym,Thursday,29,07:15,10.4,5,8.0,12.0,Low
+Main Gym Fitness Gym,Thursday,30,07:30,19.0,5,18.0,22.0,Low
+Main Gym Fitness Gym,Thursday,31,07:45,24.5,6,19.5,28.5,Medium
+Main Gym Fitness Gym,Thursday,32,08:00,23.2,5,22.0,31.0,Low
+Main Gym Fitness Gym,Thursday,33,08:15,17.2,5,15.0,25.0,Low
+Main Gym Fitness Gym,Thursday,34,08:30,18.8,5,18.0,19.0,Low
+Main Gym Fitness Gym,Thursday,35,08:45,35.333333333333336,6,25.0,38.0,Medium
+Main Gym Fitness Gym,Thursday,36,09:00,32.0,5,31.0,38.0,Low
+Main Gym Fitness Gym,Thursday,37,09:15,19.4,5,19.0,21.0,Low
+Main Gym Fitness Gym,Thursday,38,09:30,33.6,5,35.0,40.0,Low
+Main Gym Fitness Gym,Thursday,39,09:45,24.666666666666668,6,23.0,33.25,Medium
+Main Gym Fitness Gym,Thursday,40,10:00,27.6,5,26.0,33.0,Low
+Main Gym Fitness Gym,Thursday,41,10:15,26.0,5,22.0,29.0,Low
+Main Gym Fitness Gym,Thursday,42,10:30,21.333333333333332,6,17.0,28.0,Medium
+Main Gym Fitness Gym,Thursday,43,10:45,25.8,5,25.0,29.0,Low
+Main Gym Fitness Gym,Thursday,44,11:00,41.2,5,42.0,42.0,Low
+Main Gym Fitness Gym,Thursday,45,11:15,31.4,5,35.0,40.0,Low
+Main Gym Fitness Gym,Thursday,46,11:30,32.0,6,29.0,38.25,Medium
+Main Gym Fitness Gym,Thursday,47,11:45,35.0,5,29.0,40.0,Low
+Main Gym Fitness Gym,Thursday,48,12:00,29.6,5,26.0,40.0,Low
+Main Gym Fitness Gym,Thursday,49,12:15,32.6,5,31.0,38.0,Low
+Main Gym Fitness Gym,Thursday,50,12:30,36.833333333333336,6,35.0,42.0,Medium
+Main Gym Fitness Gym,Thursday,51,12:45,27.0,4,28.5,36.0,Low
+Main Gym Fitness Gym,Thursday,52,13:00,32.6,5,28.0,32.0,Low
+Main Gym Fitness Gym,Thursday,53,13:15,34.833333333333336,6,34.5,40.0,Medium
+Main Gym Fitness Gym,Thursday,54,13:30,30.8,5,33.0,35.0,Low
+Main Gym Fitness Gym,Thursday,55,13:45,28.4,5,29.0,32.0,Low
+Main Gym Fitness Gym,Thursday,56,14:00,49.0,6,46.5,53.75,Medium
+Main Gym Fitness Gym,Thursday,57,14:15,42.75,4,41.0,52.75,Low
+Main Gym Fitness Gym,Thursday,58,14:30,34.4,5,31.0,35.0,Low
+Main Gym Fitness Gym,Thursday,59,14:45,33.666666666666664,6,31.5,37.25,Medium
+Main Gym Fitness Gym,Thursday,60,15:00,33.0,4,33.5,39.0,Low
+Main Gym Fitness Gym,Thursday,61,15:15,46.666666666666664,6,34.5,58.25,Medium
+Main Gym Fitness Gym,Thursday,62,15:30,47.6,5,40.0,53.0,Low
+Main Gym Fitness Gym,Thursday,63,15:45,32.833333333333336,6,30.5,38.0,Medium
+Main Gym Fitness Gym,Thursday,64,16:00,34.8,5,26.0,32.0,Low
+Main Gym Fitness Gym,Thursday,65,16:15,38.1,5,38.0,40.0,Low
+Main Gym Fitness Gym,Thursday,66,16:30,39.0,6,42.5,43.75,Medium
+Main Gym Fitness Gym,Thursday,67,16:45,39.4,5,38.0,47.0,Low
+Main Gym Fitness Gym,Thursday,68,17:00,54.833333333333336,6,55.5,66.5,Medium
+Main Gym Fitness Gym,Thursday,69,17:15,30.2,5,28.0,32.0,Low
+Main Gym Fitness Gym,Thursday,70,17:30,58.8,5,54.0,68.0,Low
+Main Gym Fitness Gym,Thursday,71,17:45,65.4,5,60.0,76.0,Low
+Main Gym Fitness Gym,Thursday,72,18:00,33.2,5,35.0,44.0,Low
+Main Gym Fitness Gym,Thursday,73,18:15,36.6,5,35.0,42.0,Low
+Main Gym Fitness Gym,Thursday,74,18:30,49.8,5,53.0,54.0,Low
+Main Gym Fitness Gym,Thursday,75,18:45,47.0,5,49.0,49.0,Low
+Main Gym Fitness Gym,Thursday,76,19:00,34.1,5,37.5,43.0,Low
+Main Gym Fitness Gym,Thursday,77,19:15,35.3,5,39.0,43.0,Low
+Main Gym Fitness Gym,Thursday,78,19:30,37.2,5,33.0,38.0,Low
+Main Gym Fitness Gym,Thursday,79,19:45,47.2,5,40.0,44.0,Low
+Main Gym Fitness Gym,Thursday,80,20:00,36.6,5,40.0,43.0,Low
+Main Gym Fitness Gym,Thursday,81,20:15,31.166666666666668,6,31.0,34.5,Medium
+Main Gym Fitness Gym,Thursday,82,20:30,32.4,5,32.0,38.0,Low
+Main Gym Fitness Gym,Thursday,83,20:45,29.0,5,29.0,38.0,Low
+Main Gym Fitness Gym,Thursday,84,21:00,41.4,5,40.0,51.0,Low
+Main Gym Fitness Gym,Thursday,85,21:15,34.2,5,28.0,40.0,Low
+Main Gym Fitness Gym,Thursday,86,21:30,32.8,5,32.0,38.0,Low
+Main Gym Fitness Gym,Thursday,87,21:45,40.2,5,40.0,50.0,Low
+Main Gym Fitness Gym,Thursday,88,22:00,34.8,5,36.0,38.0,Low
+Main Gym Fitness Gym,Thursday,89,22:15,27.5,6,29.5,34.0,Medium
+Main Gym Fitness Gym,Thursday,90,22:30,35.8,5,31.0,43.0,Low
+Main Gym Fitness Gym,Thursday,91,22:45,12.8,5,14.0,15.0,Low
+Main Gym Fitness Gym,Friday,24,06:00,1.0,4,1.0,1.0,Low
+Main Gym Fitness Gym,Friday,25,06:15,6.25,4,4.5,9.75,Low
+Main Gym Fitness Gym,Friday,26,06:30,14.0,4,13.5,15.75,Low
+Main Gym Fitness Gym,Friday,27,06:45,12.2,5,10.0,12.0,Low
+Main Gym Fitness Gym,Friday,28,07:00,14.75,4,15.0,19.75,Low
+Main Gym Fitness Gym,Friday,29,07:15,12.75,4,10.5,13.75,Low
+Main Gym Fitness Gym,Friday,30,07:30,9.25,4,9.0,12.0,Low
+Main Gym Fitness Gym,Friday,31,07:45,8.4,5,10.0,10.0,Low
+Main Gym Fitness Gym,Friday,32,08:00,23.5,4,24.0,24.25,Low
+Main Gym Fitness Gym,Friday,33,08:15,10.25,4,6.5,10.75,Low
+Main Gym Fitness Gym,Friday,34,08:30,11.2,5,7.0,19.0,Low
+Main Gym Fitness Gym,Friday,35,08:45,19.75,4,17.5,20.75,Low
+Main Gym Fitness Gym,Friday,36,09:00,34.2,5,36.0,38.0,Low
+Main Gym Fitness Gym,Friday,37,09:15,22.75,4,20.5,25.25,Low
+Main Gym Fitness Gym,Friday,38,09:30,26.5,4,30.5,33.5,Low
+Main Gym Fitness Gym,Friday,39,09:45,24.2,5,28.0,29.0,Low
+Main Gym Fitness Gym,Friday,40,10:00,28.5,4,30.0,36.0,Low
+Main Gym Fitness Gym,Friday,41,10:15,18.5,4,17.0,21.5,Low
+Main Gym Fitness Gym,Friday,42,10:30,23.333333333333332,6,23.5,27.25,Medium
+Main Gym Fitness Gym,Friday,43,10:45,23.6,5,24.0,29.0,Low
+Main Gym Fitness Gym,Friday,44,11:00,36.666666666666664,6,37.0,38.0,Medium
+Main Gym Fitness Gym,Friday,45,11:15,25.2,5,25.0,26.0,Low
+Main Gym Fitness Gym,Friday,46,11:30,25.2,5,29.0,31.0,Low
+Main Gym Fitness Gym,Friday,47,11:45,32.6,5,26.0,39.0,Low
+Main Gym Fitness Gym,Friday,48,12:00,31.833333333333332,6,28.0,34.0,Medium
+Main Gym Fitness Gym,Friday,49,12:15,34.8,5,35.0,39.0,Low
+Main Gym Fitness Gym,Friday,50,12:30,28.6,5,25.0,40.0,Low
+Main Gym Fitness Gym,Friday,51,12:45,24.666666666666668,6,25.5,26.0,Medium
+Main Gym Fitness Gym,Friday,52,13:00,27.8,5,28.0,32.0,Low
+Main Gym Fitness Gym,Friday,53,13:15,30.2,5,26.0,36.0,Low
+Main Gym Fitness Gym,Friday,54,13:30,24.833333333333332,6,20.5,34.75,Medium
+Main Gym Fitness Gym,Friday,55,13:45,23.4,5,19.0,26.0,Low
+Main Gym Fitness Gym,Friday,56,14:00,67.0,6,35.0,35.75,Medium
+Main Gym Fitness Gym,Friday,57,14:15,32.6,5,36.0,38.0,Low
+Main Gym Fitness Gym,Friday,58,14:30,30.8,5,26.0,39.0,Low
+Main Gym Fitness Gym,Friday,59,14:45,32.0,6,32.0,38.25,Medium
+Main Gym Fitness Gym,Friday,60,15:00,32.4,5,28.0,31.0,Low
+Main Gym Fitness Gym,Friday,61,15:15,22.666666666666668,6,21.5,27.25,Medium
+Main Gym Fitness Gym,Friday,62,15:30,32.6,5,28.0,38.0,Low
+Main Gym Fitness Gym,Friday,63,15:45,29.8,5,32.0,38.0,Low
+Main Gym Fitness Gym,Friday,64,16:00,30.333333333333332,6,32.5,37.5,Medium
+Main Gym Fitness Gym,Friday,65,16:15,32.2,5,29.0,36.0,Low
+Main Gym Fitness Gym,Friday,66,16:30,23.2,5,24.0,28.0,Low
+Main Gym Fitness Gym,Friday,67,16:45,23.333333333333332,6,22.5,27.75,Medium
+Main Gym Fitness Gym,Friday,68,17:00,29.6,5,24.0,36.0,Low
+Main Gym Fitness Gym,Friday,69,17:15,28.6,5,28.0,28.0,Low
+Main Gym Fitness Gym,Friday,70,17:30,26.0,4,26.5,29.25,Low
+Main Gym Fitness Gym,Friday,71,17:45,30.8,5,29.0,31.0,Low
+Main Gym Fitness Gym,Friday,72,18:00,33.2,5,35.0,38.0,Low
+Main Gym Fitness Gym,Friday,73,18:15,67.2,5,32.0,43.0,Low
+Main Gym Fitness Gym,Friday,74,18:30,55.0,5,24.0,36.0,Low
+Main Gym Fitness Gym,Friday,75,18:45,29.166666666666668,6,25.5,38.75,Medium
+Main Gym Fitness Gym,Friday,76,19:00,36.2,5,38.0,39.0,Low
+Main Gym Fitness Gym,Friday,77,19:15,36.2,5,39.0,40.0,Low
+Main Gym Fitness Gym,Friday,78,19:30,23.6,5,25.0,25.0,Low
+Main Gym Fitness Gym,Friday,79,19:45,27.25,4,25.0,28.25,Low
+Main Gym Fitness Gym,Friday,80,20:00,23.0,5,15.0,32.0,Low
+Main Gym Fitness Gym,Friday,81,20:15,22.8,5,18.0,33.0,Low
+Main Gym Fitness Gym,Friday,82,20:30,24.2,5,29.0,31.0,Low
+Main Gym Fitness Gym,Friday,83,20:45,22.4,5,24.0,26.0,Low
+Main Gym Fitness Gym,Friday,84,21:00,17.8,5,18.0,18.0,Low
+Main Gym Fitness Gym,Friday,85,21:15,21.25,4,22.0,26.0,Low
+Main Gym Fitness Gym,Friday,86,21:30,16.75,4,16.0,18.75,Low
+Main Gym Fitness Gym,Friday,87,21:45,23.75,4,20.0,26.0,Low
+Main Gym Fitness Gym,Friday,88,22:00,28.0,4,30.0,33.5,Low
+Main Gym Fitness Gym,Friday,89,22:15,22.25,4,19.0,22.5,Low
+Main Gym Fitness Gym,Friday,90,22:30,23.0,5,25.0,25.0,Low
+Main Gym Fitness Gym,Friday,91,22:45,15.5,4,14.5,18.0,Low
+Main Gym Fitness Gym,Saturday,32,08:00,2.75,4,2.0,3.75,Low
+Main Gym Fitness Gym,Saturday,33,08:15,16.0,4,18.0,21.75,Low
+Main Gym Fitness Gym,Saturday,34,08:30,12.6,5,8.0,21.0,Low
+Main Gym Fitness Gym,Saturday,35,08:45,21.25,4,21.0,25.0,Low
+Main Gym Fitness Gym,Saturday,36,09:00,18.0,5,19.0,21.0,Low
+Main Gym Fitness Gym,Saturday,37,09:15,19.0,4,21.5,23.0,Low
+Main Gym Fitness Gym,Saturday,38,09:30,17.0,4,17.5,22.0,Low
+Main Gym Fitness Gym,Saturday,39,09:45,23.4,5,25.0,26.0,Low
+Main Gym Fitness Gym,Saturday,40,10:00,35.25,4,17.0,35.75,Low
+Main Gym Fitness Gym,Saturday,41,10:15,18.4,5,21.0,21.0,Low
+Main Gym Fitness Gym,Saturday,42,10:30,20.25,4,18.5,24.75,Low
+Main Gym Fitness Gym,Saturday,43,10:45,16.0,5,14.0,19.0,Low
+Main Gym Fitness Gym,Saturday,44,11:00,23.0,4,23.5,26.5,Low
+Main Gym Fitness Gym,Saturday,45,11:15,20.5,4,20.5,23.0,Low
+Main Gym Fitness Gym,Saturday,46,11:30,23.6,5,22.0,25.0,Low
+Main Gym Fitness Gym,Saturday,47,11:45,28.5,4,31.0,36.5,Low
+Main Gym Fitness Gym,Saturday,48,12:00,19.75,4,16.5,25.25,Low
+Main Gym Fitness Gym,Saturday,49,12:15,19.2,5,17.0,24.0,Low
+Main Gym Fitness Gym,Saturday,50,12:30,21.75,4,23.0,25.25,Low
+Main Gym Fitness Gym,Saturday,51,12:45,19.0,5,19.0,22.0,Low
+Main Gym Fitness Gym,Saturday,52,13:00,21.25,4,20.5,25.5,Low
+Main Gym Fitness Gym,Saturday,53,13:15,15.4,5,19.0,24.0,Low
+Main Gym Fitness Gym,Saturday,54,13:30,17.75,4,12.0,22.0,Low
+Main Gym Fitness Gym,Saturday,55,13:45,14.0,5,11.0,21.0,Low
+Main Gym Fitness Gym,Saturday,56,14:00,17.0,4,19.0,26.0,Low
+Main Gym Fitness Gym,Saturday,57,14:15,15.8,5,18.0,20.0,Low
+Main Gym Fitness Gym,Saturday,58,14:30,16.4,5,17.0,22.0,Low
+Main Gym Fitness Gym,Saturday,59,14:45,9.8,5,7.0,18.0,Low
+Main Gym Fitness Gym,Saturday,60,15:00,15.5,4,14.0,21.75,Low
+Main Gym Fitness Gym,Saturday,61,15:15,16.6,5,10.0,19.0,Low
+Main Gym Fitness Gym,Saturday,62,15:30,34.0,4,19.5,39.75,Low
+Main Gym Fitness Gym,Saturday,63,15:45,15.4,5,15.0,19.0,Low
+Main Gym Fitness Gym,Saturday,64,16:00,16.5,4,15.5,20.75,Low
+Main Gym Fitness Gym,Saturday,65,16:15,12.4,5,15.0,18.0,Low
+Main Gym Fitness Gym,Saturday,66,16:30,17.0,4,21.0,24.25,Low
+Main Gym Fitness Gym,Saturday,67,16:45,7.0,5,6.0,10.0,Low
+Main Gym Fitness Gym,Saturday,68,17:00,7.25,4,8.0,10.5,Low
+Main Gym Fitness Gym,Saturday,69,17:15,13.4,5,19.0,21.0,Low
+Main Gym Fitness Gym,Saturday,70,17:30,10.75,4,8.5,14.5,Low
+Main Gym Fitness Gym,Saturday,71,17:45,21.5,4,20.5,33.0,Low
+Main Gym Fitness Gym,Saturday,72,18:00,31.2,5,11.0,15.0,Low
+Main Gym Fitness Gym,Saturday,73,18:15,22.8,5,21.0,22.0,Low
+Main Gym Fitness Gym,Saturday,74,18:30,17.0,5,17.0,19.0,Low
+Main Gym Fitness Gym,Saturday,75,18:45,21.4,5,22.0,25.0,Low
+Main Gym Fitness Gym,Saturday,76,19:00,23.0,5,19.0,25.0,Low
+Main Gym Fitness Gym,Saturday,77,19:15,25.8,5,31.0,33.0,Low
+Main Gym Fitness Gym,Saturday,78,19:30,15.6,5,15.0,18.0,Low
+Main Gym Fitness Gym,Saturday,79,19:45,13.8,5,15.0,17.0,Low
+Main Gym Fitness Gym,Saturday,80,20:00,30.6,5,24.0,25.0,Low
+Main Gym Fitness Gym,Saturday,81,20:15,14.2,5,15.0,22.0,Low
+Main Gym Fitness Gym,Saturday,82,20:30,22.2,5,25.0,33.0,Low
+Main Gym Fitness Gym,Saturday,83,20:45,12.8,5,10.0,21.0,Low
+Main Gym Fitness Gym,Saturday,84,21:00,17.0,5,15.0,28.0,Low
+Main Gym Fitness Gym,Saturday,85,21:15,13.2,5,15.0,17.0,Low
+Main Gym Fitness Gym,Saturday,86,21:30,15.4,5,17.0,21.0,Low
+Main Gym Fitness Gym,Saturday,87,21:45,16.0,5,19.0,21.0,Low
+Main Gym Fitness Gym,Saturday,88,22:00,20.4,5,25.0,28.0,Low
+Main Gym Fitness Gym,Saturday,89,22:15,20.4,5,25.0,29.0,Low
+Main Gym Fitness Gym,Saturday,90,22:30,15.8,5,19.0,19.0,Low
+Main Gym Fitness Gym,Saturday,91,22:45,9.4,5,10.0,11.0,Low
+Main Gym Fitness Gym,Sunday,32,08:00,1.0,4,1.0,1.0,Low
+Main Gym Fitness Gym,Sunday,33,08:15,1.5,4,1.0,1.5,Low
+Main Gym Fitness Gym,Sunday,34,08:30,8.6,5,11.0,15.0,Low
+Main Gym Fitness Gym,Sunday,35,08:45,12.5,4,10.0,16.25,Low
+Main Gym Fitness Gym,Sunday,36,09:00,15.0,4,16.0,22.0,Low
+Main Gym Fitness Gym,Sunday,37,09:15,9.5,4,9.0,14.75,Low
+Main Gym Fitness Gym,Sunday,38,09:30,13.75,4,14.0,14.75,Low
+Main Gym Fitness Gym,Sunday,39,09:45,13.0,5,10.0,21.0,Low
+Main Gym Fitness Gym,Sunday,40,10:00,15.4,5,18.0,19.0,Low
+Main Gym Fitness Gym,Sunday,41,10:15,8.4,5,7.0,8.0,Low
+Main Gym Fitness Gym,Sunday,42,10:30,9.4,5,7.0,10.0,Low
+Main Gym Fitness Gym,Sunday,43,10:45,18.2,5,18.0,22.0,Low
+Main Gym Fitness Gym,Sunday,44,11:00,16.0,5,15.0,17.0,Low
+Main Gym Fitness Gym,Sunday,45,11:15,32.0,5,17.0,19.0,Low
+Main Gym Fitness Gym,Sunday,46,11:30,22.0,5,22.0,22.0,Low
+Main Gym Fitness Gym,Sunday,47,11:45,16.2,5,15.0,17.0,Low
+Main Gym Fitness Gym,Sunday,48,12:00,14.6,5,15.0,15.0,Low
+Main Gym Fitness Gym,Sunday,49,12:15,17.2,5,21.0,22.0,Low
+Main Gym Fitness Gym,Sunday,50,12:30,17.4,5,10.0,22.0,Low
+Main Gym Fitness Gym,Sunday,51,12:45,14.4,5,12.0,17.0,Low
+Main Gym Fitness Gym,Sunday,52,13:00,13.4,5,10.0,22.0,Low
+Main Gym Fitness Gym,Sunday,53,13:15,23.4,5,25.0,31.0,Low
+Main Gym Fitness Gym,Sunday,54,13:30,15.6,5,11.0,18.0,Low
+Main Gym Fitness Gym,Sunday,55,13:45,16.6,5,19.0,21.0,Low
+Main Gym Fitness Gym,Sunday,56,14:00,13.6,5,12.0,19.0,Low
+Main Gym Fitness Gym,Sunday,57,14:15,11.0,5,10.0,12.0,Low
+Main Gym Fitness Gym,Sunday,58,14:30,13.2,5,12.0,18.0,Low
+Main Gym Fitness Gym,Sunday,59,14:45,15.2,5,15.0,17.0,Low
+Main Gym Fitness Gym,Sunday,60,15:00,17.8,5,14.0,21.0,Low
+Main Gym Fitness Gym,Sunday,61,15:15,20.4,5,12.0,18.0,Low
+Main Gym Fitness Gym,Sunday,62,15:30,19.2,5,14.0,18.0,Low
+Main Gym Fitness Gym,Sunday,63,15:45,20.8,5,22.0,22.0,Low
+Main Gym Fitness Gym,Sunday,64,16:00,17.2,5,17.0,18.0,Low
+Main Gym Fitness Gym,Sunday,65,16:15,22.0,5,25.0,25.0,Low
+Main Gym Fitness Gym,Sunday,66,16:30,20.4,5,21.0,26.0,Low
+Main Gym Fitness Gym,Sunday,67,16:45,29.2,5,26.0,40.0,Low
+Main Gym Fitness Gym,Sunday,68,17:00,18.2,5,17.0,21.0,Low
+Main Gym Fitness Gym,Sunday,69,17:15,23.0,5,26.0,28.0,Low
+Main Gym Fitness Gym,Sunday,70,17:30,20.6,5,19.0,19.0,Low
+Main Gym Fitness Gym,Sunday,71,17:45,28.0,5,21.0,40.0,Low
+Main Gym Fitness Gym,Sunday,72,18:00,41.6,5,25.0,39.0,Low
+Main Gym Fitness Gym,Sunday,73,18:15,22.4,5,22.0,22.0,Low
+Main Gym Fitness Gym,Sunday,74,18:30,20.2,5,22.0,25.0,Low
+Main Gym Fitness Gym,Sunday,75,18:45,24.6,5,24.0,28.0,Low
+Main Gym Fitness Gym,Sunday,76,19:00,21.2,5,19.0,28.0,Low
+Main Gym Fitness Gym,Sunday,77,19:15,25.0,5,26.0,29.0,Low
+Main Gym Fitness Gym,Sunday,78,19:30,41.6,5,31.0,32.0,Low
+Main Gym Fitness Gym,Sunday,79,19:45,23.4,5,26.0,26.0,Low
+Main Gym Fitness Gym,Sunday,80,20:00,52.0,5,22.0,24.0,Low
+Main Gym Fitness Gym,Sunday,81,20:15,22.6,5,24.0,25.0,Low
+Main Gym Fitness Gym,Sunday,82,20:30,24.2,5,24.0,32.0,Low
+Main Gym Fitness Gym,Sunday,83,20:45,20.6,5,21.0,24.0,Low
+Main Gym Fitness Gym,Sunday,84,21:00,23.0,5,21.0,25.0,Low
+Main Gym Fitness Gym,Sunday,85,21:15,20.8,5,19.0,21.0,Low
+Main Gym Fitness Gym,Sunday,86,21:30,23.8,5,24.0,32.0,Low
+Main Gym Fitness Gym,Sunday,87,21:45,21.8,5,18.0,28.0,Low
+Main Gym Fitness Gym,Sunday,88,22:00,35.0,5,18.0,28.0,Low
+Main Gym Fitness Gym,Sunday,89,22:15,32.2,5,21.0,29.0,Low
+Main Gym Fitness Gym,Sunday,90,22:30,21.6,5,22.0,25.0,Low
+Main Gym Fitness Gym,Sunday,91,22:45,18.4,5,17.0,25.0,Low
+RIMAC Fitness Gym,Monday,24,06:00,1.8,5,1.0,1.0,Low
+RIMAC Fitness Gym,Monday,25,06:15,19.0,4,19.5,22.0,Low
+RIMAC Fitness Gym,Monday,26,06:30,32.5,4,32.5,35.5,Low
+RIMAC Fitness Gym,Monday,27,06:45,39.4,5,38.0,43.0,Low
+RIMAC Fitness Gym,Monday,28,07:00,37.6,5,33.0,45.0,Low
+RIMAC Fitness Gym,Monday,29,07:15,38.8,5,39.0,40.0,Low
+RIMAC Fitness Gym,Monday,30,07:30,45.2,5,42.0,51.0,Low
+RIMAC Fitness Gym,Monday,31,07:45,42.8,5,42.0,49.0,Low
+RIMAC Fitness Gym,Monday,32,08:00,44.0,5,45.0,47.0,Low
+RIMAC Fitness Gym,Monday,33,08:15,40.8,5,39.0,42.0,Low
+RIMAC Fitness Gym,Monday,34,08:30,44.6,5,45.0,46.0,Low
+RIMAC Fitness Gym,Monday,35,08:45,49.4,5,48.0,49.0,Low
+RIMAC Fitness Gym,Monday,36,09:00,52.4,5,57.0,57.0,Low
+RIMAC Fitness Gym,Monday,37,09:15,56.6,5,53.0,53.0,Low
+RIMAC Fitness Gym,Monday,38,09:30,57.0,5,56.0,60.0,Low
+RIMAC Fitness Gym,Monday,39,09:45,56.6,5,55.0,59.0,Low
+RIMAC Fitness Gym,Monday,40,10:00,50.2,5,45.0,57.0,Low
+RIMAC Fitness Gym,Monday,41,10:15,56.0,5,56.0,58.0,Low
+RIMAC Fitness Gym,Monday,42,10:30,63.4,5,62.0,69.0,Low
+RIMAC Fitness Gym,Monday,43,10:45,68.6,5,73.0,74.0,Low
+RIMAC Fitness Gym,Monday,44,11:00,66.2,5,70.0,70.0,Low
+RIMAC Fitness Gym,Monday,45,11:15,71.0,4,72.5,76.0,Low
+RIMAC Fitness Gym,Monday,46,11:30,71.8,5,69.0,74.0,Low
+RIMAC Fitness Gym,Monday,47,11:45,76.25,4,76.0,79.0,Low
+RIMAC Fitness Gym,Monday,48,12:00,70.0,4,69.0,80.0,Low
+RIMAC Fitness Gym,Monday,49,12:15,69.0,5,64.0,70.0,Low
+RIMAC Fitness Gym,Monday,50,12:30,65.4,5,63.0,76.0,Low
+RIMAC Fitness Gym,Monday,51,12:45,73.0,5,73.0,85.0,Low
+RIMAC Fitness Gym,Monday,52,13:00,69.0,5,66.0,77.0,Low
+RIMAC Fitness Gym,Monday,53,13:15,75.2,5,68.0,87.0,Low
+RIMAC Fitness Gym,Monday,54,13:30,81.4,5,79.0,91.0,Low
+RIMAC Fitness Gym,Monday,55,13:45,74.0,5,67.0,89.0,Low
+RIMAC Fitness Gym,Monday,56,14:00,74.4,5,71.0,83.0,Low
+RIMAC Fitness Gym,Monday,57,14:15,83.5,4,82.0,90.0,Low
+RIMAC Fitness Gym,Monday,58,14:30,82.6,5,79.0,87.0,Low
+RIMAC Fitness Gym,Monday,59,14:45,89.0,5,89.0,93.0,Low
+RIMAC Fitness Gym,Monday,60,15:00,87.8,5,85.0,87.0,Low
+RIMAC Fitness Gym,Monday,61,15:15,88.6,5,83.0,89.0,Low
+RIMAC Fitness Gym,Monday,62,15:30,88.25,4,82.5,89.25,Low
+RIMAC Fitness Gym,Monday,63,15:45,86.0,4,86.0,92.75,Low
+RIMAC Fitness Gym,Monday,64,16:00,83.25,4,82.5,86.0,Low
+RIMAC Fitness Gym,Monday,65,16:15,82.0,4,82.0,90.5,Low
+RIMAC Fitness Gym,Monday,66,16:30,82.0,4,83.0,97.5,Low
+RIMAC Fitness Gym,Monday,67,16:45,86.5,4,92.5,98.75,Low
+RIMAC Fitness Gym,Monday,68,17:00,81.25,4,78.0,84.5,Low
+RIMAC Fitness Gym,Monday,69,17:15,94.0,5,97.0,101.0,Low
+RIMAC Fitness Gym,Monday,70,17:30,93.6,5,97.0,103.0,Low
+RIMAC Fitness Gym,Monday,71,17:45,88.0,4,83.5,91.0,Low
+RIMAC Fitness Gym,Monday,72,18:00,91.2,5,90.0,99.0,Low
+RIMAC Fitness Gym,Monday,73,18:15,82.4,5,86.0,89.0,Low
+RIMAC Fitness Gym,Monday,74,18:30,76.25,4,72.0,80.25,Low
+RIMAC Fitness Gym,Monday,75,18:45,76.4,5,69.0,85.0,Low
+RIMAC Fitness Gym,Monday,76,19:00,83.8,5,77.0,91.0,Low
+RIMAC Fitness Gym,Monday,77,19:15,80.8,5,78.0,80.0,Low
+RIMAC Fitness Gym,Monday,78,19:30,81.2,5,76.0,81.0,Low
+RIMAC Fitness Gym,Monday,79,19:45,75.0,4,73.5,80.25,Low
+RIMAC Fitness Gym,Monday,80,20:00,94.2,5,87.0,103.0,Low
+RIMAC Fitness Gym,Monday,81,20:15,90.6,5,91.0,101.0,Low
+RIMAC Fitness Gym,Monday,82,20:30,87.2,5,86.0,95.0,Low
+RIMAC Fitness Gym,Monday,83,20:45,82.2,5,88.0,89.0,Low
+RIMAC Fitness Gym,Monday,84,21:00,83.0,5,85.0,87.0,Low
+RIMAC Fitness Gym,Monday,85,21:15,80.4,5,77.0,85.0,Low
+RIMAC Fitness Gym,Monday,86,21:30,82.8,5,85.0,96.0,Low
+RIMAC Fitness Gym,Monday,87,21:45,79.6,5,76.0,81.0,Low
+RIMAC Fitness Gym,Monday,88,22:00,83.0,4,80.5,84.5,Low
+RIMAC Fitness Gym,Monday,89,22:15,76.75,4,76.5,82.25,Low
+RIMAC Fitness Gym,Monday,90,22:30,70.25,4,70.0,71.5,Low
+RIMAC Fitness Gym,Monday,91,22:45,46.4,5,46.0,49.0,Low
+RIMAC Fitness Gym,Tuesday,24,06:00,1.6,5,1.0,1.0,Low
+RIMAC Fitness Gym,Tuesday,25,06:15,17.2,5,17.0,19.0,Low
+RIMAC Fitness Gym,Tuesday,26,06:30,24.8,5,24.0,26.0,Low
+RIMAC Fitness Gym,Tuesday,27,06:45,32.6,5,33.0,36.0,Low
+RIMAC Fitness Gym,Tuesday,28,07:00,31.4,5,32.0,35.0,Low
+RIMAC Fitness Gym,Tuesday,29,07:15,33.6,5,35.0,37.0,Low
+RIMAC Fitness Gym,Tuesday,30,07:30,34.4,5,36.0,39.0,Low
+RIMAC Fitness Gym,Tuesday,31,07:45,39.6,5,44.0,45.0,Low
+RIMAC Fitness Gym,Tuesday,32,08:00,41.2,5,43.0,50.0,Low
+RIMAC Fitness Gym,Tuesday,33,08:15,46.2,5,51.0,55.0,Low
+RIMAC Fitness Gym,Tuesday,34,08:30,48.6,5,49.0,57.0,Low
+RIMAC Fitness Gym,Tuesday,35,08:45,47.8,5,47.0,59.0,Low
+RIMAC Fitness Gym,Tuesday,36,09:00,49.4,5,50.0,58.0,Low
+RIMAC Fitness Gym,Tuesday,37,09:15,51.2,5,53.0,55.0,Low
+RIMAC Fitness Gym,Tuesday,38,09:30,48.166666666666664,6,48.0,52.0,Medium
+RIMAC Fitness Gym,Tuesday,39,09:45,57.2,5,54.0,67.0,Low
+RIMAC Fitness Gym,Tuesday,40,10:00,62.0,5,65.0,67.0,Low
+RIMAC Fitness Gym,Tuesday,41,10:15,65.33333333333333,6,63.5,73.75,Medium
+RIMAC Fitness Gym,Tuesday,42,10:30,75.0,4,75.5,77.75,Low
+RIMAC Fitness Gym,Tuesday,43,10:45,60.2,5,61.0,70.0,Low
+RIMAC Fitness Gym,Tuesday,44,11:00,58.5,6,61.0,63.0,Medium
+RIMAC Fitness Gym,Tuesday,45,11:15,66.4,5,66.0,73.0,Low
+RIMAC Fitness Gym,Tuesday,46,11:30,72.0,5,73.0,81.0,Low
+RIMAC Fitness Gym,Tuesday,47,11:45,68.8,5,72.0,79.0,Low
+RIMAC Fitness Gym,Tuesday,48,12:00,71.6,5,69.0,79.0,Low
+RIMAC Fitness Gym,Tuesday,49,12:15,56.8,5,61.0,62.0,Low
+RIMAC Fitness Gym,Tuesday,50,12:30,63.2,5,63.0,66.0,Low
+RIMAC Fitness Gym,Tuesday,51,12:45,64.8,5,66.0,68.0,Low
+RIMAC Fitness Gym,Tuesday,52,13:00,67.0,5,69.0,71.0,Low
+RIMAC Fitness Gym,Tuesday,53,13:15,68.25,4,71.0,75.25,Low
+RIMAC Fitness Gym,Tuesday,54,13:30,67.2,5,68.0,77.0,Low
+RIMAC Fitness Gym,Tuesday,55,13:45,60.0,6,58.5,64.75,Medium
+RIMAC Fitness Gym,Tuesday,56,14:00,55.75,4,54.0,58.5,Low
+RIMAC Fitness Gym,Tuesday,57,14:15,64.5,6,63.5,71.75,Medium
+RIMAC Fitness Gym,Tuesday,58,14:30,71.8,5,71.0,81.0,Low
+RIMAC Fitness Gym,Tuesday,59,14:45,74.4,5,70.0,79.0,Low
+RIMAC Fitness Gym,Tuesday,60,15:00,66.16666666666667,6,67.0,69.75,Medium
+RIMAC Fitness Gym,Tuesday,61,15:15,69.2,5,67.0,79.0,Low
+RIMAC Fitness Gym,Tuesday,62,15:30,67.6,5,66.0,73.0,Low
+RIMAC Fitness Gym,Tuesday,63,15:45,71.0,6,67.5,79.5,Medium
+RIMAC Fitness Gym,Tuesday,64,16:00,77.0,5,73.0,79.0,Low
+RIMAC Fitness Gym,Tuesday,65,16:15,88.0,6,87.5,99.0,Medium
+RIMAC Fitness Gym,Tuesday,66,16:30,76.4,5,75.0,82.0,Low
+RIMAC Fitness Gym,Tuesday,67,16:45,75.33333333333333,6,74.0,79.5,Medium
+RIMAC Fitness Gym,Tuesday,68,17:00,77.2,5,75.0,76.0,Low
+RIMAC Fitness Gym,Tuesday,69,17:15,77.25,4,79.5,82.5,Low
+RIMAC Fitness Gym,Tuesday,70,17:30,84.2,5,83.0,89.0,Low
+RIMAC Fitness Gym,Tuesday,71,17:45,82.2,5,78.0,98.0,Low
+RIMAC Fitness Gym,Tuesday,72,18:00,78.83333333333333,6,75.5,92.5,Medium
+RIMAC Fitness Gym,Tuesday,73,18:15,86.5,4,93.0,96.0,Low
+RIMAC Fitness Gym,Tuesday,74,18:30,79.2,5,83.0,88.0,Low
+RIMAC Fitness Gym,Tuesday,75,18:45,73.2,5,73.0,73.0,Low
+RIMAC Fitness Gym,Tuesday,76,19:00,72.6,5,77.0,82.0,Low
+RIMAC Fitness Gym,Tuesday,77,19:15,81.0,5,81.0,82.0,Low
+RIMAC Fitness Gym,Tuesday,78,19:30,72.6,5,67.0,79.0,Low
+RIMAC Fitness Gym,Tuesday,79,19:45,71.8,5,72.0,75.0,Low
+RIMAC Fitness Gym,Tuesday,80,20:00,64.6,5,65.0,69.0,Low
+RIMAC Fitness Gym,Tuesday,81,20:15,68.0,5,67.0,71.0,Low
+RIMAC Fitness Gym,Tuesday,82,20:30,78.2,5,79.0,86.0,Low
+RIMAC Fitness Gym,Tuesday,83,20:45,78.6,5,81.0,86.0,Low
+RIMAC Fitness Gym,Tuesday,84,21:00,75.4,5,75.0,80.0,Low
+RIMAC Fitness Gym,Tuesday,85,21:15,72.5,6,70.0,77.0,Medium
+RIMAC Fitness Gym,Tuesday,86,21:30,68.75,4,70.0,72.75,Low
+RIMAC Fitness Gym,Tuesday,87,21:45,76.0,4,75.5,80.5,Low
+RIMAC Fitness Gym,Tuesday,88,22:00,80.25,4,78.0,81.25,Low
+RIMAC Fitness Gym,Tuesday,89,22:15,77.0,3,75.0,79.0,Low
+RIMAC Fitness Gym,Tuesday,90,22:30,75.5,4,71.5,91.0,Low
+RIMAC Fitness Gym,Tuesday,91,22:45,52.5,4,54.0,60.0,Low
+RIMAC Fitness Gym,Wednesday,24,06:00,0.6666666666666666,3,1.0,1.0,Low
+RIMAC Fitness Gym,Wednesday,25,06:15,12.333333333333334,3,11.0,14.0,Low
+RIMAC Fitness Gym,Wednesday,26,06:30,19.666666666666668,3,19.0,22.0,Low
+RIMAC Fitness Gym,Wednesday,27,06:45,31.0,3,28.0,35.5,Low
+RIMAC Fitness Gym,Wednesday,28,07:00,36.333333333333336,3,35.0,40.0,Low
+RIMAC Fitness Gym,Wednesday,29,07:15,37.0,4,36.5,38.25,Low
+RIMAC Fitness Gym,Wednesday,30,07:30,43.0,3,42.0,45.5,Low
+RIMAC Fitness Gym,Wednesday,31,07:45,43.666666666666664,3,42.0,48.0,Low
+RIMAC Fitness Gym,Wednesday,32,08:00,43.0,3,47.0,48.5,Low
+RIMAC Fitness Gym,Wednesday,33,08:15,45.0,3,47.0,52.0,Low
+RIMAC Fitness Gym,Wednesday,34,08:30,41.0,3,41.0,46.0,Low
+RIMAC Fitness Gym,Wednesday,35,08:45,41.0,4,40.0,43.5,Low
+RIMAC Fitness Gym,Wednesday,36,09:00,47.666666666666664,3,43.0,51.0,Low
+RIMAC Fitness Gym,Wednesday,37,09:15,58.125,4,59.5,70.625,Low
+RIMAC Fitness Gym,Wednesday,38,09:30,56.2,5,53.0,65.0,Low
+RIMAC Fitness Gym,Wednesday,39,09:45,46.666666666666664,3,43.0,49.0,Low
+RIMAC Fitness Gym,Wednesday,40,10:00,39.333333333333336,3,40.0,43.0,Low
+RIMAC Fitness Gym,Wednesday,41,10:15,47.0,3,45.0,48.0,Low
+RIMAC Fitness Gym,Wednesday,42,10:30,46.25,4,47.5,49.0,Low
+RIMAC Fitness Gym,Wednesday,43,10:45,48.666666666666664,3,49.0,50.0,Low
+RIMAC Fitness Gym,Wednesday,44,11:00,45.333333333333336,3,45.0,46.5,Low
+RIMAC Fitness Gym,Wednesday,45,11:15,50.666666666666664,3,51.0,52.5,Low
+RIMAC Fitness Gym,Wednesday,46,11:30,55.5,4,56.5,59.0,Low
+RIMAC Fitness Gym,Wednesday,47,11:45,54.0,2,54.0,55.5,Low
+RIMAC Fitness Gym,Wednesday,48,12:00,49.666666666666664,3,49.0,51.0,Low
+RIMAC Fitness Gym,Wednesday,49,12:15,52.5,2,52.5,56.25,Low
+RIMAC Fitness Gym,Wednesday,50,12:30,55.5,4,56.0,63.5,Low
+RIMAC Fitness Gym,Wednesday,51,12:45,54.0,4,55.0,59.5,Low
+RIMAC Fitness Gym,Wednesday,52,13:00,52.25,4,52.0,60.5,Low
+RIMAC Fitness Gym,Wednesday,53,13:15,55.333333333333336,3,53.0,62.0,Low
+RIMAC Fitness Gym,Wednesday,54,13:30,51.0,3,48.0,54.0,Low
+RIMAC Fitness Gym,Wednesday,55,13:45,55.0,3,51.0,59.0,Low
+RIMAC Fitness Gym,Wednesday,56,14:00,65.6,5,62.0,65.0,Low
+RIMAC Fitness Gym,Wednesday,57,14:15,62.75,4,60.0,71.25,Low
+RIMAC Fitness Gym,Wednesday,58,14:30,72.33333333333333,3,70.0,83.5,Low
+RIMAC Fitness Gym,Wednesday,59,14:45,70.2,5,69.0,73.0,Low
+RIMAC Fitness Gym,Wednesday,60,15:00,71.0,4,67.5,81.25,Low
+RIMAC Fitness Gym,Wednesday,61,15:15,70.75,4,68.5,85.25,Low
+RIMAC Fitness Gym,Wednesday,62,15:30,74.2,5,77.0,87.0,Low
+RIMAC Fitness Gym,Wednesday,63,15:45,70.33333333333333,3,60.0,77.0,Low
+RIMAC Fitness Gym,Wednesday,64,16:00,69.4,5,72.0,76.0,Low
+RIMAC Fitness Gym,Wednesday,65,16:15,80.25,6,77.25,79.625,Medium
+RIMAC Fitness Gym,Wednesday,66,16:30,73.25,4,75.0,79.0,Low
+RIMAC Fitness Gym,Wednesday,67,16:45,77.5,6,74.0,91.5,Medium
+RIMAC Fitness Gym,Wednesday,68,17:00,75.33333333333333,6,74.0,81.5,Medium
+RIMAC Fitness Gym,Wednesday,69,17:15,77.6,5,77.0,82.0,Low
+RIMAC Fitness Gym,Wednesday,70,17:30,88.8,5,85.0,86.0,Low
+RIMAC Fitness Gym,Wednesday,71,17:45,84.8,5,77.0,87.0,Low
+RIMAC Fitness Gym,Wednesday,72,18:00,79.4,5,80.0,87.0,Low
+RIMAC Fitness Gym,Wednesday,73,18:15,81.0,4,79.0,83.25,Low
+RIMAC Fitness Gym,Wednesday,74,18:30,74.8,5,83.0,84.0,Low
+RIMAC Fitness Gym,Wednesday,75,18:45,71.0,6,70.5,77.25,Medium
+RIMAC Fitness Gym,Wednesday,76,19:00,72.0,5,63.0,93.0,Low
+RIMAC Fitness Gym,Wednesday,77,19:15,73.6,5,67.0,81.0,Low
+RIMAC Fitness Gym,Wednesday,78,19:30,68.8,5,63.0,74.0,Low
+RIMAC Fitness Gym,Wednesday,79,19:45,76.25,4,59.5,80.0,Low
+RIMAC Fitness Gym,Wednesday,80,20:00,71.2,5,70.0,77.0,Low
+RIMAC Fitness Gym,Wednesday,81,20:15,74.0,5,73.0,79.0,Low
+RIMAC Fitness Gym,Wednesday,82,20:30,78.0,5,82.0,83.0,Low
+RIMAC Fitness Gym,Wednesday,83,20:45,81.8,5,86.0,89.0,Low
+RIMAC Fitness Gym,Wednesday,84,21:00,70.4,5,69.0,71.0,Low
+RIMAC Fitness Gym,Wednesday,85,21:15,71.0,6,71.0,74.0,Medium
+RIMAC Fitness Gym,Wednesday,86,21:30,73.0,5,75.0,79.0,Low
+RIMAC Fitness Gym,Wednesday,87,21:45,77.2,5,77.0,78.0,Low
+RIMAC Fitness Gym,Wednesday,88,22:00,70.0,5,73.0,73.0,Low
+RIMAC Fitness Gym,Wednesday,89,22:15,72.0,4,71.5,79.25,Low
+RIMAC Fitness Gym,Wednesday,90,22:30,58.0,5,59.0,68.0,Low
+RIMAC Fitness Gym,Wednesday,91,22:45,30.5,6,33.0,33.75,Medium
+RIMAC Fitness Gym,Thursday,24,06:00,0.4,5,0.0,1.0,Low
+RIMAC Fitness Gym,Thursday,25,06:15,12.75,4,13.0,13.25,Low
+RIMAC Fitness Gym,Thursday,26,06:30,26.4,5,26.0,27.0,Low
+RIMAC Fitness Gym,Thursday,27,06:45,28.833333333333332,6,27.5,29.0,Medium
+RIMAC Fitness Gym,Thursday,28,07:00,30.8,5,29.0,35.0,Low
+RIMAC Fitness Gym,Thursday,29,07:15,28.2,5,25.0,33.0,Low
+RIMAC Fitness Gym,Thursday,30,07:30,33.2,5,33.0,39.0,Low
+RIMAC Fitness Gym,Thursday,31,07:45,35.5,6,32.5,36.75,Medium
+RIMAC Fitness Gym,Thursday,32,08:00,37.8,5,40.0,44.0,Low
+RIMAC Fitness Gym,Thursday,33,08:15,40.4,5,41.0,46.0,Low
+RIMAC Fitness Gym,Thursday,34,08:30,44.4,5,43.0,47.0,Low
+RIMAC Fitness Gym,Thursday,35,08:45,44.166666666666664,6,41.5,51.0,Medium
+RIMAC Fitness Gym,Thursday,36,09:00,35.0,5,33.0,33.0,Low
+RIMAC Fitness Gym,Thursday,37,09:15,36.6,5,37.0,37.0,Low
+RIMAC Fitness Gym,Thursday,38,09:30,35.6,5,35.0,38.0,Low
+RIMAC Fitness Gym,Thursday,39,09:45,49.666666666666664,6,50.5,56.25,Medium
+RIMAC Fitness Gym,Thursday,40,10:00,59.0,5,63.0,66.0,Low
+RIMAC Fitness Gym,Thursday,41,10:15,61.4,5,55.0,69.0,Low
+RIMAC Fitness Gym,Thursday,42,10:30,59.0,6,58.0,66.75,Medium
+RIMAC Fitness Gym,Thursday,43,10:45,45.6,5,42.0,45.0,Low
+RIMAC Fitness Gym,Thursday,44,11:00,47.4,5,39.0,55.0,Low
+RIMAC Fitness Gym,Thursday,45,11:15,58.0,5,53.0,64.0,Low
+RIMAC Fitness Gym,Thursday,46,11:30,66.16666666666667,6,63.0,74.25,Medium
+RIMAC Fitness Gym,Thursday,47,11:45,75.4,5,69.0,75.0,Low
+RIMAC Fitness Gym,Thursday,48,12:00,69.4,5,67.0,73.0,Low
+RIMAC Fitness Gym,Thursday,49,12:15,65.0,5,68.0,70.0,Low
+RIMAC Fitness Gym,Thursday,50,12:30,66.5,6,64.5,67.25,Medium
+RIMAC Fitness Gym,Thursday,51,12:45,72.5,4,72.5,80.75,Low
+RIMAC Fitness Gym,Thursday,52,13:00,67.2,5,70.0,71.0,Low
+RIMAC Fitness Gym,Thursday,53,13:15,66.5,6,67.0,69.25,Medium
+RIMAC Fitness Gym,Thursday,54,13:30,58.6,5,57.0,61.0,Low
+RIMAC Fitness Gym,Thursday,55,13:45,53.4,5,50.0,62.0,Low
+RIMAC Fitness Gym,Thursday,56,14:00,49.333333333333336,6,46.0,55.75,Medium
+RIMAC Fitness Gym,Thursday,57,14:15,67.66666666666667,3,71.0,76.0,Low
+RIMAC Fitness Gym,Thursday,58,14:30,65.4,5,59.0,67.0,Low
+RIMAC Fitness Gym,Thursday,59,14:45,66.0,6,67.5,75.75,Medium
+RIMAC Fitness Gym,Thursday,60,15:00,65.25,4,61.5,69.75,Low
+RIMAC Fitness Gym,Thursday,61,15:15,59.333333333333336,6,55.0,58.0,Medium
+RIMAC Fitness Gym,Thursday,62,15:30,58.6,5,55.0,55.0,Low
+RIMAC Fitness Gym,Thursday,63,15:45,63.2,5,57.0,59.0,Low
+RIMAC Fitness Gym,Thursday,64,16:00,71.6,5,64.0,65.0,Low
+RIMAC Fitness Gym,Thursday,65,16:15,74.3,5,71.0,74.0,Low
+RIMAC Fitness Gym,Thursday,66,16:30,71.41666666666667,6,67.0,76.125,Medium
+RIMAC Fitness Gym,Thursday,67,16:45,72.0,5,71.0,78.0,Low
+RIMAC Fitness Gym,Thursday,68,17:00,71.66666666666667,6,67.5,73.5,Medium
+RIMAC Fitness Gym,Thursday,69,17:15,73.2,5,69.0,72.0,Low
+RIMAC Fitness Gym,Thursday,70,17:30,80.6,5,81.0,87.0,Low
+RIMAC Fitness Gym,Thursday,71,17:45,78.6,5,79.0,86.0,Low
+RIMAC Fitness Gym,Thursday,72,18:00,84.6,5,81.0,91.0,Low
+RIMAC Fitness Gym,Thursday,73,18:15,77.6,5,73.0,83.0,Low
+RIMAC Fitness Gym,Thursday,74,18:30,71.4,5,62.0,85.0,Low
+RIMAC Fitness Gym,Thursday,75,18:45,70.6,5,61.0,87.0,Low
+RIMAC Fitness Gym,Thursday,76,19:00,73.1,5,65.0,88.0,Low
+RIMAC Fitness Gym,Thursday,77,19:15,66.2,5,68.0,79.0,Low
+RIMAC Fitness Gym,Thursday,78,19:30,69.0,5,64.0,77.0,Low
+RIMAC Fitness Gym,Thursday,79,19:45,84.6,5,63.0,115.0,Low
+RIMAC Fitness Gym,Thursday,80,20:00,72.4,5,67.0,80.0,Low
+RIMAC Fitness Gym,Thursday,81,20:15,73.5,6,76.0,82.0,Medium
+RIMAC Fitness Gym,Thursday,82,20:30,72.6,5,67.0,79.0,Low
+RIMAC Fitness Gym,Thursday,83,20:45,75.2,5,73.0,75.0,Low
+RIMAC Fitness Gym,Thursday,84,21:00,73.4,5,63.0,85.0,Low
+RIMAC Fitness Gym,Thursday,85,21:15,73.4,5,61.0,86.0,Low
+RIMAC Fitness Gym,Thursday,86,21:30,71.2,5,58.0,91.0,Low
+RIMAC Fitness Gym,Thursday,87,21:45,79.2,5,67.0,101.0,Low
+RIMAC Fitness Gym,Thursday,88,22:00,80.8,5,77.0,93.0,Low
+RIMAC Fitness Gym,Thursday,89,22:15,72.0,5,67.0,83.0,Low
+RIMAC Fitness Gym,Thursday,90,22:30,58.8,5,52.0,69.0,Low
+RIMAC Fitness Gym,Thursday,91,22:45,41.6,5,36.0,52.0,Low
+RIMAC Fitness Gym,Friday,24,06:00,0.75,4,0.5,1.25,Low
+RIMAC Fitness Gym,Friday,25,06:15,13.75,4,14.0,15.25,Low
+RIMAC Fitness Gym,Friday,26,06:30,25.25,4,25.5,26.75,Low
+RIMAC Fitness Gym,Friday,27,06:45,33.0,5,30.0,40.0,Low
+RIMAC Fitness Gym,Friday,28,07:00,34.0,4,34.0,40.25,Low
+RIMAC Fitness Gym,Friday,29,07:15,41.25,4,41.5,48.0,Low
+RIMAC Fitness Gym,Friday,30,07:30,40.75,4,40.0,49.5,Low
+RIMAC Fitness Gym,Friday,31,07:45,48.4,5,35.0,71.0,Low
+RIMAC Fitness Gym,Friday,32,08:00,39.75,4,36.5,43.75,Low
+RIMAC Fitness Gym,Friday,33,08:15,36.25,4,34.0,40.0,Low
+RIMAC Fitness Gym,Friday,34,08:30,39.8,5,41.0,46.0,Low
+RIMAC Fitness Gym,Friday,35,08:45,38.0,4,39.0,42.0,Low
+RIMAC Fitness Gym,Friday,36,09:00,42.6,5,44.0,51.0,Low
+RIMAC Fitness Gym,Friday,37,09:15,43.0,4,44.0,52.5,Low
+RIMAC Fitness Gym,Friday,38,09:30,47.25,4,43.5,55.0,Low
+RIMAC Fitness Gym,Friday,39,09:45,51.6,5,49.0,52.0,Low
+RIMAC Fitness Gym,Friday,40,10:00,50.75,4,43.5,53.75,Low
+RIMAC Fitness Gym,Friday,41,10:15,60.75,4,54.0,63.5,Low
+RIMAC Fitness Gym,Friday,42,10:30,65.0,6,59.0,69.5,Medium
+RIMAC Fitness Gym,Friday,43,10:45,67.8,5,71.0,71.0,Low
+RIMAC Fitness Gym,Friday,44,11:00,60.8,5,59.0,67.0,Low
+RIMAC Fitness Gym,Friday,45,11:15,59.2,5,61.0,67.0,Low
+RIMAC Fitness Gym,Friday,46,11:30,64.6,5,65.0,71.0,Low
+RIMAC Fitness Gym,Friday,47,11:45,78.8,5,63.0,103.0,Low
+RIMAC Fitness Gym,Friday,48,12:00,62.333333333333336,6,63.5,69.0,Medium
+RIMAC Fitness Gym,Friday,49,12:15,67.8,5,68.0,77.0,Low
+RIMAC Fitness Gym,Friday,50,12:30,66.4,5,65.0,71.0,Low
+RIMAC Fitness Gym,Friday,51,12:45,61.5,6,58.0,68.75,Medium
+RIMAC Fitness Gym,Friday,52,13:00,65.4,5,60.0,74.0,Low
+RIMAC Fitness Gym,Friday,53,13:15,68.6,5,71.0,75.0,Low
+RIMAC Fitness Gym,Friday,54,13:30,69.83333333333333,6,68.0,75.0,Medium
+RIMAC Fitness Gym,Friday,55,13:45,69.6,5,71.0,78.0,Low
+RIMAC Fitness Gym,Friday,56,14:00,65.16666666666667,6,68.0,75.0,Medium
+RIMAC Fitness Gym,Friday,57,14:15,70.8,5,73.0,79.0,Low
+RIMAC Fitness Gym,Friday,58,14:30,70.6,5,75.0,83.0,Low
+RIMAC Fitness Gym,Friday,59,14:45,73.5,6,75.5,84.75,Medium
+RIMAC Fitness Gym,Friday,60,15:00,65.8,5,63.0,72.0,Low
+RIMAC Fitness Gym,Friday,61,15:15,70.5,6,70.0,79.0,Medium
+RIMAC Fitness Gym,Friday,62,15:30,73.0,5,68.0,79.0,Low
+RIMAC Fitness Gym,Friday,63,15:45,79.6,5,69.0,87.0,Low
+RIMAC Fitness Gym,Friday,64,16:00,65.33333333333333,6,60.0,79.0,Medium
+RIMAC Fitness Gym,Friday,65,16:15,66.8,5,66.0,77.0,Low
+RIMAC Fitness Gym,Friday,66,16:30,63.2,5,67.0,73.0,Low
+RIMAC Fitness Gym,Friday,67,16:45,68.16666666666667,6,70.5,78.5,Medium
+RIMAC Fitness Gym,Friday,68,17:00,62.6,5,66.0,71.0,Low
+RIMAC Fitness Gym,Friday,69,17:15,69.0,5,66.0,81.0,Low
+RIMAC Fitness Gym,Friday,70,17:30,79.5,4,79.0,84.75,Low
+RIMAC Fitness Gym,Friday,71,17:45,75.4,5,75.0,82.0,Low
+RIMAC Fitness Gym,Friday,72,18:00,84.2,5,80.0,95.0,Low
+RIMAC Fitness Gym,Friday,73,18:15,73.75,4,76.5,80.75,Low
+RIMAC Fitness Gym,Friday,74,18:30,66.0,5,67.0,73.0,Low
+RIMAC Fitness Gym,Friday,75,18:45,63.166666666666664,6,65.5,68.5,Medium
+RIMAC Fitness Gym,Friday,76,19:00,64.0,5,63.0,67.0,Low
+RIMAC Fitness Gym,Friday,77,19:15,63.4,5,65.0,67.0,Low
+RIMAC Fitness Gym,Friday,78,19:30,64.8,5,59.0,77.0,Low
+RIMAC Fitness Gym,Friday,79,19:45,59.5,4,59.5,62.5,Low
+RIMAC Fitness Gym,Friday,80,20:00,59.4,5,61.0,65.0,Low
+RIMAC Fitness Gym,Friday,81,20:15,56.8,5,56.0,70.0,Low
+RIMAC Fitness Gym,Friday,82,20:30,56.6,5,55.0,71.0,Low
+RIMAC Fitness Gym,Friday,83,20:45,63.0,5,63.0,71.0,Low
+RIMAC Fitness Gym,Friday,84,21:00,59.6,5,54.0,71.0,Low
+RIMAC Fitness Gym,Friday,85,21:15,60.75,4,60.0,67.75,Low
+RIMAC Fitness Gym,Friday,86,21:30,58.5,4,58.5,67.75,Low
+RIMAC Fitness Gym,Friday,87,21:45,62.0,4,61.5,68.5,Low
+RIMAC Fitness Gym,Friday,88,22:00,58.0,4,54.5,63.25,Low
+RIMAC Fitness Gym,Friday,89,22:15,58.5,4,57.5,67.25,Low
+RIMAC Fitness Gym,Friday,90,22:30,44.8,5,44.0,54.0,Low
+RIMAC Fitness Gym,Friday,91,22:45,35.75,4,36.0,41.25,Low
+RIMAC Fitness Gym,Saturday,32,08:00,0.75,4,1.0,1.0,Low
+RIMAC Fitness Gym,Saturday,33,08:15,8.5,4,10.0,11.5,Low
+RIMAC Fitness Gym,Saturday,34,08:30,20.2,5,25.0,30.0,Low
+RIMAC Fitness Gym,Saturday,35,08:45,22.75,4,22.5,28.75,Low
+RIMAC Fitness Gym,Saturday,36,09:00,25.6,5,29.0,33.0,Low
+RIMAC Fitness Gym,Saturday,37,09:15,26.25,4,32.0,38.0,Low
+RIMAC Fitness Gym,Saturday,38,09:30,30.25,4,38.0,41.75,Low
+RIMAC Fitness Gym,Saturday,39,09:45,32.4,5,35.0,45.0,Low
+RIMAC Fitness Gym,Saturday,40,10:00,31.5,4,36.0,44.0,Low
+RIMAC Fitness Gym,Saturday,41,10:15,34.6,5,35.0,52.0,Low
+RIMAC Fitness Gym,Saturday,42,10:30,36.5,4,42.0,58.0,Low
+RIMAC Fitness Gym,Saturday,43,10:45,36.4,5,42.0,52.0,Low
+RIMAC Fitness Gym,Saturday,44,11:00,38.25,4,47.5,53.25,Low
+RIMAC Fitness Gym,Saturday,45,11:15,38.75,4,47.5,50.75,Low
+RIMAC Fitness Gym,Saturday,46,11:30,41.4,5,49.0,51.0,Low
+RIMAC Fitness Gym,Saturday,47,11:45,54.75,4,61.0,83.25,Low
+RIMAC Fitness Gym,Saturday,48,12:00,38.5,4,48.5,54.75,Low
+RIMAC Fitness Gym,Saturday,49,12:15,44.6,5,53.0,56.0,Low
+RIMAC Fitness Gym,Saturday,50,12:30,43.0,4,54.5,60.0,Low
+RIMAC Fitness Gym,Saturday,51,12:45,41.4,5,49.0,53.0,Low
+RIMAC Fitness Gym,Saturday,52,13:00,38.5,4,50.0,53.0,Low
+RIMAC Fitness Gym,Saturday,53,13:15,40.2,5,49.0,49.0,Low
+RIMAC Fitness Gym,Saturday,54,13:30,34.0,4,45.0,45.25,Low
+RIMAC Fitness Gym,Saturday,55,13:45,34.8,5,40.0,41.0,Low
+RIMAC Fitness Gym,Saturday,56,14:00,28.0,4,36.0,39.0,Low
+RIMAC Fitness Gym,Saturday,57,14:15,29.75,4,36.5,40.5,Low
+RIMAC Fitness Gym,Saturday,58,14:30,35.6,5,45.0,45.0,Low
+RIMAC Fitness Gym,Saturday,59,14:45,39.6,5,49.0,49.0,Low
+RIMAC Fitness Gym,Saturday,60,15:00,39.75,4,52.5,53.0,Low
+RIMAC Fitness Gym,Saturday,61,15:15,39.2,5,45.0,47.0,Low
+RIMAC Fitness Gym,Saturday,62,15:30,35.75,4,45.0,48.25,Low
+RIMAC Fitness Gym,Saturday,63,15:45,36.8,5,42.0,47.0,Low
+RIMAC Fitness Gym,Saturday,64,16:00,35.5,4,41.0,50.75,Low
+RIMAC Fitness Gym,Saturday,65,16:15,37.0,5,39.0,45.0,Low
+RIMAC Fitness Gym,Saturday,66,16:30,37.75,4,44.0,51.0,Low
+RIMAC Fitness Gym,Saturday,67,16:45,43.2,5,47.0,50.0,Low
+RIMAC Fitness Gym,Saturday,68,17:00,44.5,4,50.0,56.75,Low
+RIMAC Fitness Gym,Saturday,69,17:15,41.8,5,42.0,59.0,Low
+RIMAC Fitness Gym,Saturday,70,17:30,42.25,4,50.5,56.75,Low
+RIMAC Fitness Gym,Saturday,71,17:45,41.5,4,48.0,54.0,Low
+RIMAC Fitness Gym,Saturday,72,18:00,43.734,5,52.0,55.0,Low
+RIMAC Fitness Gym,Saturday,73,18:15,40.465999999999994,5,45.33,53.0,Low
+RIMAC Fitness Gym,Saturday,74,18:30,46.8,5,54.0,58.0,Low
+RIMAC Fitness Gym,Saturday,75,18:45,43.8,5,49.0,58.0,Low
+RIMAC Fitness Gym,Saturday,76,19:00,43.4,5,45.0,63.0,Low
+RIMAC Fitness Gym,Saturday,77,19:15,48.8,5,51.0,68.0,Low
+RIMAC Fitness Gym,Saturday,78,19:30,41.0,5,41.0,63.0,Low
+RIMAC Fitness Gym,Saturday,79,19:45,39.0,4,46.0,56.25,Low
+RIMAC Fitness Gym,Saturday,80,20:00,42.2,5,51.0,51.0,Low
+RIMAC Fitness Gym,Saturday,81,20:15,42.0,5,50.0,54.0,Low
+RIMAC Fitness Gym,Saturday,82,20:30,39.8,5,45.0,49.0,Low
+RIMAC Fitness Gym,Saturday,83,20:45,40.0,5,45.0,52.0,Low
+RIMAC Fitness Gym,Saturday,84,21:00,40.0,5,47.0,55.0,Low
+RIMAC Fitness Gym,Saturday,85,21:15,43.0,5,53.0,55.0,Low
+RIMAC Fitness Gym,Saturday,86,21:30,42.6,5,47.0,57.0,Low
+RIMAC Fitness Gym,Saturday,87,21:45,44.8,5,53.0,62.0,Low
+RIMAC Fitness Gym,Saturday,88,22:00,41.4,5,46.0,61.0,Low
+RIMAC Fitness Gym,Saturday,89,22:15,39.8,5,52.0,54.0,Low
+RIMAC Fitness Gym,Saturday,90,22:30,33.4,5,36.0,48.0,Low
+RIMAC Fitness Gym,Saturday,91,22:45,22.0,5,28.0,33.0,Low
+RIMAC Fitness Gym,Sunday,32,08:00,3.0,4,0.5,3.5,Low
+RIMAC Fitness Gym,Sunday,33,08:15,13.0,4,12.0,14.25,Low
+RIMAC Fitness Gym,Sunday,34,08:30,22.2,5,21.0,24.0,Low
+RIMAC Fitness Gym,Sunday,35,08:45,28.5,4,28.5,32.0,Low
+RIMAC Fitness Gym,Sunday,36,09:00,29.0,4,28.0,30.25,Low
+RIMAC Fitness Gym,Sunday,37,09:15,27.75,4,28.0,33.0,Low
+RIMAC Fitness Gym,Sunday,38,09:30,28.5,4,29.0,34.5,Low
+RIMAC Fitness Gym,Sunday,39,09:45,32.8,5,30.0,36.0,Low
+RIMAC Fitness Gym,Sunday,40,10:00,35.8,5,36.0,37.0,Low
+RIMAC Fitness Gym,Sunday,41,10:15,36.2,5,37.0,39.0,Low
+RIMAC Fitness Gym,Sunday,42,10:30,34.4,5,33.0,39.0,Low
+RIMAC Fitness Gym,Sunday,43,10:45,37.0,5,35.0,45.0,Low
+RIMAC Fitness Gym,Sunday,44,11:00,35.2,5,31.0,41.0,Low
+RIMAC Fitness Gym,Sunday,45,11:15,32.4,5,29.0,31.0,Low
+RIMAC Fitness Gym,Sunday,46,11:30,32.8,5,35.0,35.0,Low
+RIMAC Fitness Gym,Sunday,47,11:45,34.6,5,31.0,42.0,Low
+RIMAC Fitness Gym,Sunday,48,12:00,35.6,5,33.0,39.0,Low
+RIMAC Fitness Gym,Sunday,49,12:15,43.0,5,41.0,49.0,Low
+RIMAC Fitness Gym,Sunday,50,12:30,40.2,5,45.0,47.0,Low
+RIMAC Fitness Gym,Sunday,51,12:45,39.0,5,37.0,43.0,Low
+RIMAC Fitness Gym,Sunday,52,13:00,38.2,5,38.0,41.0,Low
+RIMAC Fitness Gym,Sunday,53,13:15,37.6,5,37.0,40.0,Low
+RIMAC Fitness Gym,Sunday,54,13:30,38.2,5,37.0,42.0,Low
+RIMAC Fitness Gym,Sunday,55,13:45,33.6,5,35.0,37.0,Low
+RIMAC Fitness Gym,Sunday,56,14:00,32.6,5,33.0,35.0,Low
+RIMAC Fitness Gym,Sunday,57,14:15,35.4,5,35.0,39.0,Low
+RIMAC Fitness Gym,Sunday,58,14:30,38.0,5,39.0,40.0,Low
+RIMAC Fitness Gym,Sunday,59,14:45,35.4,5,32.0,39.0,Low
+RIMAC Fitness Gym,Sunday,60,15:00,38.6,5,39.0,43.0,Low
+RIMAC Fitness Gym,Sunday,61,15:15,40.8,5,37.0,39.0,Low
+RIMAC Fitness Gym,Sunday,62,15:30,42.0,5,38.0,46.0,Low
+RIMAC Fitness Gym,Sunday,63,15:45,45.2,5,40.0,45.0,Low
+RIMAC Fitness Gym,Sunday,64,16:00,55.8,5,44.0,51.0,Low
+RIMAC Fitness Gym,Sunday,65,16:15,46.6,5,39.0,40.0,Low
+RIMAC Fitness Gym,Sunday,66,16:30,49.6,5,43.0,50.0,Low
+RIMAC Fitness Gym,Sunday,67,16:45,47.4,5,41.0,43.0,Low
+RIMAC Fitness Gym,Sunday,68,17:00,48.2,5,46.0,47.0,Low
+RIMAC Fitness Gym,Sunday,69,17:15,50.6,5,51.0,57.0,Low
+RIMAC Fitness Gym,Sunday,70,17:30,49.8,5,47.0,57.0,Low
+RIMAC Fitness Gym,Sunday,71,17:45,49.8,5,47.0,53.0,Low
+RIMAC Fitness Gym,Sunday,72,18:00,51.8,5,43.0,66.0,Low
+RIMAC Fitness Gym,Sunday,73,18:15,53.0,5,59.0,63.0,Low
+RIMAC Fitness Gym,Sunday,74,18:30,53.4,5,56.0,68.0,Low
+RIMAC Fitness Gym,Sunday,75,18:45,55.0,5,55.0,64.0,Low
+RIMAC Fitness Gym,Sunday,76,19:00,51.6,5,51.0,61.0,Low
+RIMAC Fitness Gym,Sunday,77,19:15,47.4,5,49.0,53.0,Low
+RIMAC Fitness Gym,Sunday,78,19:30,48.4,5,48.0,51.0,Low
+RIMAC Fitness Gym,Sunday,79,19:45,49.2,5,50.0,51.0,Low
+RIMAC Fitness Gym,Sunday,80,20:00,44.4,5,46.0,47.0,Low
+RIMAC Fitness Gym,Sunday,81,20:15,47.8,5,47.0,51.0,Low
+RIMAC Fitness Gym,Sunday,82,20:30,50.8,5,51.0,55.0,Low
+RIMAC Fitness Gym,Sunday,83,20:45,53.8,5,57.0,59.0,Low
+RIMAC Fitness Gym,Sunday,84,21:00,54.2,5,52.0,61.0,Low
+RIMAC Fitness Gym,Sunday,85,21:15,60.2,5,58.0,67.0,Low
+RIMAC Fitness Gym,Sunday,86,21:30,56.8,5,61.0,62.0,Low
+RIMAC Fitness Gym,Sunday,87,21:45,58.0,5,60.0,61.0,Low
+RIMAC Fitness Gym,Sunday,88,22:00,53.6,5,54.0,57.0,Low
+RIMAC Fitness Gym,Sunday,89,22:15,50.4,5,51.0,57.0,Low
+RIMAC Fitness Gym,Sunday,90,22:30,41.8,5,44.0,45.0,Low
+RIMAC Fitness Gym,Sunday,91,22:45,31.6,5,31.0,37.0,Low
