@@ -1,2 +1,2 @@
-Main Gym Fitness Gym: No future data-backed window left today.
-RIMAC Fitness Gym: No future data-backed window left today.
+Main Gym Fitness Gym: 06:00 for 120 min (~9.8% avg, ~19.8% peak, same_day, Low confidence)
+RIMAC Fitness Gym: 06:00 for 90 min (~24.7% avg, ~48.0% peak, same_day, Low confidence)
