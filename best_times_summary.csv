@@ -1,5 +1,5 @@
 facility_name,day,bucket_index,time_bucket_15,avg_percent,sample_count,median_percent,p75_percent,confidence
-Main Gym Fitness Gym,Monday,24,06:00,1.0,8,1.0,1.0,Medium
+Main Gym Fitness Gym,Monday,24,06:00,1.0,9,1.0,1.0,Medium
 Main Gym Fitness Gym,Monday,25,06:15,5.0,8,3.5,8.0,Medium
 Main Gym Fitness Gym,Monday,26,06:30,15.25,8,16.0,19.5,Medium
 Main Gym Fitness Gym,Monday,27,06:45,15.125,8,13.0,17.5,Medium
@@ -459,7 +459,7 @@ Main Gym Fitness Gym,Sunday,88,22:00,30.88888888888889,9,25.0,35.0,Medium
 Main Gym Fitness Gym,Sunday,89,22:15,29.11111111111111,9,24.0,28.0,Medium
 Main Gym Fitness Gym,Sunday,90,22:30,37.25,8,25.5,30.5,Medium
 Main Gym Fitness Gym,Sunday,91,22:45,20.25,8,18.0,25.25,Medium
-RIMAC Fitness Gym,Monday,24,06:00,1.5,8,1.0,1.0,Medium
+RIMAC Fitness Gym,Monday,24,06:00,1.4444444444444444,9,1.0,1.0,Medium
 RIMAC Fitness Gym,Monday,25,06:15,14.142857142857142,7,15.0,19.5,Medium
 RIMAC Fitness Gym,Monday,26,06:30,23.857142857142858,7,28.0,32.5,Medium
 RIMAC Fitness Gym,Monday,27,06:45,32.714285714285715,7,37.0,40.5,Medium
