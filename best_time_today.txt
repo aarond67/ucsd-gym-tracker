@@ -1,2 +1,2 @@
-Main Gym Fitness Gym: 06:00 for 90 min (~11.0% avg, ~31.0% peak, same_day, Medium confidence)
-RIMAC Fitness Gym: 06:00 for 90 min (~20.1% avg, ~30.5% peak, same_day, Medium confidence)
+Main Gym Fitness Gym: 07:15 for 90 min (~17.4% avg, ~26.5% peak, same_day, Medium confidence)
+RIMAC Fitness Gym: 07:00 for 90 min (~32.6% avg, ~42.2% peak, same_day, Medium confidence)
