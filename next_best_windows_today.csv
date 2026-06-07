@@ -1,3 +1,3 @@
 facility_name,day,start_bucket,start_time,end_time,window_minutes,window_label,avg_percent,peak_percent,sample_floor,sample_total,confidence,source_scope,score
-Main Gym Fitness Gym,Sunday,56,14:00,15:30,90,14:00 -> 14:15 -> 14:30 -> 14:45 -> 15:00 -> 15:15,21.7,24.0,9,54,Medium,same_day,24.904
-RIMAC Fitness Gym,Sunday,56,14:00,15:30,90,14:00 -> 14:15 -> 14:30 -> 14:45 -> 15:00 -> 15:15,32.74,39.0,9,54,Medium,same_day,41.191
+Main Gym Fitness Gym,Sunday,60,15:00,16:30,90,15:00 -> 15:15 -> 15:30 -> 15:45 -> 16:00 -> 16:15,20.26,32.0,9,54,Medium,same_day,26.259
+RIMAC Fitness Gym,Sunday,60,15:00,16:30,90,15:00 -> 15:15 -> 15:30 -> 15:45 -> 16:00 -> 16:15,38.61,44.0,9,54,Medium,same_day,48.811
