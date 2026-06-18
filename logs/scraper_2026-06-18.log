@@ -482,3 +482,14 @@
 [2026-06-18 15:45:29] RIMAC Fitness Gym: 12% (Not Busy) people=17 capacity=150 is_open=True hour_summary=open
 [2026-06-18 15:45:29] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=closed
 [2026-06-18 15:45:29] === SCRAPE END OK ===
+[2026-06-18 16:00:02] === SCRAPE START ===
+[2026-06-18 16:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-06-18 16:00:32] HTTP ERROR: HTTPSConnectionPool(host='waitz.io', port=443): Read timed out. (read timeout=20)
+[2026-06-18 16:15:02] === SCRAPE START ===
+[2026-06-18 16:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-06-18 16:15:07] Saved 4 rows to ucsd_occupancy_history.csv
+[2026-06-18 16:15:07] Main Gym Fitness Gym: 6% (Closed) people=4 capacity=72 is_open=False hour_summary=closed
+[2026-06-18 16:15:07] Outback Climbing Center: 0% (Closed) people=0 capacity=30 is_open=False hour_summary=closed
+[2026-06-18 16:15:07] RIMAC Fitness Gym: 13% (Not Busy) people=20 capacity=150 is_open=True hour_summary=open
+[2026-06-18 16:15:07] Triton Esports Center: 0% (Closed) people=0 capacity=35 is_open=False hour_summary=closed
+[2026-06-18 16:15:07] === SCRAPE END OK ===
