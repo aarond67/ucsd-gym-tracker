@@ -20207,3 +20207,5 @@ timestamp,day_of_week,date,time,time_bucket_15,bucket_index_15,time_bucket_30,bu
 2026-07-26T06:37:00-07:00,Sunday,2026-07-26,06:37:00,06:30,26,06:30,13,RIMAC Fitness Gym,Closed,0,Closed,0,150,False,Closed until 8:00am,False,True,closed,False,6,37,30,30
 2026-07-26T06:45:03-07:00,Sunday,2026-07-26,06:45:03,06:45,27,06:30,13,Main Gym Fitness Gym,Closed,0,Closed,0,72,False,closed,False,True,closed,False,6,45,45,30
 2026-07-26T06:45:03-07:00,Sunday,2026-07-26,06:45:03,06:45,27,06:30,13,RIMAC Fitness Gym,Closed,0,Closed,0,150,False,Closed until 8:00am,False,True,closed,False,6,45,45,30
+2026-07-26T06:52:00-07:00,Sunday,2026-07-26,06:52:00,06:45,27,06:30,13,Main Gym Fitness Gym,Closed,0,Closed,0,72,False,closed,False,True,closed,False,6,52,45,30
+2026-07-26T06:52:00-07:00,Sunday,2026-07-26,06:52:00,06:45,27,06:30,13,RIMAC Fitness Gym,Closed,0,Closed,0,150,False,Closed until 8:00am,False,True,closed,False,6,52,45,30
