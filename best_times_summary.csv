@@ -118,8 +118,8 @@ Main Gym Fitness Gym,Tuesday,71,17:45,40.55555555555556,9,38.0,44.0,Medium
 Main Gym Fitness Gym,Tuesday,72,18:00,42.3,10,38.5,51.25,Medium
 Main Gym Fitness Gym,Tuesday,73,18:15,51.55555555555556,9,42.0,60.0,Medium
 Main Gym Fitness Gym,Tuesday,74,18:30,94.0,9,46.0,61.0,Medium
-Main Gym Fitness Gym,Tuesday,75,18:45,39.22222222222222,9,35.0,46.0,Medium
-Main Gym Fitness Gym,Tuesday,76,19:00,35.77777777777778,9,36.0,40.0,Medium
+Main Gym Fitness Gym,Tuesday,75,18:45,35.7,10,33.5,45.5,Medium
+Main Gym Fitness Gym,Tuesday,76,19:00,32.5,10,36.0,39.0,Medium
 Main Gym Fitness Gym,Tuesday,77,19:15,64.0,9,39.0,46.0,Medium
 Main Gym Fitness Gym,Tuesday,78,19:30,35.888888888888886,9,36.0,39.0,Medium
 Main Gym Fitness Gym,Tuesday,79,19:45,47.111111111111114,9,32.0,47.0,Medium
@@ -579,8 +579,8 @@ RIMAC Fitness Gym,Tuesday,71,17:45,65.32142857142857,14,66.0,77.5,High
 RIMAC Fitness Gym,Tuesday,72,18:00,64.73333333333333,15,62.0,75.5,High
 RIMAC Fitness Gym,Tuesday,73,18:15,63.333333333333336,12,61.0,84.25,High
 RIMAC Fitness Gym,Tuesday,74,18:30,57.233333333333334,15,63.0,72.0,High
-RIMAC Fitness Gym,Tuesday,75,18:45,55.266666666666666,15,55.0,71.5,High
-RIMAC Fitness Gym,Tuesday,76,19:00,57.1,15,59.0,73.5,High
+RIMAC Fitness Gym,Tuesday,75,18:45,57.0,16,60.0,73.0,High
+RIMAC Fitness Gym,Tuesday,76,19:00,57.96875,16,60.5,72.5,High
 RIMAC Fitness Gym,Tuesday,77,19:15,56.833333333333336,15,70.0,76.0,High
 RIMAC Fitness Gym,Tuesday,78,19:30,54.2,15,64.0,67.5,High
 RIMAC Fitness Gym,Tuesday,79,19:45,54.96666666666667,15,62.0,71.5,High
@@ -776,10 +776,10 @@ RIMAC Fitness Gym,Friday,64,16:00,39.10526315789474,19,45.0,55.0,High
 RIMAC Fitness Gym,Friday,65,16:15,38.23529411764706,17,34.0,53.0,High
 RIMAC Fitness Gym,Friday,66,16:30,40.583333333333336,18,46.5,51.75,High
 RIMAC Fitness Gym,Friday,67,16:45,45.21052631578947,19,48.0,64.0,High
-RIMAC Fitness Gym,Friday,68,17:00,41.35294117647059,17,47.0,57.0,High
-RIMAC Fitness Gym,Friday,69,17:15,42.88235294117647,17,43.0,61.0,High
-RIMAC Fitness Gym,Friday,70,17:30,45.90625,16,51.5,67.75,High
-RIMAC Fitness Gym,Friday,71,17:45,47.794117647058826,17,51.0,66.0,High
+RIMAC Fitness Gym,Friday,68,17:00,41.55555555555556,18,46.5,56.0,High
+RIMAC Fitness Gym,Friday,69,17:15,42.888888888888886,18,43.0,61.0,High
+RIMAC Fitness Gym,Friday,70,17:30,45.26470588235294,17,51.0,67.0,High
+RIMAC Fitness Gym,Friday,71,17:45,46.861111111111114,18,49.5,65.75,High
 RIMAC Fitness Gym,Friday,72,18:00,51.6875,16,52.0,73.25,High
 RIMAC Fitness Gym,Friday,73,18:15,48.06666666666667,15,42.0,72.0,High
 RIMAC Fitness Gym,Friday,74,18:30,45.78125,16,48.5,63.25,High
