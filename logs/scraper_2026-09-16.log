@@ -1,0 +1,24 @@
+[2026-09-16 15:45:03] === SCRAPE START ===
+[2026-09-16 15:45:03] Fetching https://waitz.io/live/ucsd-rec
+[2026-09-16 15:45:03] HTTP ERROR: HTTPSConnectionPool(host='waitz.io', port=443): Max retries exceeded with url: /live/ucsd-rec (Caused by NameResolutionError("HTTPSConnection(host='waitz.io', port=443): Failed to resolve 'waitz.io' ([Errno 11001] getaddrinfo failed)"))
+[2026-09-16 16:00:02] === SCRAPE START ===
+[2026-09-16 16:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-09-16 16:00:02] HTTP ERROR: HTTPSConnectionPool(host='waitz.io', port=443): Max retries exceeded with url: /live/ucsd-rec (Caused by NameResolutionError("HTTPSConnection(host='waitz.io', port=443): Failed to resolve 'waitz.io' ([Errno 11001] getaddrinfo failed)"))
+[2026-09-16 16:15:02] === SCRAPE START ===
+[2026-09-16 16:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-09-16 16:15:02] HTTP ERROR: HTTPSConnectionPool(host='waitz.io', port=443): Max retries exceeded with url: /live/ucsd-rec (Caused by NameResolutionError("HTTPSConnection(host='waitz.io', port=443): Failed to resolve 'waitz.io' ([Errno 11001] getaddrinfo failed)"))
+[2026-09-16 16:30:02] === SCRAPE START ===
+[2026-09-16 16:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-09-16 16:30:02] HTTP ERROR: HTTPSConnectionPool(host='waitz.io', port=443): Max retries exceeded with url: /live/ucsd-rec (Caused by NameResolutionError("HTTPSConnection(host='waitz.io', port=443): Failed to resolve 'waitz.io' ([Errno 11001] getaddrinfo failed)"))
+[2026-09-16 16:45:02] === SCRAPE START ===
+[2026-09-16 16:45:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-09-16 16:45:02] HTTP ERROR: HTTPSConnectionPool(host='waitz.io', port=443): Max retries exceeded with url: /live/ucsd-rec (Caused by NameResolutionError("HTTPSConnection(host='waitz.io', port=443): Failed to resolve 'waitz.io' ([Errno 11001] getaddrinfo failed)"))
+[2026-09-16 17:00:02] === SCRAPE START ===
+[2026-09-16 17:00:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-09-16 17:00:02] HTTP ERROR: HTTPSConnectionPool(host='waitz.io', port=443): Max retries exceeded with url: /live/ucsd-rec (Caused by NameResolutionError("HTTPSConnection(host='waitz.io', port=443): Failed to resolve 'waitz.io' ([Errno 11001] getaddrinfo failed)"))
+[2026-09-16 17:15:02] === SCRAPE START ===
+[2026-09-16 17:15:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-09-16 17:15:02] HTTP ERROR: HTTPSConnectionPool(host='waitz.io', port=443): Max retries exceeded with url: /live/ucsd-rec (Caused by NameResolutionError("HTTPSConnection(host='waitz.io', port=443): Failed to resolve 'waitz.io' ([Errno 11001] getaddrinfo failed)"))
+[2026-09-16 17:30:02] === SCRAPE START ===
+[2026-09-16 17:30:02] Fetching https://waitz.io/live/ucsd-rec
+[2026-09-16 17:30:02] HTTP ERROR: HTTPSConnectionPool(host='waitz.io', port=443): Max retries exceeded with url: /live/ucsd-rec (Caused by NameResolutionError("HTTPSConnection(host='waitz.io', port=443): Failed to resolve 'waitz.io' ([Errno 11001] getaddrinfo failed)"))
