@@ -1,8 +1,8 @@
 facility_name,day,bucket_index,time_bucket_15,avg_percent,sample_count,median_percent,p75_percent,confidence
-Main Gym Fitness Gym,Monday,24,06:00,1.0,12,1.0,1.0,High
-Main Gym Fitness Gym,Monday,25,06:15,4.416666666666667,12,3.0,8.0,High
-Main Gym Fitness Gym,Monday,26,06:30,14.416666666666666,12,16.0,21.75,High
-Main Gym Fitness Gym,Monday,27,06:45,13.333333333333334,12,11.5,15.5,High
+Main Gym Fitness Gym,Monday,24,06:00,1.1538461538461537,13,1.0,1.0,High
+Main Gym Fitness Gym,Monday,25,06:15,5.923076923076923,13,3.0,8.0,High
+Main Gym Fitness Gym,Monday,26,06:30,15.846153846153847,13,17.0,24.0,High
+Main Gym Fitness Gym,Monday,27,06:45,14.76923076923077,13,12.0,17.0,High
 Main Gym Fitness Gym,Monday,28,07:00,14.916666666666666,12,13.0,18.25,High
 Main Gym Fitness Gym,Monday,29,07:15,7.083333333333333,12,5.0,11.0,High
 Main Gym Fitness Gym,Monday,30,07:30,7.916666666666667,12,7.5,12.5,High
@@ -460,10 +460,10 @@ Main Gym Fitness Gym,Sunday,89,22:15,25.75,12,24.0,28.25,High
 Main Gym Fitness Gym,Sunday,90,22:30,26.916666666666668,12,20.0,26.75,High
 Main Gym Fitness Gym,Sunday,91,22:45,14.583333333333334,12,12.0,20.5,High
 Main Gym Fitness Gym,Sunday,92,23:00,1.0,1,1.0,1.0,Low
-RIMAC Fitness Gym,Monday,24,06:00,1.1764705882352942,17,1.0,1.0,High
-RIMAC Fitness Gym,Monday,25,06:15,11.21875,16,8.0,15.5,High
-RIMAC Fitness Gym,Monday,26,06:30,18.1875,16,14.5,28.5,High
-RIMAC Fitness Gym,Monday,27,06:45,24.8125,16,20.0,37.25,High
+RIMAC Fitness Gym,Monday,24,06:00,1.1111111111111112,18,1.0,1.0,High
+RIMAC Fitness Gym,Monday,25,06:15,14.970588235294118,17,9.0,17.0,High
+RIMAC Fitness Gym,Monday,26,06:30,22.88235294117647,17,17.0,30.0,High
+RIMAC Fitness Gym,Monday,27,06:45,29.11764705882353,17,23.0,38.0,High
 RIMAC Fitness Gym,Monday,28,07:00,24.647058823529413,17,22.0,33.0,High
 RIMAC Fitness Gym,Monday,29,07:15,25.294117647058822,17,23.0,37.0,High
 RIMAC Fitness Gym,Monday,30,07:30,28.11764705882353,17,25.0,41.0,High
