@@ -62539,3 +62539,7 @@ timestamp,day_of_week,date,time,facility_name,status,percent_full,raw_text,peopl
 2026-11-01T15:30:04-08:00,Sunday,2026-11-01,15:30:04,Outback Climbing Center,Closed,13,Closed,4,30,False,Closed until 4:00pm,False,False
 2026-11-01T15:30:04-08:00,Sunday,2026-11-01,15:30:04,RIMAC Fitness Gym,Not Busy,35,Not Busy (35%),44,125,True,open,False,True
 2026-11-01T15:30:04-08:00,Sunday,2026-11-01,15:30:04,Triton Esports Center,Busy,57,Busy (57%),20,35,True,open,False,True
+2026-11-01T15:45:03-08:00,Sunday,2026-11-01,15:45:03,Main Gym Fitness Gym,Not Busy,17,Not Busy (17%),12,72,True,open,False,True
+2026-11-01T15:45:03-08:00,Sunday,2026-11-01,15:45:03,Outback Climbing Center,Closed,30,Closed,9,30,False,Closed until 4:00pm,False,False
+2026-11-01T15:45:03-08:00,Sunday,2026-11-01,15:45:03,RIMAC Fitness Gym,Not Busy,35,Not Busy (35%),44,125,True,open,False,True
+2026-11-01T15:45:03-08:00,Sunday,2026-11-01,15:45:03,Triton Esports Center,Not Busy,34,Not Busy (34%),12,35,True,open,False,True
